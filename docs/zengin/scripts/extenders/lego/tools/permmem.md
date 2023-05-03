@@ -16,6 +16,131 @@ LeGo_Init(LeGo_PermMem);
 
 ## Functions
 
+### `new`
+Creates a handle to a new instance of `inst`.
+```dae
+func int new(var int inst)
+```
+**Paramerers**
+
+- `#!dae var int inst`  
+    A valid instance. Used as "constructor" 
+
+**Return value**
+
+The function returns a new, valid PermMem handle.
+
+### `create`
+Similar to `new` , but here a pointer is returned directly and not a handle. Caution! Not managed by PermMem!
+```dae
+func int create(var int inst)
+```
+**Paramerers**
+
+- `#!dae var int inst`  
+    A valid instance. Used as "constructor" 
+
+**Return value**
+
+The function returns a pointer to the new instance.
+
+### `wrap`
+"Wraps" a handle "around" a pointer so that the pointer can be used with any function that expects handles.
+Only conditionally managed by PermMem. 
+```dae
+func int wrap(var int inst, var int ptr)
+```
+**Paramerers**
+
+- `#!dae var int inst`  
+    A valid instance. Used as "constructor" 
+
+**Return value**
+
+The function returns a pointer to the new instance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### `MEM_ReadStringArray`
 Function moved to PermMem form [Ikarus](../../ikarus/functions/mem_access.md#mem_readstringarray). Reads string from the array at the `arrayAddress`. 
 ```dae
@@ -37,3 +162,5 @@ The function returns string from the array if the address is correct.
 ```dae
 func void MEM_ArraySortFunc(var int stream, var func fnc)
 ```
+
+###
