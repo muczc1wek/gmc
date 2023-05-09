@@ -3,7 +3,7 @@ This package allows you to create new console commands.
 
 ## Dependencies
 
-- PermMem
+- [PermMem](../tools/permmem.md)
 - [HookEngine](../tools/hook_engine.md)
 
 ## Initialization
@@ -29,7 +29,7 @@ func void CC_Register(var func f, var string cmdPrefix, var string description)
 - `#!dae var string cmdPrefix`  
     This is a command, which can be entered in the console.
 - `#!dae var string description`  
-    This text appears next to the command (in zSpy) when you use the `help` command in the console.
+    This text appears next to the command (in [zSpy](../../../../tools/zSpy.md)) when you use the `help` command in the console.
 
 ### `CC_Remove`
 Removes a function from the console commands.
