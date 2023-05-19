@@ -214,17 +214,6 @@ func int hasHndl(var int inst)
 
 The function returns `TRUE` if the PermMem has a handle of this instance, `FALSE` is returned otherwise.
 
-### `zCParser_CreateInstance`
-Engine call. Calls the instance function `inst` on `ptr` and points `inst` to `ptr`. (used in [`create`](#create) function)
-```dae
-func int zCParser_CreateInstance(var int inst, var int ptr)
-```
-
-### `foreachHndlSort`
-
-```dae
-func void foreachHndlSort(var int inst, var func cmp)
-```
 ### `MEM_ReadStringArray`
 Function moved to PermMem form [Ikarus](../../ikarus/functions/mem_access.md#mem_readstringarray). Reads string from the array at the `arrayAddress`. 
 ```dae
@@ -240,12 +229,6 @@ func string MEM_ReadStringArray(var int arrayAddress, var int index)
 **Return value**
 
 The function returns string from the array if the address is correct.
-
-### `MEM_ArraySortFunc`
-
-```dae
-func void MEM_ArraySortFunc(var int stream, var func fnc)
-```
 
 ## Archiver
 
@@ -321,24 +304,49 @@ func void PM_SaveFuncPtr(var string name, var int fnc)
 - `#!dae var int fnc`   
     Saved function pointer
 
-
-
-<!-- //TODO XD
-### Classes/Arrays
-Subclasses or arrays can also be stored.
-
-#### `PM_SaveClassPtr`
-Stores a pointer to a class `ClassName`
+### `PM_SaveClassPtr`
+Saves a pointer of a class to the archive.
 ```dae
 func void PM_SaveClassPtr(var string name, var int ptr, var string className)
 ```
+**Parameters**
 
-#### `PM_SaveClass`
+- `#!dae var string name`  
+    Name of the field in saved archive
+- `#!dae var int ptr`  
+    Saved pointer
+- `#!dae var string className`  
+    Name of the class of stored pointer
+
+
+
+
+
+
+### `PM_SaveClass`
 Stores a subclass inside its own class.
 ```dae
 func void PM_SaveClass(var string name, var int ptr, var string className)
 ```
-#### `PM_SaveIntArray`
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the field in saved archive
+- `#!dae var int ptr`  
+    
+- `#!dae var string className`  
+    Name of the class of stored pointer
+
+
+
+
+
+
+
+
+
+
+### `PM_SaveIntArray`
 ```dae
 func void PM_SaveIntArray(var string name, var int ptr, var int elements)
 ```
