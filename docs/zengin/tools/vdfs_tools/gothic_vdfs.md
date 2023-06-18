@@ -1,6 +1,6 @@
 # GothicVDFS
 
-Gothic VDFS is the most popular VDFS tool. It was created by NicoDE and allows viewing, extracting and building `.vdf` and `.mod` volumes.
+Gothic VDFS is the most popular VDFS tool. It was created by NicoDE and allows viewing, extracting and building `.vdf` and `.mod` archives.
 
 ## Download
 
@@ -14,18 +14,17 @@ This is a blank VDFS viewer:
 
 ![Viewer](../../../assets/images/viewer.png)
 
-There are two paths to chose at the top:
+There are two paths to choose at the top:
 
-- Filename - Path to currently opened `.vdf` or `.mod` volume
-- Root Path - Path where we want to extract files
-
+- Filename - Path to currently opened `.vdf` or `.mod` archive
+- Root Path - Path to the place where the files will be extracted
 
 When we specify the `Filename` the VDFS will load the volume and display some information.
 ![Viewer](../../../assets/images/vdfs_viewer2.png)
 
 **Comment** is an information about loaded volume left by the author and **Timestamp** is a date and time set by the author. Usually the date coincides with the actual date of the volume's build, but it cannot be taken for granted as it can be easily changed.
 
-Now if you want to extract something form loaded volume you have three options:
+At the bottom there are three different options for extracting files from archive:
 
 1. Extract Volume - extract the whole volume to the Root Path
 2. Extract Directory - extract only selected folder
@@ -33,5 +32,5 @@ Now if you want to extract something form loaded volume you have three options:
 
 In addition, you can choose if files should stay at their folders after extraction or get extracted directly to the Root Path.
 
-### Bulider
+### Builder
 //TODO

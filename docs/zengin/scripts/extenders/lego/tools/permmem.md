@@ -230,6 +230,20 @@ func string MEM_ReadStringArray(var int arrayAddress, var int index)
 
 The function returns string from the array if the address is correct.
 
+
+### `PM_Exists`
+Checks if the specified field already exists in the archive. (used with archiver/unarchiver)
+```dae
+func int PM_Exists(var string name)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the field
+
+**Return value**
+The function returns `TRUE` if the field exists in the archive, `FALSE` is returned otherwise. 
+
 ## Archiver
 
 ### `PM_SaveInt`
@@ -318,13 +332,8 @@ func void PM_SaveClassPtr(var string name, var int ptr, var string className)
 - `#!dae var string className`  
     Name of the class of stored pointer
 
-
-
-
-
-
 ### `PM_SaveClass`
-Stores a subclass inside its own class.
+Saves a class like `PM_SaveClassPtr`.
 ```dae
 func void PM_SaveClass(var string name, var int ptr, var string className)
 ```
@@ -333,21 +342,165 @@ func void PM_SaveClass(var string name, var int ptr, var string className)
 - `#!dae var string name`  
     Name of the field in saved archive
 - `#!dae var int ptr`  
-    
+    Saved class pointer
 - `#!dae var string className`  
     Name of the class of stored pointer
 
-
-
-
-
-
-
-
-
-
 ### `PM_SaveIntArray`
+Saves an array of integers.
 ```dae
 func void PM_SaveIntArray(var string name, var int ptr, var int elements)
 ```
-func void PM_SaveStringArray(var string name, var int ptr, var int elements) -->
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the field in saved archive
+- `#!dae var int ptr`  
+    Pointer to the array
+- `#!dae var int elements`  
+    Number of elements in array
+
+### `PM_SaveStringArray`
+Saves an array of integers.
+```dae
+func void PM_SaveStringArray(var string name, var int ptr, var int elements)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the field in saved archive
+- `#!dae var int ptr`  
+    Pointer to the array
+- `#!dae var int elements`  
+    Number of elements in array
+
+## Unarchiver
+
+### `PM_Load`
+Universal function to load integers, floats, class pointers and int arrays.
+```dae
+func int PM_Load(var string name)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+
+**Return value**
+The function returns the data existing in the archive at the given field.
+
+### `PM_LoadInt`
+Returns an integer stored in the archive.
+```dae
+func int PM_LoadInt(var string name)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+
+### `PM_LoadFloat`
+Returns a daedalus float stored in the archive.
+```dae
+func int PM_LoadFloat(var string name)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+
+### `PM_LoadString`
+Returns a string stored in the archive.
+```dae
+func string PM_LoadString(var string name)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+
+### `PM_LoadFuncID`
+Returns a function ID stored in the archive.
+```dae
+func int PM_LoadFuncID(var string name)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+
+### `PM_LoadFuncOffset`
+Returns a function offset stored in the archive.
+```dae
+func int PM_LoadFuncOffset(var string name)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+
+### `PM_LoadFuncPtr`
+Returns a function pointer stored in the archive.
+```dae
+func int PM_LoadFuncPtr(var string name)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+
+### `PM_LoadClassPtr`
+Returns a class pointer stored in the archive.
+```dae
+func int PM_LoadClassPtr(var string name)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+
+### `PM_LoadClass`
+Loads a pointer to the class from the archive to `destPtr`.
+```dae
+func void PM_LoadClass(var string name, var int destPtr)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+- `#!dae var int destPtr`  
+    Destination pointer, the address to where it will deserialize the saved data
+
+### `PM_LoadArray`
+Returns a pointer to array stored in the archive.
+```dae
+func int PM_LoadArray(var string name)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+
+### `PM_LoadArrayToPtr`
+Loads a pointer to array from the archive to `destPtr`.
+```dae
+func void PM_LoadArrayToPtr(var string name, var int destPtr)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+- `#!dae var int destPtr`  
+    Destination pointer, the address to where it will deserialize the saved data
+
+### `PM_LoadToPtr`
+Universal function to load array or class pointer from the archive to `destPtr`.
+```dae
+func void PM_LoadToPtr(var string name, var int destPtr)
+```
+**Parameters**
+
+- `#!dae var string name`  
+    Name of the loaded field
+- `#!dae var int destPtr`  
+    Destination pointer, the address to where it will deserialize the saved data
