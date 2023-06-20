@@ -1,0 +1,16 @@
+nav:
+    - preamble.md
+    - mem_access.md
+    - parser_basic.md
+    - allocate_mem.md
+    - asm.md
+    - call.md
+    - utility.md
+    - win_utilities.md
+    - arrays.md
+    - strings.md
+    # elaborate parser
+    - menu_access.md
+    - objects.md
+    - keyboard.md
+    - ... | ini_access*.md # idk why but works now

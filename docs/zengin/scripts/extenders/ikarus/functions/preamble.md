@@ -1,182 +1,128 @@
-Apologies for the oversight. Here's the revised documentation of the functions in the preamble of the Ikarus script package, structured as requested:
+# Preamble
+The preamble is a bunch of functions related with debug and some stuff, that doesn't fit to other sections.
 
-1. **`MEM_CheckVersion`**
+## Initialization
+The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
+!!! warning
+    If you want to use Ikarus in Gothic 1, it is best to define your own `Init_Global()` function and call it from every world initialization function.
 
-   - Description: Checks if the version of Ikarus is the specified version or newer.
-   - Signature: 
-     ```csharp
-     func int MEM_CheckVersion(var int base, var int major, var int minor)
-     ```
-   - Parameters:
-     - `base` (int): Base version number.
-     - `major` (int): Major revision number.
-     - `minor` (int): Minor revision number.
-   - Returns: 
-     - Type: `int`
-     - Description: `1` if the version of Ikarus is the specified version or newer, `0` otherwise.
+```dae
+MEM_InitAll();
+```
 
-2. **`MEM_SendToSpy`**
+## Implementation
+[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L137)
 
-   - Description: Sends a message to the debugging console.
-   - Signature: 
-     ```csharp
-     func void MEM_SendToSpy(var int errorType, var string text)
-     ```
-   - Parameters:
-     - `errorType` (int): Type of error (e.g., `zERR_TYPE_FAULT`, `zERR_TYPE_WARN`, `zERR_TYPE_INFO`).
-     - `text` (string): The message to be sent.
-   - Returns: None.
+## Functions
 
-3. **`MEM_ErrorBox`**
+### `MEM_CheckVersion`
+Checks if the version of Ikarus is the specified version or newer.
+```dae
+func int MEM_CheckVersion(var int base, var int major, var int minor)
+```
+**Parameters**:
 
-   - Description: Displays an error message in a message box.
-   - Signature: 
-     ```csharp
-     func void MEM_ErrorBox(var string text)
-     ```
-   - Parameters:
-     - `text` (string): The error message to be displayed.
-   - Returns: None.
+- `#!dae var int base`  
+    Base version number
+- `#!dae var int major`  
+    Major revision number
+- `#!dae var int minor`  
+    Minor revision number
 
-4. **`MEM_PrintStackTrace`**
+**Return value**
 
-   - Description: Prints the stack trace.
-   - Signature: 
-     ```csharp
-     func void MEM_PrintStackTrace()
-     ```
-   - Parameters: None.
-   - Returns: None.
+The function returns `TRUE` if the version of Ikarus is the specified version or newer, `FALSE` is returned otherwise.
 
-5. **`MEM_Error`**
+### `MEM_SendToSpy`
+Sends a message to the debugging console.
+```dae
+func void MEM_SendToSpy(var int errorType, var string text)
+```
+**Parameters**
 
-   - Description: Handles a fatal error, displaying the error message and printing the stack trace.
-   - Signature: 
-     ```csharp
-     func void MEM_Error(var string error)
-     ```
-   - Parameters:
-     - `error` (string): The error message.
-   - Returns: None.
+- `#!dae var int errorType`  
+    Type of error (e.g., `zERR_TYPE_FAULT`, `zERR_TYPE_WARN`, `zERR_TYPE_INFO`)
+- `#!dae var string text`  
+    The message to be sent.
 
-6. **`MEM_Warn`**
+### `MEM_ErrorBox`
+Displays an error message in a message box.
+```dae
+func void MEM_ErrorBox(var string text)
+```
+**Parameters**
 
-   - Description: Handles a warning, displaying the warning message and printing the stack trace.
-   - Signature: 
-     ```csharp
-     func void MEM_Warn(var string warn)
-     ```
-   - Parameters:
-     - `warn` (string): The warning message.
-   - Returns: None.
+- `#!dae var string text`  
+    The error message to be displayed.
 
-7. **`MEM_Info`**
+### `MEM_PrintStackTrace`
+Prints the stack trace.
+```dae
+func void MEM_PrintStackTrace()
+```
 
-   - Description: Handles an information message, printing it if enabled in the settings.
-   - Signature: 
-     ```csharp
-     func void MEM_Info(var string info)
-     ```
-   - Parameters:
-     - `info` (string): The information message.
-   - Returns: None.
+### `MEM_Error`
+Handles a fatal error, displaying the error message and printing the stack trace.
+```dae
+func void MEM_Error(var string error)
+```
+**Parameters**
 
-8. **`MEM_AssertFail`**
+- `#!dae var string error`  
+    The error message.
 
-   - Description: Handles an assertion failure, reporting the error message as a fatal error.
-   - Signature: 
-     ```csharp
-     func void MEM_AssertFail(var string assertFailText)
-     ```
-   - Parameters:
-     - `assertFailText` (string): The assertion failure message.
-   - Returns: None.
+### `MEM_Warn`
+Handles a warning, displaying the warning message and printing the stack trace.
+```dae
+func void MEM_Warn(var string warn)
+```
+**Parameters**
 
-9. **`MEM_Debug`**
+- `#!dae var string warn`  
+    The warning message.
 
-   - Description: Sends a debug message to the console or debugging console based on settings.
-   - Signature: 
-     ```csharp
-     func void MEM_Debug(var string message)
-     ```
-   - Parameters:
-     - `message` (string): The debug message.
-   - Returns: None.
+### `MEM_Info`
+Handles an information message, printing it if enabled in the settings.
+```dae
+func void MEM_Info(var string info)
+```
+**Parameters**
 
-Please let me know if you would like documentation for the remaining functions as well.
+- `#!dae var string info`  
+    The information message.
 
-Certainly! Here's the continuation of the documentation for the remaining functions in the preamble of the Ikarus script package:
+### `MEM_AssertFail`
+Handles an assertion failure, reporting the error message as a fatal error.
+```dae
+func void MEM_AssertFail(var string assertFailText)
+```
+**Parameters**
 
-10. **`MEMINT_StackPushInt`**
+- `#!dae var string assertFailText`  
+    The assertion failure message.
 
-   - Description: Pushes an integer value onto the stack.
-   - Signature: 
-     ```csharp
-     func int MEMINT_StackPushInt(var int val)
-     ```
-   - Parameters:
-     - `val` (int): The integer value to push onto the stack.
-   - Returns:
-     - Type: `int`
-     - Description: The pushed integer value.
+### `MEM_Debug`
+Sends a debug message to the zSpy or on screen or displays an error box basing on `zERR_DEBUG_TOSPY`, `zERR_DEBUG_TOSCREEN` and `zERR_DEBUG_ERRORBOX` constants (`TRUE` - display).
+```dae
+func void MEM_Debug(var string message)
+```
+**Parameters**
 
-11. **`MEMINT_StackPushString`**
+- `#!dae var string message`  
+    The debug message.
 
-   - Description: Pushes a string value onto the stack.
-   - Signature: 
-     ```csharp
-     func string MEMINT_StackPushString(var string val)
-     ```
-   - Parameters:
-     - `val` (string): The string value to push onto the stack.
-   - Returns:
-     - Type: `string`
-     - Description: The pushed string value.
+### `MEMINT_SwitchG1G2`
+Switches between values based on the game version. Used mainly to change addresses in multi-platform hooks or function calls.
+```dae
+func int MEMINT_SwitchG1G2(var int g1Val, var int g2Val)
+```
+**Parameters**
 
-12. **`MEMINT_StackPopInst`**
+- `#!dae var int g1Val` 
+    The value to return if the game version is Gothic 1.
+- `#!dae var int g2Val`  
+    The value to return if the game version is Gothic 2.
 
-   - Description: Pops an instance from the stack.
-   - Signature: 
-     ```csharp
-     func void MEMINT_StackPopInst()
-     ```
-   - Parameters: None.
-   - Returns: None.
+**Return value**
 
-13. **`MEMINT_StackPushInst`**
-
-   - Description: Pushes an instance onto the stack.
-   - Signature: 
-     ```csharp
-     func void MEMINT_StackPushInst(var int val)
-     ```
-   - Parameters:
-     - `val` (int): The instance value to push onto the stack.
-   - Returns: None.
-
-14. **`MEMINT_StackPushVar`**
-
-   - Description: Pushes a variable onto the stack.
-   - Signature: 
-     ```csharp
-     func void MEMINT_StackPushVar(var int adr)
-     ```
-   - Parameters:
-     - `adr` (int): The address of the variable to push onto the stack.
-   - Returns: None.
-
-15. **`MEMINT_SwitchG1G2`**
-
-   - Description: Switches between values based on the game version.
-   - Signature: 
-     ```csharp
-     func int MEMINT_SwitchG1G2(var int g1Val, var int g2Val)
-     ```
-   - Parameters:
-     - `g1Val` (int): The value to return if the game version is Gothic 1.
-     - `g2Val` (int): The value to return if the game version is Gothic 2.
-   - Returns:
-     - Type: `int`
-     - Description: The appropriate value based on the game version.
-
-Please note that the remaining functions in the code are incomplete or lack information necessary for proper documentation. Let me know if there's anything else you would like to know or any other functions you would like to document.
+The function returns an appropriate value based on the game version.

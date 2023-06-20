@@ -14,7 +14,7 @@ MEM_InitAll();
 [:material-github: float.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/float.d)
 
 ## Functions
-!!! Warning
+!!! Danger
     Ikarus floats are saved as int but it doesn't mean that you can use arthmetic operators on them. All operations on floats must be done with functions listed below.
 
 ### `mkf`
