@@ -1,7 +1,7 @@
 ---
-title: Basic parser stuff
+title: Parser stuff
 ---
-# Basic `zCParser` related functions
+# `zCParser` related functions
 Having only the address of the object, accessing the properties of the object is very inconvenient. It's better if the instance points to an object, then with `instance.property` you can access the properties of an object. This Ikarus part provides some useful functions to work with parser instances.
 
 !!! Danger
@@ -34,6 +34,10 @@ func MEMINT_HelperClass MEM_PtrToInst(var int ptr)
 **Shortcut**
 
 In addition there is a function **`_^`** with the same signature and functionality as `MEM_PtrToInst`. It is used as a shortcut, since the converting pointer to instance is commonly used while working with Ikarus.
+
+```dae
+func MEMINT_HelperClass _^ (var int ptr)
+```
 
 ??? abstract "Example"
     Following code
@@ -94,7 +98,7 @@ func int MEM_InstToPtr(var int inst)
 - `#!dae var int inst`  
     The instance to which the pointer is returned
 
-### `MEM_InstToPtr`
+### `MEM_InstGetOffset`
 Alias to `MEM_InstToPtr`. Returns a pointer to given instance.
 ```dae
 func int MEM_InstGetOffset(var int inst)
@@ -123,3 +127,149 @@ func MEMINT_HelperClass MEM_CpyInst(var int inst)
     ```dae
     selfCopy = MEM_PtrToInst (MEM_InstToPtr (self));
     ```
+
+### `MEM_Call`
+Calls a function.
+```dae
+func void MEM_Call(var func fnc)
+```
+**Parameters**
+
+- `#!dae var func fnc`  
+    Function to be called
+
+### `MEM_CallByID`
+Calls a function by its ID.
+```dae
+func void MEM_CallByID (var int symbID)
+```
+**Parameters**
+
+- `#!dae var int symbID`  
+    The ID of the function to be called
+
+### `MEM_CallByPtr`
+Calls a function by its pointer.
+```dae
+func void MEM_CallByPtr(var int ptr)
+```
+**Parameters**
+
+- `#!dae var int ptr`  
+    The pointer of the function to be called
+
+### `MEM_CallByOffset`
+Calls a function by its offset.
+```dae
+func void MEM_CallByOffset(var int offset)
+```
+**Parameters**
+
+- `#!dae var int offset`  
+    The offset of the function to be called
+
+### `MEM_CallByString`
+Calls a function by its name.
+```dae
+func void MEM_CallByString (var string fnc)
+```
+**Parameters**
+
+- `#!dae var string fnc`  
+    The name of the function IN CAPITAL LETTERS.
+
+### `MEM_GetFuncID`
+Returns the ID of the given function.
+```dae
+func int MEM_GetFuncID(var func fnc)
+```
+**Parameters**
+
+- `#!dae var func fnc`  
+    The function whose ID is returned
+
+### `MEM_GetFuncPtr`
+Returns the pointer of the given function.
+```dae
+func int MEM_GetFuncPtr(var func fnc)
+```
+**Parameters**
+
+- `#!dae var func fnc`  
+    The function whose pointer is returned
+
+### `MEM_GetFuncOffset`
+Returns the offset of the given function.
+```dae
+func int MEM_GetFuncOffset(var func fnc)
+```
+**Parameters**
+
+- `#!dae var func fnc`  
+    The function whose offset is returned
+
+### `MEM_ReplaceFunc`
+Replaces the `f1` function with `f2` function so if you call the first function, the second function is called.
+```dae
+func void MEM_ReplaceFunc(var func f1, var func f2)
+```
+**Parameters**
+
+- `#!dae var func f1`  
+    Function to replace
+- `#!dae var func f2`  
+    Function called instead of `f1`
+
+### `MEM_GetIntAddress`
+Returns an address of a given integer.
+```dae
+func int MEM_GetIntAddress(var int i)
+```
+**Parameters**
+
+- `#!dae var int i`  
+    Integer whose address is returned
+
+**Shortcut**
+
+In addition there is a function **`_@`** with the same signature and functionality as `MEM_GetIntAddress`.
+
+```dae
+func int _@(var int i)
+```
+
+### `MEM_GetFloatAddress`
+Returns an address of a given daedalus float.
+```dae
+func int MEM_GetFloatAddress(var float f)
+```
+**Parameters**
+
+- `#!dae var float f`  
+    Float whose address is returned
+
+**Shortcut**
+
+In addition there is a function **`_@f`** with the same signature and functionality as `MEM_GetFloatAddress`.
+
+```dae
+func int _@s(var string s)
+```
+
+### `MEM_GetStringAddress`
+Returns an address of a given string.
+```dae
+func int MEM_GetStringAddress(var string s)
+```
+**Parameters**
+
+- `#!dae var string s`  
+    String whose address is returned
+
+**Shortcut**
+
+In addition there is a function **`_@s`** with the same signature and functionality as `MEM_GetStringAddress`.
+
+```dae
+func int _@f(var float f)
+```
