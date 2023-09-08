@@ -2,10 +2,10 @@
 title: Parser stuff
 ---
 # `zCParser` related functions
-Having only the address of the object, accessing the properties of the object is very inconvenient. It's better if the instance points to an object, then with `instance.property` you can access the properties of an object. This Ikarus part provides some useful functions to work with parser instances.
+Having only the address of the object, accessing the properties of the object is very inconvenient. This Ikarus part provides some useful functions to work with parser and its instances.
 
 !!! Danger
-    Remember to assign an instance to a correct class. If you assign an `oCNpc` pointer to `oCItem` class you won't be able to read any data from it.
+    Remember to always assign an instance to a correct class. If you assign an `oCNpc` pointer to `oCItem` class you won't be able to read any data from it.
 
 ## Initialization
 The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 

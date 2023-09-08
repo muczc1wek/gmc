@@ -1,17 +1,20 @@
-Certainly! Here's the documentation for the functions in the next part of the Ikarus script package:
+# Utility
 
-# UTILITY
+## Initialization
 
-## MEM_SetShowDebug
+## Implementation
 
-- Description: Turns on or off debug information.
-- Signature:
-  ```csharp
-  func void MEM_SetShowDebug(var int on)
-  ```
-- Parameters:
-  - `on` (int): Specifies whether to turn on (`1`) or off (`0`) debug information.
-- Returns: None.
+## Functions
+
+### `MEM_SetShowDebug`
+Sets the variable that is also toggled by the `toggle debug` command. As a result, messages outputted by `PrintDebug` are directed to the [zSpy](../../../../tools/zSpy.md)
+```dae
+func void MEM_SetShowDebug(var int on)
+```
+**Parameters**
+
+- `#!dae var int on` - Specifies whether to turn on (`TRUE`) or off (`FALSE`) debug information.
+
 
 ## MEM_CopyBytes
 
