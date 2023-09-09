@@ -81,7 +81,8 @@ List of console commands related with zSpy.
 Sets a [level of logging](#log-level).
 ```
 zerr level <#>
-```  
+``` 
+
 - `<#>` - max message priority. See [log level](#log-level).
 
 ### `zerr searchspy`
@@ -95,6 +96,7 @@ Sets a filter to display only messages of one author.
 ```
 zerr authors <letter>
 ```
+
 - `<letter>` - One of the letters listed [here](#user).
 
 ### `zerr rem`

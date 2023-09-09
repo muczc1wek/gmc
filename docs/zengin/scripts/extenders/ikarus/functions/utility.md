@@ -101,8 +101,9 @@ func void MEM_SetShowDebug(var int on)
   ```csharp
   func void
 
- MEM_Clear(var int ptr, var int size)
+  MEM_Clear(var int ptr, var int size)
   ```
+
 - Parameters:
   - `ptr` (int): The memory address to start clearing from.
   - `size` (int): The number of bytes to clear.

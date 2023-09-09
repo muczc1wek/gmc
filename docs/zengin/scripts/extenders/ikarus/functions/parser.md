@@ -85,6 +85,8 @@ Assigns null pointer to a given instance.
 ```dae
 func void MEM_AssignInstNull(var int inst)
 ```
+**Parameters**
+
 - `#!dae var int inst`  
     Instance to which the null pointer will be assigned
 
