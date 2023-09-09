@@ -3,7 +3,7 @@ name: Dev Site
 on:
   push:
     branches:
-      - dev
+      - emu-notready
 
 env:
   GMC_ENABLE_ON_PUBLISH: true
