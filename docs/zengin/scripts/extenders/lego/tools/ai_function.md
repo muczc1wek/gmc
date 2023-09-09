@@ -1,6 +1,5 @@
 ---
 title: AI_Function
-description: LeGo Package for enqueueing functions on NPC's
 ---
 # AI_Function
 This package allows time-delayed functions to be called by enqueuing the functions in the AI queue of the NPC in question. This can be very useful in writing cutscenes on engine or implementing new routines.
