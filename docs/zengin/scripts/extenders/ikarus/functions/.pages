@@ -8,7 +8,7 @@ nav:
     - utility.md
     - win_utilities.md
     - arrays.md
-    - strings.md
+    - string.md
     - menu_access.md
     - objects.md
     - keyboard.md

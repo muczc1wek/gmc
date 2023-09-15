@@ -1,22 +1,77 @@
-The provided code appears to be a partial implementation of string manipulation functions in the Ikarus scripting language. Let's go through each function and document its purpose:
+# String operations
 
-1. `STR_GetCharAt`:
-   - Purpose: Returns the ASCII value of a character at a specific position in a string.
-   - Parameters: `string str` (the input string), `int pos` (the position of the character).
-   - Returns: The ASCII value of the character at the specified position.
 
-2. `STR_Len`:
-   - Purpose: Returns the length of a string.
-   - Parameter: `string str` (the input string).
-   - Returns: The length of the string.
+## Initialization
+The best way to initialize all Ikarus functions is to call `MEM_InitAll()` in the `Init_Global()` initialization function. 
+!!! warning
+    If you want to use Ikarus in Gothic 1, it is best to define your own `Init_Global()` function and call it from every world initialization function.
 
-3. `STR_toChar` and `STRINT_toChar`:
-   - Purpose: Converts a string to a character pointer.
-   - Parameter: `string str` (the input string).
-   - Returns: The character pointer representation of the string.
+```dae
+MEM_InitAll();
+```
 
-4. `STR_FromChar`:
-   - Purpose: Converts a character to a string.
+## Implementation
+[:material-github: Ikarus.d on GitHub](https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L2341)
+
+## Functions
+
+### `STR_GetCharAt`
+Returns the ASCII value of a character at a specific position in a string.
+```dae
+func int STR_GetCharAt (var string str, var int pos)
+```
+**Parameters**:
+
+- `#!dae var string str`  
+    The input string
+- `#!dae var int pos`  
+    The position of the character
+
+**Return value**
+
+The function returns the ASCII value of the character at the specified position.
+
+### `STR_Len`
+Returns the length of a string.
+```dae
+func int STR_Len (var string str)
+```
+**Parameters**:
+
+- `#!dae var string str`  
+    The input string
+
+**Return value**
+
+The function returns the length of the string in characters.
+
+### `STR_toChar`
+Converts a string to a pointer to its character array.
+```dae
+func int STR_toChar (var string str)
+```
+**Parameters**:
+
+- `#!dae var string str`  
+    The input string
+
+**Return value**
+
+The function returns a pointer to the character array representing the input string `str`
+
+### `STR_FromChar`
+Converts a character array to a string.
+```dae
+func string STR_FromChar(var int char)
+```
+**Parameters**:
+
+- `#!dae var string str`  
+    The input string
+
+**Return value**
+
+The function returns
    - Parameter: `int char` (the input character).
    - Returns: The string representation of the character.
 
