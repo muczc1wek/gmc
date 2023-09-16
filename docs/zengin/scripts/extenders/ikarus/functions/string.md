@@ -66,46 +66,73 @@ func string STR_FromChar(var int char)
 ```
 **Parameters**:
 
-- `#!dae var string str`  
-    The input string
+- `#!dae var int char`  
+    Pointer to the character array
 
 **Return value**
 
-The function returns
-   - Parameter: `int char` (the input character).
-   - Returns: The string representation of the character.
+The function returns the string representation of the character array.
 
-5. `STR_SubStr` and `STR_Prefix`:
+### `STR_SubStr`
+```dae
+func string STR_SubStr (var string str, var int start, var int count)
+```
+
+
+### `STR_Prefix`
+```dae
+func string STR_Prefix (var string str, var int len)
+```
    - Purpose: Extracts a substring from a given string.
    - Parameters: `string str` (the input string), `int start` (the starting position of the substring), `int count` (the length of the substring).
    - Returns: The extracted substring.
 
-6. `STR_Compare`:
+### `STR_Compare`
+```dae
+func int STR_Compare(var string str1, var string str2)
+```
    - Purpose: Compares two strings and returns the result.
    - Parameters: `string str1` (the first string), `string str2` (the second string).
    - Returns: An integer indicating the comparison result: `STR_GREATER` (1) if `str1` is greater, `STR_EQUAL` (0) if they are equal, or `STR_SMALLER` (-1) if `str2` is greater.
 
-7. `STR_ToInt`:
+### `STR_ToInt`
+```dae
+func int STR_ToInt (var string str)
+```
    - Purpose: Converts a string to an integer.
    - Parameter: `string str` (the input string).
    - Returns: The integer value of the string.
 
-8. `STR_IndexOf`:
+### `STR_IndexOf`
+```dae
+func int STR_IndexOf(var string str, var string tok)
+```
    - Purpose: Finds the index of a substring within a string.
    - Parameters: `string str` (the input string), `string tok` (the substring to find).
    - Returns: The index of the first occurrence of the substring in the string, or -1 if not found.
 
-9. `STRINT_SplitReset`, `STRINT_Split`, `STRINT_SplitGet`, `STR_Split`, and `STR_SplitCount`:
+### `STR_Split`
+```dae
+func string STR_Split(var string str, var string separator, var int offset)
+```
+
+### `STR_SplitCount`
+```dae
+func int STR_SplitCount(var string str, var string seperator)
+```
    - Purpose: These functions are related to splitting a string into substrings based on a separator.
-   - `STRINT_SplitReset`: Resets the internal state for splitting.
-   - `STRINT_Split`: Splits the string into substrings based on the separator.
-   - `STRINT_SplitGet`: Retrieves a specific substring based on its offset.
    - `STR_Split`: Splits the string and retrieves a specific substring based on its offset.
    - `STR_SplitCount`: Returns the number of substrings obtained by splitting the string.
 
-10. `STR_Upper` and `STR_Lower`:
+### `STR_Upper` 
+```dae
+func string STR_Upper(var string str)
+```
+
+### `STR_Lower`
+```dae
+func string STR_Lower(var string str)
+```
    - Purpose: Converts a string to uppercase or lowercase.
    - Parameter: `string str` (the input string).
    - Returns: The converted string in uppercase or lowercase, respectively.
-
-It's important to note that this code snippet may not be complete, as it seems to be a part of a larger codebase. The missing parts could include function declarations, required headers, and additional utility functions.
