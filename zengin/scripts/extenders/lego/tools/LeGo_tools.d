@@ -985,7 +985,7 @@ func int Print_LongestLineLengthExt(var string text, var string font, var string
 /// @param font Name of font
 /// @param height A specific line height
 ///
-/// @return The function returns a text field pointer.
+/// @return The function returns a text field pointer. Look at the Print_TextField return value to see an example.
 func int Print_TextField(var int x, var int y, var string text, var string font, var int height) {};
 
 /// Print_TextFieldPxl but with pixel coordinates.
@@ -995,7 +995,7 @@ func int Print_TextField(var int x, var int y, var string text, var string font,
 /// @param text Text to be printed
 /// @param font Name of font
 ///
-/// @return The function returns a text field pointer.
+/// @return The function returns a text field pointer. Look at the Print_TextField return value to see an example.
 func int Print_TextFieldPxl(var int x, var int y, var string text, var string font) {};
 
 /// Print_TextFieldColored but you specify the color of the text.
@@ -1007,7 +1007,7 @@ func int Print_TextFieldPxl(var int x, var int y, var string text, var string fo
 /// @param height A specific line height
 /// @param color zColor, e.g., generated with RGBA function
 ///
-/// @return The function returns a text field pointer.
+/// @return The function returns a text field pointer. Look at the Print_TextField return value to see an example.
 func int Print_TextFieldColored(var int x, var int y, var string text, var string font, var int height, var int color) {};
 
 /// Same function as the external Print, but with smooth animations. The effect can be changed as desired with the user constants.
