@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/">
       
       
-        <link rel="prev" href="functions/win_utilities/">
+        <link rel="prev" href="functions/objects/">
       
       
         <link rel="next" href="setup/">
@@ -1097,6 +1097,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_6_2_3_3" id="__nav_2_6_2_3_3_label" tabindex="0">
@@ -1159,6 +1165,20 @@
   
   
     <li class="md-nav__item">
+      <a href="functions/jumps_loops/" class="md-nav__link">
+        Jumps and Loops
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="functions/keyboard/" class="md-nav__link">
         Keyboard
       </a>
@@ -1201,8 +1221,36 @@
   
   
     <li class="md-nav__item">
+      <a href="functions/utility/" class="md-nav__link">
+        Utility
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="functions/win_utilities/" class="md-nav__link">
         Windows Utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="functions/objects/" class="md-nav__link">
+        zCObjects
       </a>
     </li>
   
@@ -3834,6 +3882,14 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition trivia">
+<p class="admonition-title">Author Note (by Sektenspinner)</p>
+<p>This script package is not called <strong>Ikarus</strong> for nothing:</p>
+<p>One can leave the boundaries of Daedalus behind, but may also crash and burn. For instance, reading from invalid addresses won't trigger a <a href="../../../tools/zSpy/">zSpy</a> warning but will result in a desktop crash with an Access Violation. This is not a reason to panic but requires a tolerance for frustration (which can be useful for scripters in general).</p>
+<p>Of course, such spectacular-looking errors can be fixed, and with focused and systematic work, something sensible can be achieved.</p>
+<p>In short: Extra care is needed! A bug that leads to a crash is not something you want in the release version. But if you work cleanly and test extensively, it's not such a big deal.</p>
+<p>A good friend in debugging crashes is undoubtedly <code>PrintDebug</code>. It allows sending messages to <a href="../../../tools/zSpy/">zSpy</a> (for example, to narrow down where the crash is occurring). It's worth enabling debug messages by <a href="functions/debug/#mem_setshowdebug"><code>MEM_SetShowDebug</code></a> and the text filter (Options -&gt; Textfilter) in <a href="../../../tools/zSpy/#configuration">zSpy</a>.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Ikarus is hosted on <a href="https://github.com/Lehona/Ikarus">GitHub</a> and the documentation is <a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus_Doc.d">built in</a>. The translation is planned.</p>
@@ -3859,7 +3915,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="functions/win_utilities/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Windows Utilities" rel="prev">
+          <a href="functions/objects/" class="md-footer__link md-footer__link--prev" aria-label="Previous: zCObjects" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -3868,7 +3924,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Windows Utilities
+                zCObjects
               </div>
             </div>
           </a>

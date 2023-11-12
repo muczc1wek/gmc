@@ -1095,6 +1095,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_6_2_3_3" id="__nav_2_6_2_3_3_label" tabindex="0">
@@ -1157,6 +1163,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ikarus/functions/jumps_loops/" class="md-nav__link">
+        Jumps and Loops
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ikarus/functions/keyboard/" class="md-nav__link">
         Keyboard
       </a>
@@ -1199,8 +1219,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ikarus/functions/utility/" class="md-nav__link">
+        Utility
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ikarus/functions/win_utilities/" class="md-nav__link">
         Windows Utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ikarus/functions/objects/" class="md-nav__link">
+        zCObjects
       </a>
     </li>
   
@@ -3951,8 +3999,11 @@
 </span><span id="example-1-7"><a id="example-1-7" name="example-1-7"></a><span class="p">};</span>
 </span></code></pre></div></td></tr></table></div>
 <ul>
-<li>To change detected key rename <code>KEY_LBRACKET</code> to your own key e.g. taken from Ikarus constants.</li>
-<li>To detect pressing a key leave <code>(pressed)</code> unchanged but if you want to detect holding change it to <code>(1)</code></li>
+<li>To change detected key rename <code>KEY_LBRACKET</code> to your own key e.g. taken from <a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d#L129-L288">Ikarus constants</a>.</li>
+<li>To detect pressing a key leave <code>(pressed)</code> unchanged but if you want to detect holding change it to <code>(!pressed)</code>. That's because <blockquote>
+<p>pressed is FALSE: key is held, pressed is TRUE: key press onset</p>
+</blockquote>
+</li>
 <li>To run code when a key is pressed, paste it or call a function where the comment is.</li>
 <li>To detect more than one key add <code>else if</code>.</li>
 </ul></div>

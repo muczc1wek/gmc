@@ -1099,6 +1099,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_6_2_3_3" id="__nav_2_6_2_3_3_label" tabindex="0">
@@ -1191,6 +1197,13 @@
           <li class="md-nav__item">
   <a href="#mem_checkversion" class="md-nav__link">
     MEM_CheckVersion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mem_setshowdebug" class="md-nav__link">
+    MEM_SetShowDebug
   </a>
   
 </li>
@@ -1292,6 +1305,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../jumps_loops/" class="md-nav__link">
+        Jumps and Loops
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../keyboard/" class="md-nav__link">
         Keyboard
       </a>
@@ -1334,8 +1361,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../utility/" class="md-nav__link">
+        Utility
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../win_utilities/" class="md-nav__link">
         Windows Utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../objects/" class="md-nav__link">
+        zCObjects
       </a>
     </li>
   
@@ -3950,6 +4005,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mem_setshowdebug" class="md-nav__link">
+    MEM_SetShowDebug
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#mem_sendtospy" class="md-nav__link">
     MEM_SendToSpy
   </a>
@@ -4076,9 +4138,18 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns <code>TRUE</code> if the version of Ikarus is the specified version or newer, <code>FALSE</code> is returned otherwise.</p>
+<h3 id="mem_setshowdebug"><code>MEM_SetShowDebug</code><a class="headerlink" href="#mem_setshowdebug" title="Permanent link"></a></h3>
+<p>Sets the variable that is also toggled by the <code>toggle debug</code> command. As a result, messages outputted by <code>PrintDebug</code> are directed to the <a href="../../../../../tools/zSpy/">zSpy</a>
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_SetShowDebug</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">on</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<strong>Parameters</strong>
+<ul>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">on</span></code> <br>
+    Specifies whether to turn on (<code>TRUE</code>) or off (<code>FALSE</code>) debug information.</li>
+</ul>
 <h3 id="mem_sendtospy"><code>MEM_SendToSpy</code><a class="headerlink" href="#mem_sendtospy" title="Permanent link"></a></h3>
 <p>Sends a message to the debugging console.
-</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_SendToSpy</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">errorType</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_SendToSpy</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">errorType</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Parameters</strong>
 <ul>
@@ -4089,7 +4160,7 @@
 </ul>
 <h3 id="mem_errorbox"><code>MEM_ErrorBox</code><a class="headerlink" href="#mem_errorbox" title="Permanent link"></a></h3>
 <p>Displays an error message in a message box.
-</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ErrorBox</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ErrorBox</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Parameters</strong>
 <ul>
@@ -4098,11 +4169,11 @@
 </ul>
 <h3 id="mem_printstacktrace"><code>MEM_PrintStackTrace</code><a class="headerlink" href="#mem_printstacktrace" title="Permanent link"></a></h3>
 <p>Prints the stack trace.
-</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_PrintStackTrace</span><span class="p">()</span>
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_PrintStackTrace</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="mem_error"><code>MEM_Error</code><a class="headerlink" href="#mem_error" title="Permanent link"></a></h3>
 <p>Handles a fatal error, displaying the error message and printing the stack trace.
-</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Error</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">error</span><span class="p">)</span>
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Error</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">error</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Parameters</strong>
 <ul>
@@ -4111,7 +4182,7 @@
 </ul>
 <h3 id="mem_warn"><code>MEM_Warn</code><a class="headerlink" href="#mem_warn" title="Permanent link"></a></h3>
 <p>Handles a warning, displaying the warning message and printing the stack trace.
-</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Warn</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">warn</span><span class="p">)</span>
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Warn</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">warn</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Parameters</strong>
 <ul>
@@ -4120,7 +4191,7 @@
 </ul>
 <h3 id="mem_info"><code>MEM_Info</code><a class="headerlink" href="#mem_info" title="Permanent link"></a></h3>
 <p>Handles an information message, printing it if enabled in the settings.
-</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Info</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">info</span><span class="p">)</span>
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Info</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">info</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Parameters</strong>
 <ul>
@@ -4129,7 +4200,7 @@
 </ul>
 <h3 id="mem_assertfail"><code>MEM_AssertFail</code><a class="headerlink" href="#mem_assertfail" title="Permanent link"></a></h3>
 <p>Handles an assertion failure, reporting the error message as a fatal error.
-</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_AssertFail</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">assertFailText</span><span class="p">)</span>
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_AssertFail</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">assertFailText</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Parameters</strong>
 <ul>
@@ -4138,7 +4209,7 @@
 </ul>
 <h3 id="mem_debug"><code>MEM_Debug</code><a class="headerlink" href="#mem_debug" title="Permanent link"></a></h3>
 <p>Freely conigurable debug chanell. See how to setup it in the <a href="../../constants/#mem_debug">Constants</a> article.
-</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Debug</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Debug</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Parameters</strong>
 <ul>
@@ -4147,7 +4218,7 @@
 </ul>
 <h3 id="memint_switchg1g2"><code>MEMINT_SwitchG1G2</code><a class="headerlink" href="#memint_switchg1g2" title="Permanent link"></a></h3>
 <p>Switches between values based on the game version. Used mainly to change addresses in multi-platform hooks or function calls.
-</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEMINT_SwitchG1G2</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g1Val</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g2Val</span><span class="p">)</span>
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEMINT_SwitchG1G2</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g1Val</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g2Val</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Parameters</strong>
 <ul>
