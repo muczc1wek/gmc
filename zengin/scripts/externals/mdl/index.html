@@ -165,6 +165,38 @@
       
     
     
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <img alt="🇬🇧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1ec-1f1e7.svg" title=":flag_gb:">
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="en" class="md-select__link">
+                    <img alt="🇬🇧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1ec-1f1e7.svg" title=":flag_gb:"> English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../../../pl/zengin/scripts/externals/mdl/" hreflang="pl" class="md-select__link">
+                    <img alt="🇵🇱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1f5-1f1f1.svg" title=":flag_pl:"> Polski
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../../../cs/zengin/scripts/externals/mdl/" hreflang="cs" class="md-select__link">
+                    <img alt="🇨🇿" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1e8-1f1ff.svg" title=":flag_cz:"> Čeština
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
@@ -1099,6 +1131,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_6_2_3_3" id="__nav_2_6_2_3_3_label" tabindex="0">
@@ -1119,8 +1157,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../extenders/ikarus/functions/asm/" class="md-nav__link">
+        ASM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../extenders/ikarus/functions/menu_access/" class="md-nav__link">
         Access Menu Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extenders/ikarus/functions/arrays/" class="md-nav__link">
+        Arrays (zCArray)
       </a>
     </li>
   
@@ -1203,6 +1269,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../extenders/ikarus/functions/mem_utility/" class="md-nav__link">
+        Memory utility
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../extenders/ikarus/functions/string/" class="md-nav__link">
         String operations
       </a>
@@ -1217,8 +1297,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../extenders/ikarus/functions/utility/" class="md-nav__link">
-        Utility
+      <a href="../../extenders/ikarus/functions/time_benchmark/" class="md-nav__link">
+        Time and Benchmark
       </a>
     </li>
   
@@ -4068,56 +4148,69 @@
 
 <div><h1 id="mdl-functions">MDL functions<a class="headerlink" href="#mdl-functions" title="Permanent link"></a></h1>
 <p>Functions to tweak animation and other model related settings.</p>
-<h2 id="mdl_applyoverlaymds">Mdl_ApplyOverlayMDS<a class="headerlink" href="#mdl_applyoverlaymds" title="Permanent link"></a></h2>
+<h2 id="mdl_applyoverlaymds"><code>Mdl_ApplyOverlayMDS</code><a class="headerlink" href="#mdl_applyoverlaymds" title="Permanent link"></a></h2>
 <p>Apply an animation overlay with <code>overlay_name</code> for the specified <code>npc</code>
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_ApplyOverlayMDS</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> - NPC to apply the overlay to</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span></code> - name of the animation overlay</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> <br>
+    NPC to apply the overlay to</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span></code> <br>
+    Name of the animation overlay</li>
 </ul>
-<h2 id="mdl_applyoverlaymdstimed">Mdl_ApplyOverlayMDSTimed<a class="headerlink" href="#mdl_applyoverlaymdstimed" title="Permanent link"></a></h2>
+<h2 id="mdl_applyoverlaymdstimed"><code>Mdl_ApplyOverlayMDSTimed</code><a class="headerlink" href="#mdl_applyoverlaymdstimed" title="Permanent link"></a></h2>
 <p>Apply an animation overlay with <code>overlay_name</code> for the specified <code>npc</code> for <code>duration</code> milliseconds
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_ApplyOverlayMDSTimed</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> - NPC to apply the overlay to</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span></code> - name of the animation overlay</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">duration</span></code> - overlay duration in milliseconds</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> <br>
+    NPC to apply the overlay to</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span></code> <br>
+    Name of the animation overlay</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">duration</span></code> <br>
+    Overlay duration in milliseconds</li>
 </ul>
-<h2 id="mdl_removeoverlaymds">Mdl_RemoveOverlayMDS<a class="headerlink" href="#mdl_removeoverlaymds" title="Permanent link"></a></h2>
+<h2 id="mdl_removeoverlaymds"><code>Mdl_RemoveOverlayMDS</code><a class="headerlink" href="#mdl_removeoverlaymds" title="Permanent link"></a></h2>
 <p>Remove the animation overlay <code>overlay_name</code> from specified <code>npc</code> 
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_RemoveOverlayMDS</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> - NPC to remove the overlay from</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span></code> - name of the animation overlay</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> <br>
+    NPC to remove the overlay from</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span></code> <br>
+    Name of the animation overlay</li>
 </ul>
-<h2 id="mdl_applyrandomani">Mdl_ApplyRandomAni<a class="headerlink" href="#mdl_applyrandomani" title="Permanent link"></a></h2>
+<h2 id="mdl_applyrandomani"><code>Mdl_ApplyRandomAni</code><a class="headerlink" href="#mdl_applyrandomani" title="Permanent link"></a></h2>
 <p>Assign a random animation <code>ani2</code> to random animation list of animation <code>ani1</code>
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_ApplyRandomAni</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani1</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani2</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> - NPC owning the animation</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani1</span></code> - the animation to asign random animation to</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani2</span></code> - animation to be assigned</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> <br>
+    NPC owning the animation</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani1</span></code> <br>
+    The animation to assign random animation to</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani2</span></code> <br>
+    Animation to be assigned</li>
 </ul>
-<h2 id="mdl_applyrandomanifreq">Mdl_ApplyRandomAniFreq<a class="headerlink" href="#mdl_applyrandomanifreq" title="Permanent link"></a></h2>
+<h2 id="mdl_applyrandomanifreq"><code>Mdl_ApplyRandomAniFreq</code><a class="headerlink" href="#mdl_applyrandomanifreq" title="Permanent link"></a></h2>
 <p>Sets the random animation frequency for animation <code>ani1</code>
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_ApplyRandomAniFreq</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani1</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">frequency</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> - NPC owning the animation</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani1</span></code> - the animation to set the random frequency</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">frequency</span></code> - number of seconds between random animations</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> <br>
+    NPC owning the animation</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani1</span></code> <br>
+    The animation to set the random frequency</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">frequency</span></code> <br>
+    Number of seconds between random animations</li>
 </ul>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
+<details class="abstract">
+<summary>Example</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span>
 <span class="normal"><a href="#example-5-2">2</a></span>
 <span class="normal"><a href="#example-5-3">3</a></span>
@@ -4126,28 +4219,34 @@
 </span><span id="example-5-3"><a id="example-5-3" name="example-5-3"></a><span class="c">// Make the random animation attached play every 8 seconds</span>
 </span><span id="example-5-4"><a id="example-5-4" name="example-5-4"></a><span class="nb nb-Externals">Mdl_ApplyRandomAniFreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">"S_WOUNDED"</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
 </span></code></pre></div></td></tr></table></div>
-</div>
-<h2 id="mdl_setmodelfatness">Mdl_SetModelFatness<a class="headerlink" href="#mdl_setmodelfatness" title="Permanent link"></a></h2>
+</details>
+<h2 id="mdl_setmodelfatness"><code>Mdl_SetModelFatness</code><a class="headerlink" href="#mdl_setmodelfatness" title="Permanent link"></a></h2>
 <p>Set the procedural model fatness
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_SetModelFatness</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">fatness</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> - NPC to apply the fatness to </li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">fatness</span></code> - fatness value</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> <br>
+    NPC to apply the fatness to </li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">fatness</span></code> <br>
+    Fatness value</li>
 </ul>
-<h2 id="mdl_setmodelscale">Mdl_SetModelScale<a class="headerlink" href="#mdl_setmodelscale" title="Permanent link"></a></h2>
+<h2 id="mdl_setmodelscale"><code>Mdl_SetModelScale</code><a class="headerlink" href="#mdl_setmodelscale" title="Permanent link"></a></h2>
 <p>Set model scale per axis
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_SetModelScale</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> - NPC to apply the scale to </li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span></code> - scale along the x axis, 1.0 = 100%, 1.5 = 150%, 0.9 = 90% </li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span></code> - scale along the y axis, 1.0 = 100%, 1.5 = 150%, 0.9 = 90% </li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span></code> - scale along the z axis, 1.0 = 100%, 1.5 = 150%, 0.9 = 90% </li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> <br>
+    NPC to apply the scale to </li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span></code> <br>
+    Scale along the x-axis, 1.0 = 100%, 1.5 = 150%, 0.9 = 90% </li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span></code> <br>
+    Scale along the y-axis, 1.0 = 100%, 1.5 = 150%, 0.9 = 90% </li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span></code> <br>
+    Scale along the z-axis, 1.0 = 100%, 1.5 = 150%, 0.9 = 90% </li>
 </ul>
-<h2 id="mdl_setvisualbody">Mdl_SetVisualBody<a class="headerlink" href="#mdl_setvisualbody" title="Permanent link"></a></h2>
+<h2 id="mdl_setvisualbody"><code>Mdl_SetVisualBody</code><a class="headerlink" href="#mdl_setvisualbody" title="Permanent link"></a></h2>
 <p>Sets up the visual of an NPC
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span>
 <span class="normal"><a href="#example-8-2">2</a></span>
@@ -4167,25 +4266,35 @@
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">npc</span></code> - NPC to be affected</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">body_mesh</span></code> - mesh to be used as the body e.g. <code>HUN_BODY_NAKED0</code></li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">body_tex</span></code> - body texture assigned to this body mesh</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">skin</span></code> - body texture variant</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">head_mesh</span></code> - head mesh</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">head_tex</span></code> - head texture</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">teeth_tex</span></code> - teeth texture</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">armor_inst</span></code> - armor (C_ITEM instance) to be equipped or <code>-1</code> for no armor </li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">npc</span></code> <br>
+    NPC to be affected</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">body_mesh</span></code> <br>
+    Mesh to be used as the body e.g. <code>HUN_BODY_NAKED0</code></li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">body_tex</span></code> <br>
+    Body texture assigned to this body mesh</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">skin</span></code> <br>
+    Body texture variant</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">head_mesh</span></code> <br>
+    Head mesh</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">head_tex</span></code> <br>
+    Head texture</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">teeth_tex</span></code> <br>
+    Teeth texture</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">armor_inst</span></code> <br>
+    Armor (<a href="../../classes/c_item/"><code>C_ITEM</code></a> instance) to be equipped or <code>-1</code> for no armor </li>
 </ul>
-<h2 id="mdl_setvisual">Mdl_SetVisual<a class="headerlink" href="#mdl_setvisual" title="Permanent link"></a></h2>
+<h2 id="mdl_setvisual"><code>Mdl_SetVisual</code><a class="headerlink" href="#mdl_setvisual" title="Permanent link"></a></h2>
 <p>Set the animation set (also dictates models you can set using the <code>Mdl_SetVisualBody</code>)
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_SetVisual</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">animation_set</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">npc</span></code> - NPC to apply the animation set to </li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">animation_set</span></code> - name of the MDS file that contains the animation set</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">npc</span></code> <br>
+    NPC to apply the animation set to </li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">animation_set</span></code> <br>
+    Name of the MDS file that contains the animation set</li>
 </ul>
-<h2 id="mdl_startfaceani">Mdl_StartFaceAni<a class="headerlink" href="#mdl_startfaceani" title="Permanent link"></a></h2>
+<h2 id="mdl_startfaceani"><code>Mdl_StartFaceAni</code><a class="headerlink" href="#mdl_startfaceani" title="Permanent link"></a></h2>
 <p>Start a face animation
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span>
 <span class="normal"><a href="#example-10-2">2</a></span>
@@ -4197,12 +4306,16 @@
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> - NPC to apply the animation to </li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span></code> - animation name</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">intensity</span></code> - intensity of the animation 0.0 to 1.0</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">holdtime</span></code> - how long should the animation be held for <code>-2</code> will use the MMS defined value, '-1' will make the hold time infinite</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> <br>
+    NPC to apply the animation to </li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span></code> <br>
+    Animation name</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">intensity</span></code> <br>
+    Intensity of the animation 0.0 to 1.0</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">holdtime</span></code> <br>
+    How long should the animation be held for <code>-2</code> will use the MMS defined value, '-1' will make the hold time infinite</li>
 </ul>
-<h2 id="mdl_applyrandomfaceani">Mdl_ApplyRandomFaceAni<a class="headerlink" href="#mdl_applyrandomfaceani" title="Permanent link"></a></h2>
+<h2 id="mdl_applyrandomfaceani"><code>Mdl_ApplyRandomFaceAni</code><a class="headerlink" href="#mdl_applyrandomfaceani" title="Permanent link"></a></h2>
 <p>Start a random face animation
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span>
 <span class="normal"><a href="#example-11-2">2</a></span>
@@ -4220,13 +4333,20 @@
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> - NPC to apply the animation to </li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span></code> - animation name</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">timemin</span></code> - minimum time after which the ani should be started (in seconds)</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">timeminvar</span></code> - minimum boundary variation (in seconds)</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">timemax</span></code> - maximum time after which the ani should be started (in seconds)</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">timemaxvar</span></code> - maximum boundary variation (in seconds)</li>
-<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">probmin</span></code> - probablity (0.0 to 1.0) to choose the lower boundary time</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span></code> <br>
+    NPC to apply the animation to </li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span></code> <br>
+    Animation name</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">timemin</span></code> <br>
+    Minimum time after which the ani should be started (in seconds)</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">timeminvar</span></code> <br>
+    Minimum boundary variation (in seconds)</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">timemax</span></code> <br>
+    Maximum time after which the ani should be started (in seconds)</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">timemaxvar</span></code> <br>
+    Maximum boundary variation (in seconds)</li>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">probmin</span></code> <br>
+    Probablity (0.0 to 1.0) to choose the lower boundary time</li>
 </ul>
 <h2 id="externals-with-docu-comments">Externals with docu comments<a class="headerlink" href="#externals-with-docu-comments" title="Permanent link"></a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1"> 1</a></span>

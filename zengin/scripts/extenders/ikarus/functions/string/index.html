@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/extenders/ikarus/functions/string/">
       
       
-        <link rel="prev" href="../mem_access/">
+        <link rel="prev" href="../mem_utility/">
       
       
-        <link rel="next" href="../utility/">
+        <link rel="next" href="../time_benchmark/">
       
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.1.21">
@@ -164,6 +164,38 @@
         </form>
       
     
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <img alt="🇬🇧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1ec-1f1e7.svg" title=":flag_gb:">
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="en" class="md-select__link">
+                    <img alt="🇬🇧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1ec-1f1e7.svg" title=":flag_gb:"> English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../../../../../pl/zengin/scripts/extenders/ikarus/functions/string/" hreflang="pl" class="md-select__link">
+                    <img alt="🇵🇱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1f5-1f1f1.svg" title=":flag_pl:"> Polski
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../../../../../cs/zengin/scripts/extenders/ikarus/functions/string/" hreflang="cs" class="md-select__link">
+                    <img alt="🇨🇿" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1e8-1f1ff.svg" title=":flag_cz:"> Čeština
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -1105,6 +1137,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_6_2_3_3" id="__nav_2_6_2_3_3_label" tabindex="0">
@@ -1125,8 +1163,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../asm/" class="md-nav__link">
+        ASM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../menu_access/" class="md-nav__link">
         Access Menu Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arrays/" class="md-nav__link">
+        Arrays (zCArray)
       </a>
     </li>
   
@@ -1197,6 +1263,20 @@
     <li class="md-nav__item">
       <a href="../mem_access/" class="md-nav__link">
         Memory Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mem_utility/" class="md-nav__link">
+        Memory utility
       </a>
     </li>
   
@@ -1375,8 +1455,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../utility/" class="md-nav__link">
-        Utility
+      <a href="../time_benchmark/" class="md-nav__link">
+        Time and Benchmark
       </a>
     </li>
   
@@ -4155,7 +4235,7 @@
 <p>Returns the ASCII value of a character at a specific position in a string.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_GetCharAt</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>:
+<strong>Parameters</strong>
 <ul>
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span></code><br>
     The input string</li>
@@ -4168,7 +4248,7 @@
 <p>Returns the length of a string.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_Len</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>:
+<strong>Parameters</strong>
 <ul>
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span></code><br>
     The input string</li>
@@ -4179,7 +4259,7 @@
 <p>Converts a string to a pointer to its character array.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_toChar</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>:
+<strong>Parameters</strong>
 <ul>
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span></code><br>
     The input string</li>
@@ -4190,7 +4270,7 @@
 <p>Converts a character array to a string.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">STR_FromChar</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">char</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>:
+<strong>Parameters</strong>
 <ul>
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">char</span></code><br>
     Pointer to the character array</li>
@@ -4201,7 +4281,7 @@
 <p>Extracts a substring from a given string.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">STR_SubStr</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>:
+<strong>Parameters</strong>
 <ul>
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span></code><br>
     The input string</li>
@@ -4216,7 +4296,7 @@
 <p>Extracts a prefix of a given string, similar to <a href="#str_substr"><code>STR_SubStr</code></a>, but with the starting position set to the first character of the string.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">STR_Prefix</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>:
+<strong>Parameters</strong>
 <ul>
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span></code><br>
     The input string</li>
@@ -4285,7 +4365,7 @@
 <p>Converts a string to an integer.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_ToInt</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>:
+<strong>Parameters</strong>
 <ul>
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span></code><br>
     The input string</li>
@@ -4407,7 +4487,7 @@ At the end of the function, <code>tok1</code> contains "This", <code>tok2</code>
 <p>Converts a string to uppercase.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-16-1"><a id="example-16-1" name="example-16-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">STR_Upper</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>:
+<strong>Parameters</strong>
 <ul>
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span></code><br>
     The input string</li>
@@ -4418,7 +4498,7 @@ At the end of the function, <code>tok1</code> contains "This", <code>tok2</code>
 <p>Converts a string to lowercase.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-17-1"><a id="example-17-1" name="example-17-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">STR_Lower</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>:
+<strong>Parameters</strong>
 <ul>
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span></code><br>
     The input string</li>
@@ -4446,7 +4526,7 @@ At the end of the function, <code>tok1</code> contains "This", <code>tok2</code>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../mem_access/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Memory Access" rel="prev">
+          <a href="../mem_utility/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Memory utility" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -4455,20 +4535,20 @@ At the end of the function, <code>tok1</code> contains "This", <code>tok2</code>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Memory Access
+                Memory utility
               </div>
             </div>
           </a>
         
         
           
-          <a href="../utility/" class="md-footer__link md-footer__link--next" aria-label="Next: Utility" rel="next">
+          <a href="../time_benchmark/" class="md-footer__link md-footer__link--next" aria-label="Next: Time and Benchmark" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Utility
+                Time and Benchmark
               </div>
             </div>
             <div class="md-footer__button md-icon">

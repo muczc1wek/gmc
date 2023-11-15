@@ -165,6 +165,38 @@
       
     
     
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <img alt="🇬🇧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1ec-1f1e7.svg" title=":flag_gb:">
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="en" class="md-select__link">
+                    <img alt="🇬🇧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1ec-1f1e7.svg" title=":flag_gb:"> English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../../../../../pl/zengin/scripts/extenders/ikarus/functions/jumps_loops/" hreflang="pl" class="md-select__link">
+                    <img alt="🇵🇱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1f5-1f1f1.svg" title=":flag_pl:"> Polski
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../../../../../cs/zengin/scripts/extenders/ikarus/functions/jumps_loops/" hreflang="cs" class="md-select__link">
+                    <img alt="🇨🇿" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1e8-1f1ff.svg" title=":flag_cz:"> Čeština
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
@@ -1105,6 +1137,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_6_2_3_3" id="__nav_2_6_2_3_3_label" tabindex="0">
@@ -1125,8 +1163,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../asm/" class="md-nav__link">
+        ASM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../menu_access/" class="md-nav__link">
         Access Menu Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arrays/" class="md-nav__link">
+        Arrays (zCArray)
       </a>
     </li>
   
@@ -1352,6 +1418,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../mem_utility/" class="md-nav__link">
+        Memory utility
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../string/" class="md-nav__link">
         String operations
       </a>
@@ -1366,8 +1446,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../utility/" class="md-nav__link">
-        Utility
+      <a href="../time_benchmark/" class="md-nav__link">
+        Time and Benchmark
       </a>
     </li>
   
@@ -4122,7 +4202,7 @@
 
 <div><h1 id="jumps-and-loops">Jumps and Loops<a class="headerlink" href="#jumps-and-loops" title="Permanent link"></a></h1>
 <h2 id="jumps">Jumps<a class="headerlink" href="#jumps" title="Permanent link"></a></h2>
-<p>Jumps in Ikarus are managed elegantly using a simple approach. Two lines of code enable the manipulation of the current position within the parser stack, which represents machine-level code generated during script compilation. By querying and setting this position, the execution flow can be redirected to a new location in the code.</p>
+<p>Jumps in Ikarus are implemented by direct manipulation of the stack pointer, achieved with two lines of code. These lines enable the change of the current position within the parser stack, representing machine-level code generated during script compilation. By querying and setting this position, the execution flow can be redirected to a new location in the code.</p>
 <h3 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link"></a></h3>
 <p>To ensure the correct functioning of this jump mechanism, it is crucial to execute the <code>MEM_InitLabels()</code> function once after loading a saved game. The recommended practice is to integrate this initialization function within <code>INIT_GLOBAL</code>. It's only after <code>MEM_InitLabels()</code> has been called that accessing <code>MEM_StackPos.position</code> becomes valid.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_InitLabels</span><span class="p">()</span>
@@ -4134,7 +4214,7 @@
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link"></a></h3>
 <ul>
 <li><strong>Label Initialization</strong> <br>
-    Before attempting a jump, it's imperative to initialize the label to which the jump is intended. Forward jumps, where the jump point is encountered before the jump target, can be challenging. Label initialization looks like that:
+    Before attempting a jump, it's important to initialize the label to which the jump is intended. Forward jumps, where the jump point is encountered before the jump target, can be challenging. Label initialization looks like that:
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
 <span class="normal"><a href="#example-1-2">2</a></span>
 <span class="normal"><a href="#example-1-3">3</a></span>
@@ -4481,12 +4561,12 @@ These two constants works like a regular <code>break</code> and <code>continue</
 <p>It's worth noting that <code>MEM_InitRepeat</code> is also invoked by the <code>MEM_InitAll</code> function.</p>
 </div>
 <h3 id="syntax_1">Syntax<a class="headerlink" href="#syntax_1" title="Permanent link"></a></h3>
-<p>Repeat loop has a syntax very similar to the <a href="#syntax">while loop</a>. It also uses <code>end</code> constant as an ending brace, and <code>break</code> and <code>continue</code> statements can be used within it. The main difference is the loop function <code>Repeat</code> that looks like this:</p>
+<p>Repeat loop has a syntax very similar to the <a href="#syntax">while loop</a>. It also uses <code>end</code> constant as an ending brace. <code>break</code> and <code>continue</code> statements can be used within it as well. The main difference is the main loop function <code>Repeat</code> that has following properties:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Repeat</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">variable</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">limit</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">variable</span></code> <br>
-    A variable that increase with every iteration.</li>
+    A variable that increase with every loop iteration.</li>
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">limit</span></code> <br>
     A variable that defines the number of loop iterations. If <code>variable &gt;= limit</code> the loop is exited.</li>
 </ul>

@@ -165,6 +165,38 @@
       
     
     
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <img alt="🇬🇧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1ec-1f1e7.svg" title=":flag_gb:">
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="en" class="md-select__link">
+                    <img alt="🇬🇧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1ec-1f1e7.svg" title=":flag_gb:"> English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../../../../../pl/zengin/scripts/extenders/ikarus/functions/ini_access/" hreflang="pl" class="md-select__link">
+                    <img alt="🇵🇱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1f5-1f1f1.svg" title=":flag_pl:"> Polski
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../../../../../cs/zengin/scripts/extenders/ikarus/functions/ini_access/" hreflang="cs" class="md-select__link">
+                    <img alt="🇨🇿" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f1e8-1f1ff.svg" title=":flag_cz:"> Čeština
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
@@ -1105,6 +1137,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_6_2_3_3" id="__nav_2_6_2_3_3_label" tabindex="0">
@@ -1125,8 +1163,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../asm/" class="md-nav__link">
+        ASM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../menu_access/" class="md-nav__link">
         Access Menu Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arrays/" class="md-nav__link">
+        Arrays (zCArray)
       </a>
     </li>
   
@@ -1394,6 +1460,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../mem_utility/" class="md-nav__link">
+        Memory utility
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../string/" class="md-nav__link">
         String operations
       </a>
@@ -1408,8 +1488,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../utility/" class="md-nav__link">
-        Utility
+      <a href="../time_benchmark/" class="md-nav__link">
+        Time and Benchmark
       </a>
     </li>
   
@@ -4218,11 +4298,11 @@
 <p><a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L4293"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"></path></svg></span> Ikarus.d on GitHub</a></p>
 <h2 id="read-functions">Read functions<a class="headerlink" href="#read-functions" title="Permanent link"></a></h2>
 <h3 id="mem_getcommandline"><code>MEM_GetCommandLine</code><a class="headerlink" href="#mem_getcommandline" title="Permanent link"></a></h3>
-<p>Zwraca zawartość linii poleceń przekazaną do Gothica.
+<p>Returns the contents of the command line passed to Gothic.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">MEM_GetCommandLine</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
-<p>Funkcja zwraca zawartość linii poleceń przekazaną do Gothica. Może to wyglądać na przykład tak:</p>
+<p>The function returns contents of the command line passed to Gothic. This could, for example, look like this:</p>
 <p><code>"-TIME:7:35 -GAME:TEST_IKARUS.INI -ZREPARSE -ZWINDOW -ZLOG:5,S -DEVMODE -ZMAXFRAMERATE:30"</code></p>
 <h3 id="mem_getgothopt"><code>MEM_GetGothOpt</code><a class="headerlink" href="#mem_getgothopt" title="Permanent link"></a></h3>
 <p>Searches the <code>Gothic.ini</code> for an option.
