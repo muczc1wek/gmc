@@ -4125,7 +4125,7 @@
 </div>
 <h2 id="parsing">Parsing<a class="headerlink" href="#parsing" title="Permanent link"></a></h2>
 <p>Ikarus consists of three main parts, <a href="../constants/">constants</a>, classes and the Ikarus core. It's essential to parse these in a specific order. Additionally, there is a <a href="../floats/">floats package</a> which isn't essential, but it is highly recommended to parse it, especially if you are working with <a href="../../lego/">LeGo</a> that depends on it.</p>
-<p>The Ikarus Core is identical for both Gothic 1 and 2 and is contained in a single file, <code>Ikarus.d</code>. However, there are separate files for the constants and classes for each engine, and they must be parsed correctly. Ikarus uses a C_NPC and therefore has to be parsed after the C_NPC class (after the <code>classes.d</code> file). There are no other dependencies.</p>
+<p>The Ikarus Core is identical for both Gothic 1 and 2 and is contained in a single file, <a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus.d"><code>Ikarus.d</code></a>. However, there are separate files for the constants and classes for each engine, and they must be parsed correctly. Ikarus uses a C_NPC and therefore has to be parsed after the C_NPC class (after the <code>classes.d</code> file). There are no other dependencies.</p>
 <p>Since Ikarus 1.2.1 there is additional <code>.src</code> file for each game engine, to simplify adding files to <code>Gothic.src</code> </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>

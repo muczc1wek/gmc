@@ -4831,7 +4831,7 @@ Only conditionally managed by PermMem.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">numHandles</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="sizeof"><code>sizeof</code><a class="headerlink" href="#sizeof" title="Permanent link"></a></h3>
-<p>Returns Size of the instance's class in bytes 
+<p>Gets the size of the given instance's class.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-13-1"><a id="example-13-1" name="example-13-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sizeof</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Parameters</strong>
@@ -4839,6 +4839,8 @@ Only conditionally managed by PermMem.
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span></code><br>
     Any instance</li>
 </ul>
+<p><strong>Return value</strong></p>
+<p>The function returns the size of a given instance's class in bytes.</p>
 <h3 id="hlp_isvalidhandle"><code>Hlp_IsValidHandle</code><a class="headerlink" href="#hlp_isvalidhandle" title="Permanent link"></a></h3>
 <p>Indicates whether the handle exists and is managed by PermMem. 
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-14-1"><a id="example-14-1" name="example-14-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Hlp_IsValidHandle</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">hndl</span><span class="p">)</span>
@@ -4910,8 +4912,8 @@ Only conditionally managed by PermMem.
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span></code><br>
     Name of the field</li>
 </ul>
-<p><strong>Return value</strong>
-The function returns <code>TRUE</code> if the field exists in the archive, <code>FALSE</code> is returned otherwise. </p>
+<p><strong>Return value</strong></p>
+<p>The function returns <code>TRUE</code> if the field exists in the archive, <code>FALSE</code> is returned otherwise. </p>
 <h2 id="archiver">Archiver<a class="headerlink" href="#archiver" title="Permanent link"></a></h2>
 <h3 id="pm_saveint"><code>PM_SaveInt</code><a class="headerlink" href="#pm_saveint" title="Permanent link"></a></h3>
 <p>Saves an integer to the archive.
