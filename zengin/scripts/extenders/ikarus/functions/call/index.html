@@ -1471,6 +1471,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apply-overlay-disposable" class="md-nav__link">
+    Apply overlay (Disposable)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-time-as-string-disposable" class="md-nav__link">
+    Get time as string (Disposable)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-sky-time-disposable" class="md-nav__link">
+    Get the "sky time" (Disposable)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-vob-recyclable" class="md-nav__link">
+    Delete Vob (Recyclable)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4527,6 +4568,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apply-overlay-disposable" class="md-nav__link">
+    Apply overlay (Disposable)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-time-as-string-disposable" class="md-nav__link">
+    Get time as string (Disposable)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-sky-time-disposable" class="md-nav__link">
+    Get the "sky time" (Disposable)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-vob-recyclable" class="md-nav__link">
+    Delete Vob (Recyclable)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4656,17 +4738,34 @@
 </span></code></pre></div></td></tr></table></div>
 <h2 id="start-and-end">Start and End<a class="headerlink" href="#start-and-end" title="Permanent link"></a></h2>
 <h3 id="call_open"><code>CALL_Open</code><a class="headerlink" href="#call_open" title="Permanent link"></a></h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_Open</span><span class="p">()</span>
+<p>Initializes a Recyclable call mode.
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_Open</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="call_begin"><code>CALL_Begin</code><a class="headerlink" href="#call_begin" title="Permanent link"></a></h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_Begin</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr</span><span class="p">)</span>
+<p>A practical wrapper for <code>CALL_Open</code>. Makes a call if it had been already created, initializes it otherwise.
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_Begin</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
+<strong>Parameters</strong>
+<ul>
+<li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr</span></code> <br>
+    Zero if you need to create a new recyclable function to be called (usually, before first use). In this case <code>CALL_Open</code> is called and <code>CALL_Begin</code> returns <code>1</code>.</li>
+</ul>
+<p><strong>Return Value</strong></p>
+<p>The function returns <code>1</code> if the new call has been created, <code>0</code> is returned otherwise.</p>
 <h3 id="call_close"><code>CALL_Close</code><a class="headerlink" href="#call_close" title="Permanent link"></a></h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_Close</span><span class="p">()</span>
+<p>Finalizes a function call in recyclable mode, restoring the previous execution context.
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_Close</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="call_end"><code>CALL_End</code><a class="headerlink" href="#call_end" title="Permanent link"></a></h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_End</span><span class="p">()</span>
+<p>Finalizes a function call, pushes the pointer onto the stack, and runs the associated assembly code (makes an actual call).
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_End</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
+<p><strong>Return Value</strong></p>
+<p>The function returns a pointer that could be used to repeat the call.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>CALL_Close</code> only finalizes the function call, returning the pointer, while <code>CALL_End</code> additionally handles pushing the pointer onto the stack and running associated assembly code.   </p>
+</div>
 <h2 id="passing-parameters">Passing parameters<a class="headerlink" href="#passing-parameters" title="Permanent link"></a></h2>
 <p>Parameters must be arranged on the machine stack from right to left i.e. from the parameter on the far right to the parameter on the far left. These functions generate machine code that will place parameters on the machine stack when executed.</p>
 <div class="admonition note">
@@ -4709,6 +4808,10 @@
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">param</span></code> <br>
     String to be passed</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function only works when writing a disposable call!</p>
+</div>
 <h3 id="call_cstringptrparam"><code>CALL_cStringPtrParam</code><a class="headerlink" href="#call_cstringptrparam" title="Permanent link"></a></h3>
 <p>Passes a char array (<code>char **</code>) as a parameter to the called function.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_cStringPtrParam</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">param</span><span class="p">)</span>
@@ -4718,6 +4821,10 @@
 <li><code class="highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">param</span></code> <br>
     String to be passed as character array`</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function only works when writing a disposable call!</p>
+</div>
 <h3 id="call_structparam"><code>CALL_StructParam</code><a class="headerlink" href="#call_structparam" title="Permanent link"></a></h3>
 <p>Passes a structure (struct) as a parameter to the called function.
 </p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_StructParam</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">words</span><span class="p">)</span>
@@ -4868,7 +4975,91 @@ to use it as a pointer to some memory or an instance in Daedalus.
 This function copies the contents of the <code>zString</code> into a
 daedalus string and frees the <code>zString</code> afterwards.</p>
 </blockquote>
-</details></div>
+</details>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"></a></h2>
+<h3 id="apply-overlay-disposable">Apply overlay (Disposable)<a class="headerlink" href="#apply-overlay-disposable" title="Permanent link"></a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-27-1">1</a></span>
+<span class="normal"><a href="#example-27-2">2</a></span>
+<span class="normal"><a href="#example-27-3">3</a></span>
+<span class="normal"><a href="#example-27-4">4</a></span>
+<span class="normal"><a href="#example-27-5">5</a></span>
+<span class="normal"><a href="#example-27-6">6</a></span>
+<span class="normal"><a href="#example-27-7">7</a></span>
+<span class="normal"><a href="#example-27-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-27-1"><a id="example-27-1" name="example-27-1"></a><span class="c">// .text:0072D2C0:int __thiscall oCNpc::ApplyOverlay(class zSTRING const &amp;)</span>
+</span><span id="example-27-2"><a id="example-27-2" name="example-27-2"></a>
+</span><span id="example-27-3"><a id="example-27-3" name="example-27-3"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">example1</span><span class="p">(){</span>
+</span><span id="example-27-4"><a id="example-27-4" name="example-27-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">oCNpc__ApplyOverlay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7525056</span><span class="p">;</span><span class="w"> </span><span class="c">//0x72D2C0 (G2A)</span>
+</span><span id="example-27-5"><a id="example-27-5" name="example-27-5"></a><span class="w">    </span><span class="nb nb-Other">CALL_zStringPtrParam</span><span class="w"> </span><span class="p">(</span><span class="s">"HUMANS_MILITIA.MDS"</span><span class="p">);</span>
+</span><span id="example-27-6"><a id="example-27-6" name="example-27-6"></a><span class="w">    </span><span class="nb nb-Other">CALL__thiscall</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Other">MEM_InstToPtr</span><span class="w"> </span><span class="p">(</span><span class="bp">hero</span><span class="p">),</span><span class="w"> </span><span class="n">oCNpc__ApplyOverlay</span><span class="p">);</span>
+</span><span id="example-27-7"><a id="example-27-7" name="example-27-7"></a><span class="w">    </span><span class="c">//We are not interested in the return value here.</span>
+</span><span id="example-27-8"><a id="example-27-8" name="example-27-8"></a><span class="p">};</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="get-time-as-string-disposable">Get time as string (Disposable)<a class="headerlink" href="#get-time-as-string-disposable" title="Permanent link"></a></h3>
+<p>e.g. <code>"7:30"</code> for half past seven in the morning
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-28-1">1</a></span>
+<span class="normal"><a href="#example-28-2">2</a></span>
+<span class="normal"><a href="#example-28-3">3</a></span>
+<span class="normal"><a href="#example-28-4">4</a></span>
+<span class="normal"><a href="#example-28-5">5</a></span>
+<span class="normal"><a href="#example-28-6">6</a></span>
+<span class="normal"><a href="#example-28-7">7</a></span>
+<span class="normal"><a href="#example-28-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-28-1"><a id="example-28-1" name="example-28-1"></a><span class="c">// .text:00780EC0:class zSTRING __thiscall oCWorldTimer::GetTimeString(void)</span>
+</span><span id="example-28-2"><a id="example-28-2" name="example-28-2"></a>
+</span><span id="example-28-3"><a id="example-28-3" name="example-28-3"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">example2</span><span class="p">(){</span>
+</span><span id="example-28-4"><a id="example-28-4" name="example-28-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">oCWorldTimer__GetTimeString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7868096</span><span class="p">;</span><span class="w"> </span><span class="c">//780EC0 (G2A)</span>
+</span><span id="example-28-5"><a id="example-28-5" name="example-28-5"></a><span class="w">    </span><span class="nb nb-Other">CALL_RetValIszString</span><span class="p">();</span>
+</span><span id="example-28-6"><a id="example-28-6" name="example-28-6"></a><span class="w">    </span><span class="nb nb-Other">CALL__thiscall</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Other">MEM_InstToPtr</span><span class="w"> </span><span class="p">(</span><span class="n">MEM_WorldTimer</span><span class="p">),</span><span class="w"> </span><span class="n">oCWorldTimer__GetTimeString</span><span class="w"> </span><span class="p">);</span>
+</span><span id="example-28-7"><a id="example-28-7" name="example-28-7"></a><span class="w">    </span><span class="nb nb-Externals">PrintDebug</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Other">CALL_RetValAszString</span><span class="p">());</span>
+</span><span id="example-28-8"><a id="example-28-8" name="example-28-8"></a><span class="p">};</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="get-the-sky-time-disposable">Get the "sky time" (Disposable)<a class="headerlink" href="#get-the-sky-time-disposable" title="Permanent link"></a></h3>
+<p>Sky time is a floating point value between 0 and 1 that jumps back from 1 to 0 at noon.
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-29-1"> 1</a></span>
+<span class="normal"><a href="#example-29-2"> 2</a></span>
+<span class="normal"><a href="#example-29-3"> 3</a></span>
+<span class="normal"><a href="#example-29-4"> 4</a></span>
+<span class="normal"><a href="#example-29-5"> 5</a></span>
+<span class="normal"><a href="#example-29-6"> 6</a></span>
+<span class="normal"><a href="#example-29-7"> 7</a></span>
+<span class="normal"><a href="#example-29-8"> 8</a></span>
+<span class="normal"><a href="#example-29-9"> 9</a></span>
+<span class="normal"><a href="#example-29-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-29-1"><a id="example-29-1" name="example-29-1"></a><span class="c">// .text:00781240:float __thiscall oCWorldTimer::GetSkyTime(void)</span>
+</span><span id="example-29-2"><a id="example-29-2" name="example-29-2"></a>
+</span><span id="example-29-3"><a id="example-29-3" name="example-29-3"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">GetSkyTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="example-29-4"><a id="example-29-4" name="example-29-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">oCWorldTimer__GetSkyTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7868992</span><span class="p">;</span><span class="w"> </span><span class="c">//0x781240</span>
+</span><span id="example-29-5"><a id="example-29-5" name="example-29-5"></a><span class="w">    </span><span class="nb nb-Other">CALL_RetValIsFloat</span><span class="p">();</span>
+</span><span id="example-29-6"><a id="example-29-6" name="example-29-6"></a><span class="w">    </span><span class="nb nb-Other">CALL__thiscall</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Other">MEM_InstToPtr</span><span class="w"> </span><span class="p">(</span><span class="n">MEM_WorldTimer</span><span class="p">),</span>
+</span><span id="example-29-7"><a id="example-29-7" name="example-29-7"></a><span class="w">    </span><span class="n">oCWorldTimer__GetSkyTime</span><span class="p">);</span>
+</span><span id="example-29-8"><a id="example-29-8" name="example-29-8"></a>
+</span><span id="example-29-9"><a id="example-29-9" name="example-29-9"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nb nb-Other">CALL_RetValAsFloat</span><span class="p">();</span>
+</span><span id="example-29-10"><a id="example-29-10" name="example-29-10"></a><span class="p">};</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="delete-vob-recyclable">Delete Vob (Recyclable)<a class="headerlink" href="#delete-vob-recyclable" title="Permanent link"></a></h3>
+<p>Call of the <code>oCWorld.RemoveVob</code>. <a href="../objects/#mem_deletevob"><code>MEM_DeleteVob</code></a> is an ikarus built-in function.
+</p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-30-1"> 1</a></span>
+<span class="normal"><a href="#example-30-2"> 2</a></span>
+<span class="normal"><a href="#example-30-3"> 3</a></span>
+<span class="normal"><a href="#example-30-4"> 4</a></span>
+<span class="normal"><a href="#example-30-5"> 5</a></span>
+<span class="normal"><a href="#example-30-6"> 6</a></span>
+<span class="normal"><a href="#example-30-7"> 7</a></span>
+<span class="normal"><a href="#example-30-8"> 8</a></span>
+<span class="normal"><a href="#example-30-9"> 9</a></span>
+<span class="normal"><a href="#example-30-10">10</a></span>
+<span class="normal"><a href="#example-30-11">11</a></span>
+<span class="normal"><a href="#example-30-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-30-1"><a id="example-30-1" name="example-30-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_DeleteVob</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vobPtr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="example-30-2"><a id="example-30-2" name="example-30-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">world</span><span class="p">;</span><span class="w"> </span><span class="n">world</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEM_Game</span><span class="p">.</span><span class="n">_zCSession_world</span><span class="p">;</span>
+</span><span id="example-30-3"><a id="example-30-3" name="example-30-3"></a>
+</span><span id="example-30-4"><a id="example-30-4" name="example-30-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="example-30-5"><a id="example-30-5" name="example-30-5"></a><span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Other">CALL_Begin</span><span class="p">(</span><span class="n">call</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="example-30-6"><a id="example-30-6" name="example-30-6"></a><span class="w">        </span><span class="cm">/* oCWorld.RemoveVob */</span>
+</span><span id="example-30-7"><a id="example-30-7" name="example-30-7"></a><span class="w">        </span><span class="nb nb-Other">CALL_IntParam</span><span class="p">(</span><span class="n">_@</span><span class="p">(</span><span class="n">vobPtr</span><span class="p">));</span>
+</span><span id="example-30-8"><a id="example-30-8" name="example-30-8"></a><span class="w">        </span><span class="nb nb-Other">CALL__thiscall</span><span class="p">(</span><span class="n">_@</span><span class="p">(</span><span class="n">world</span><span class="p">),</span><span class="w"> </span><span class="nb nb-Other">MEMINT_SwitchG1G2</span><span class="p">(</span><span class="mi">7171824</span><span class="p">,</span><span class="w"> </span><span class="mi">7864512</span><span class="p">));</span>
+</span><span id="example-30-9"><a id="example-30-9" name="example-30-9"></a>
+</span><span id="example-30-10"><a id="example-30-10" name="example-30-10"></a><span class="w">        </span><span class="n">call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Other">CALL_End</span><span class="p">();</span>
+</span><span id="example-30-11"><a id="example-30-11" name="example-30-11"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="example-30-12"><a id="example-30-12" name="example-30-12"></a><span class="p">};</span>
+</span></code></pre></div></td></tr></table></div></div>
 
 
 
