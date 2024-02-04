@@ -767,6 +767,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
@@ -817,6 +819,20 @@
     <li class="md-nav__item">
       <a href="../../../classes/c_menu/" class="md-nav__link">
         C_MENU
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../classes/c_menuitem/" class="md-nav__link">
+        C_MENU_ITEM
       </a>
     </li>
   
@@ -1413,6 +1429,13 @@
   
     <nav class="md-nav" aria-label="Initialization">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mem_initall" class="md-nav__link">
+    MEM_InitAll
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#gothic-1" class="md-nav__link">
@@ -2947,6 +2970,8 @@
         
           
         
+          
+        
       
       
         
@@ -2981,6 +3006,20 @@
 
             
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../externals/hlp/" class="md-nav__link">
+        HLP functions
+      </a>
+    </li>
+  
+
             
           
             
@@ -4081,6 +4120,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#mem_initall" class="md-nav__link">
+    MEM_InitAll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#gothic-1" class="md-nav__link">
     Gothic 1
   </a>
@@ -4175,52 +4221,123 @@
 </div>
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link"></a></h2>
 <p>Before you can use Ikarus in your scripts, it must be properly initialized. The initialization process differs between Gothic 1 and Gothic 2.</p>
+<h3 id="mem_initall"><code>MEM_InitAll</code><a class="headerlink" href="#mem_initall" title="Permanent link"></a></h3>
+<p>This is main ikarus initialization function, however it consists of some smaller initialization functions.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Declaration</label><label for="__tabbed_2_2">Definition</label><label for="__tabbed_2_3">List of functions</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_InitAll</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1"> 1</a></span>
+<span class="normal"><a href="#example-3-2"> 2</a></span>
+<span class="normal"><a href="#example-3-3"> 3</a></span>
+<span class="normal"><a href="#example-3-4"> 4</a></span>
+<span class="normal"><a href="#example-3-5"> 5</a></span>
+<span class="normal"><a href="#example-3-6"> 6</a></span>
+<span class="normal"><a href="#example-3-7"> 7</a></span>
+<span class="normal"><a href="#example-3-8"> 8</a></span>
+<span class="normal"><a href="#example-3-9"> 9</a></span>
+<span class="normal"><a href="#example-3-10">10</a></span>
+<span class="normal"><a href="#example-3-11">11</a></span>
+<span class="normal"><a href="#example-3-12">12</a></span>
+<span class="normal"><a href="#example-3-13">13</a></span>
+<span class="normal"><a href="#example-3-14">14</a></span>
+<span class="normal"><a href="#example-3-15">15</a></span>
+<span class="normal"><a href="#example-3-16">16</a></span>
+<span class="normal"><a href="#example-3-17">17</a></span>
+<span class="normal"><a href="#example-3-18">18</a></span>
+<span class="normal"><a href="#example-3-19">19</a></span>
+<span class="normal"><a href="#example-3-20">20</a></span>
+<span class="normal"><a href="#example-3-21">21</a></span>
+<span class="normal"><a href="#example-3-22">22</a></span>
+<span class="normal"><a href="#example-3-23">23</a></span>
+<span class="normal"><a href="#example-3-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_InitAll</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="example-3-2"><a id="example-3-2" name="example-3-2"></a><span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nb nb-Other">MEMINT_ReportVersionCheck</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="example-3-3"><a id="example-3-3" name="example-3-3"></a><span class="w">        </span><span class="kr">return</span><span class="p">;</span>
+</span><span id="example-3-4"><a id="example-3-4" name="example-3-4"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="example-3-5"><a id="example-3-5" name="example-3-5"></a>
+</span><span id="example-3-6"><a id="example-3-6" name="example-3-6"></a><span class="w">    </span><span class="nb nb-Other">MEM_ReinitParser</span><span class="p">();</span><span class="w"> </span><span class="cm">/* depends on nothing */</span>
+</span><span id="example-3-7"><a id="example-3-7" name="example-3-7"></a><span class="w">    </span><span class="nb nb-Other">MEM_InitLabels</span><span class="p">();</span><span class="w"> </span><span class="cm">/* depends in MEM_ReinitParser */</span>
+</span><span id="example-3-8"><a id="example-3-8" name="example-3-8"></a><span class="w">    </span><span class="nb nb-Other">MEM_InitGlobalInst</span><span class="p">();</span><span class="w"> </span><span class="cm">/* depends on MEM_ReinitParser */</span>
+</span><span id="example-3-9"><a id="example-3-9" name="example-3-9"></a>
+</span><span id="example-3-10"><a id="example-3-10" name="example-3-10"></a><span class="w">    </span><span class="cm">/* now I can use MEM_ReplaceFunc, MEM_GetFuncID */</span>
+</span><span id="example-3-11"><a id="example-3-11" name="example-3-11"></a><span class="w">    </span><span class="nb nb-Other">MEM_GetAddress_Init</span><span class="p">();</span><span class="w"> </span><span class="cm">/* depends on MEM_ReinitParser and MEM_InitLabels */</span>
+</span><span id="example-3-12"><a id="example-3-12" name="example-3-12"></a><span class="w">    </span><span class="cm">/* now the nicer operators are available */</span>
+</span><span id="example-3-13"><a id="example-3-13" name="example-3-13"></a>
+</span><span id="example-3-14"><a id="example-3-14" name="example-3-14"></a><span class="w">    </span><span class="nb nb-Other">MEM_InitStatArrs</span><span class="p">();</span><span class="w"> </span><span class="cm">/* depends on MEM_ReinitParser and MEM_InitLabels */</span>
+</span><span id="example-3-15"><a id="example-3-15" name="example-3-15"></a><span class="w">    </span><span class="n">ASMINT_Init</span><span class="p">();</span>
+</span><span id="example-3-16"><a id="example-3-16" name="example-3-16"></a>
+</span><span id="example-3-17"><a id="example-3-17" name="example-3-17"></a><span class="w">    </span><span class="nb nb-Other">MEMINT_ReplaceLoggingFunctions</span><span class="p">();</span>
+</span><span id="example-3-18"><a id="example-3-18" name="example-3-18"></a><span class="w">    </span><span class="nb nb-Other">MEMINT_ReplaceSlowFunctions</span><span class="p">();</span>
+</span><span id="example-3-19"><a id="example-3-19" name="example-3-19"></a><span class="w">    </span><span class="nb nb-Other">MEM_InitRepeat</span><span class="p">();</span>
+</span><span id="example-3-20"><a id="example-3-20" name="example-3-20"></a>
+</span><span id="example-3-21"><a id="example-3-21" name="example-3-21"></a><span class="w">    </span><span class="cm">/* takes a wail the first time it is called.</span>
+</span><span id="example-3-22"><a id="example-3-22" name="example-3-22"></a><span class="cm">        call it to avoid delay later */</span>
+</span><span id="example-3-23"><a id="example-3-23" name="example-3-23"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dump</span><span class="p">;</span><span class="w"> </span><span class="n">dump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Other">MEM_GetFuncIDByOffset</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span><span id="example-3-24"><a id="example-3-24" name="example-3-24"></a><span class="p">};</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><a href="../functions/parser/#mem_reinitparser">MEM_ReinitParser</a></li>
+<li><a href="../functions/jumps_loops/#initialization">MEM_InitLabels</a></li>
+<li><a href="../functions/objects/#mem_initglobalinst">MEM_InitGlobalInst</a></li>
+<li><a href="../functions/parser/#mem_getaddress_init">MEM_GetAddress_Init</a></li>
+<li><a href="../functions/parser/#mem_initstatarrs">MEM_InitStatArrs</a></li>
+<li><a href="../functions/asm/#asmint_init">ASMINT_Init</a></li>
+<li><a href="../functions/jumps_loops/#initialization_1">MEM_InitRepeat</a></li>
+</ul>
+</div>
+</div>
+</div>
 <h3 id="gothic-1">Gothic 1<a class="headerlink" href="#gothic-1" title="Permanent link"></a></h3>
 <p>To initialize Ikarus in Gothic 1 you must define your own <code>INIT_GLOBAL</code> function at the top of the <code>Startup.d</code> file. Then the <code>INIT_GLOBAL</code> should be called in every <code>INIT_&lt;location&gt;</code> function (e.g. <code>INIT_SURFACE</code>,<code>INIT_OLDCAMP</code> etc.). <code>INIT_SUB_&lt;location&gt;</code> functions can be skipped in that process.</p>
 <p>Then in your <code>INIT_GLOBAL</code> function you call <code>MEM_InitAll()</code> initialization function.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Startup.d</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1"> 1</a></span>
-<span class="normal"><a href="#example-2-2"> 2</a></span>
-<span class="normal"><a href="#example-2-3"> 3</a></span>
-<span class="normal"><a href="#example-2-4"> 4</a></span>
-<span class="normal"><a href="#example-2-5"> 5</a></span>
-<span class="normal"><a href="#example-2-6"> 6</a></span>
-<span class="normal"><a href="#example-2-7"> 7</a></span>
-<span class="normal"><a href="#example-2-8"> 8</a></span>
-<span class="normal"><a href="#example-2-9"> 9</a></span>
-<span class="normal"><a href="#example-2-10">10</a></span>
-<span class="normal"><a href="#example-2-11">11</a></span>
-<span class="normal"><a href="#example-2-12">12</a></span>
-<span class="normal"><a href="#example-2-13">13</a></span>
-<span class="normal"><a href="#example-2-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">FUNC</span><span class="w"> </span><span class="kt">VOID</span><span class="w"> </span><span class="nf">INIT_GLOBAL</span><span class="p">()</span>
-</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a><span class="p">{</span>
-</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a><span class="w">    </span><span class="c">// Init Ikarus</span>
-</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="w">    </span><span class="nb nb-Other">MEM_InitAll</span><span class="w"> </span><span class="p">();</span>
-</span><span id="example-2-5"><a id="example-2-5" name="example-2-5"></a><span class="p">};</span>
-</span><span id="example-2-6"><a id="example-2-6" name="example-2-6"></a>
-</span><span id="example-2-7"><a id="example-2-7" name="example-2-7"></a><span class="c">// [...]</span>
-</span><span id="example-2-8"><a id="example-2-8" name="example-2-8"></a>
-</span><span id="example-2-9"><a id="example-2-9" name="example-2-9"></a><span class="kd">func</span><span class="w"> </span><span class="kt">VOID</span><span class="w"> </span><span class="nf">INIT_SURFACE</span><span class="w"> </span><span class="p">()</span>
-</span><span id="example-2-10"><a id="example-2-10" name="example-2-10"></a><span class="p">{</span>
-</span><span id="example-2-11"><a id="example-2-11" name="example-2-11"></a><span class="w">    </span><span class="n">Init_Global</span><span class="p">();</span>
-</span><span id="example-2-12"><a id="example-2-12" name="example-2-12"></a><span class="w">    </span><span class="n">INIT_SUB_SURFACE</span><span class="w"> </span><span class="p">();</span>
-</span><span id="example-2-13"><a id="example-2-13" name="example-2-13"></a><span class="p">};</span>
-</span><span id="example-2-14"><a id="example-2-14" name="example-2-14"></a><span class="c">// [...]</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Startup.d</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1"> 1</a></span>
+<span class="normal"><a href="#example-4-2"> 2</a></span>
+<span class="normal"><a href="#example-4-3"> 3</a></span>
+<span class="normal"><a href="#example-4-4"> 4</a></span>
+<span class="normal"><a href="#example-4-5"> 5</a></span>
+<span class="normal"><a href="#example-4-6"> 6</a></span>
+<span class="normal"><a href="#example-4-7"> 7</a></span>
+<span class="normal"><a href="#example-4-8"> 8</a></span>
+<span class="normal"><a href="#example-4-9"> 9</a></span>
+<span class="normal"><a href="#example-4-10">10</a></span>
+<span class="normal"><a href="#example-4-11">11</a></span>
+<span class="normal"><a href="#example-4-12">12</a></span>
+<span class="normal"><a href="#example-4-13">13</a></span>
+<span class="normal"><a href="#example-4-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">FUNC</span><span class="w"> </span><span class="kt">VOID</span><span class="w"> </span><span class="nf">INIT_GLOBAL</span><span class="p">()</span>
+</span><span id="example-4-2"><a id="example-4-2" name="example-4-2"></a><span class="p">{</span>
+</span><span id="example-4-3"><a id="example-4-3" name="example-4-3"></a><span class="w">    </span><span class="c">// Init Ikarus</span>
+</span><span id="example-4-4"><a id="example-4-4" name="example-4-4"></a><span class="w">    </span><span class="nb nb-Other">MEM_InitAll</span><span class="w"> </span><span class="p">();</span>
+</span><span id="example-4-5"><a id="example-4-5" name="example-4-5"></a><span class="p">};</span>
+</span><span id="example-4-6"><a id="example-4-6" name="example-4-6"></a>
+</span><span id="example-4-7"><a id="example-4-7" name="example-4-7"></a><span class="c">// [...]</span>
+</span><span id="example-4-8"><a id="example-4-8" name="example-4-8"></a>
+</span><span id="example-4-9"><a id="example-4-9" name="example-4-9"></a><span class="kd">func</span><span class="w"> </span><span class="kt">VOID</span><span class="w"> </span><span class="nf">INIT_SURFACE</span><span class="w"> </span><span class="p">()</span>
+</span><span id="example-4-10"><a id="example-4-10" name="example-4-10"></a><span class="p">{</span>
+</span><span id="example-4-11"><a id="example-4-11" name="example-4-11"></a><span class="w">    </span><span class="n">Init_Global</span><span class="p">();</span>
+</span><span id="example-4-12"><a id="example-4-12" name="example-4-12"></a><span class="w">    </span><span class="n">INIT_SUB_SURFACE</span><span class="w"> </span><span class="p">();</span>
+</span><span id="example-4-13"><a id="example-4-13" name="example-4-13"></a><span class="p">};</span>
+</span><span id="example-4-14"><a id="example-4-14" name="example-4-14"></a><span class="c">// [...]</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="gothic-2">Gothic 2<a class="headerlink" href="#gothic-2" title="Permanent link"></a></h3>
 <p>Gothic 2 has its own <code>INIT_GLOBAL</code> function, so the initialization process is much simpler. All you have to do is to call <code>MEM_InitAll()</code> in <code>INIT_GLOBAL</code> function located in the <code>Startup.d</code> file.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Startup.d</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span>
-<span class="normal"><a href="#example-3-2">2</a></span>
-<span class="normal"><a href="#example-3-3">3</a></span>
-<span class="normal"><a href="#example-3-4">4</a></span>
-<span class="normal"><a href="#example-3-5">5</a></span>
-<span class="normal"><a href="#example-3-6">6</a></span>
-<span class="normal"><a href="#example-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">FUNC</span><span class="w"> </span><span class="kt">VOID</span><span class="w"> </span><span class="nf">INIT_GLOBAL</span><span class="p">()</span>
-</span><span id="example-3-2"><a id="example-3-2" name="example-3-2"></a><span class="p">{</span>
-</span><span id="example-3-3"><a id="example-3-3" name="example-3-3"></a><span class="w">    </span><span class="c">// Init Ikarus</span>
-</span><span id="example-3-4"><a id="example-3-4" name="example-3-4"></a><span class="w">    </span><span class="nb nb-Other">MEM_InitAll</span><span class="w"> </span><span class="p">();</span>
-</span><span id="example-3-5"><a id="example-3-5" name="example-3-5"></a><span class="p">};</span>
-</span><span id="example-3-6"><a id="example-3-6" name="example-3-6"></a>
-</span><span id="example-3-7"><a id="example-3-7" name="example-3-7"></a><span class="c">// [...]</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Startup.d</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span>
+<span class="normal"><a href="#example-5-2">2</a></span>
+<span class="normal"><a href="#example-5-3">3</a></span>
+<span class="normal"><a href="#example-5-4">4</a></span>
+<span class="normal"><a href="#example-5-5">5</a></span>
+<span class="normal"><a href="#example-5-6">6</a></span>
+<span class="normal"><a href="#example-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">FUNC</span><span class="w"> </span><span class="kt">VOID</span><span class="w"> </span><span class="nf">INIT_GLOBAL</span><span class="p">()</span>
+</span><span id="example-5-2"><a id="example-5-2" name="example-5-2"></a><span class="p">{</span>
+</span><span id="example-5-3"><a id="example-5-3" name="example-5-3"></a><span class="w">    </span><span class="c">// Init Ikarus</span>
+</span><span id="example-5-4"><a id="example-5-4" name="example-5-4"></a><span class="w">    </span><span class="nb nb-Other">MEM_InitAll</span><span class="w"> </span><span class="p">();</span>
+</span><span id="example-5-5"><a id="example-5-5" name="example-5-5"></a><span class="p">};</span>
+</span><span id="example-5-6"><a id="example-5-6" name="example-5-6"></a>
+</span><span id="example-5-7"><a id="example-5-7" name="example-5-7"></a><span class="c">// [...]</span>
 </span></code></pre></div></td></tr></table></div></div>
 
 

@@ -767,6 +767,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
@@ -817,6 +819,20 @@
     <li class="md-nav__item">
       <a href="../../../../classes/c_menu/" class="md-nav__link">
         C_MENU
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../classes/c_menuitem/" class="md-nav__link">
+        C_MENU_ITEM
       </a>
     </li>
   
@@ -3203,6 +3219,8 @@
         
           
         
+          
+        
       
       
         
@@ -3237,6 +3255,20 @@
 
             
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../externals/hlp/" class="md-nav__link">
+        HLP functions
+      </a>
+    </li>
+  
+
             
           
             
@@ -4699,43 +4731,26 @@
 <span class="normal"><a href="#example-2-13">13</a></span>
 <span class="normal"><a href="#example-2-14">14</a></span>
 <span class="normal"><a href="#example-2-15">15</a></span>
-<span class="normal"><a href="#example-2-16">16</a></span>
-<span class="normal"><a href="#example-2-17">17</a></span>
-<span class="normal"><a href="#example-2-18">18</a></span>
-<span class="normal"><a href="#example-2-19">19</a></span>
-<span class="normal"><a href="#example-2-20">20</a></span>
-<span class="normal"><a href="#example-2-21">21</a></span>
-<span class="normal"><a href="#example-2-22">22</a></span>
-<span class="normal"><a href="#example-2-23">23</a></span>
-<span class="normal"><a href="#example-2-24">24</a></span>
-<span class="normal"><a href="#example-2-25">25</a></span>
-<span class="normal"><a href="#example-2-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a>/* Receives a pointer. In case the pointer is non-zero,
-</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a> * the code at this position is executed and 0 is returned.
-</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a> * In case pointer is zero, the current mode is changed
-</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a> * into recyclable mode, this means that the call functions
-</span><span id="example-2-5"><a id="example-2-5" name="example-2-5"></a> * expect instructions to build a recyclable call. This
-</span><span id="example-2-6"><a id="example-2-6" name="example-2-6"></a> * mode will continue until CALL_End(). This allows code like this:
-</span><span id="example-2-7"><a id="example-2-7" name="example-2-7"></a> ```
-</span><span id="example-2-8"><a id="example-2-8" name="example-2-8"></a>
-</span><span id="example-2-9"><a id="example-2-9" name="example-2-9"></a>
-</span><span id="example-2-10"><a id="example-2-10" name="example-2-10"></a>```dae
-</span><span id="example-2-11"><a id="example-2-11" name="example-2-11"></a>func int Npc_GetPercFunc(var C_Npc npc, var int type) {
-</span><span id="example-2-12"><a id="example-2-12" name="example-2-12"></a>    const int oCNpc__GetPerceptionFunc = 7726080; //0x75E400
+<span class="normal"><a href="#example-2-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Npc_GetPercFunc</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">oCNpc__GetPerceptionFunc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7726080</span><span class="p">;</span><span class="w"> </span><span class="c">//0x75E400</span>
+</span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a>
+</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">npcPtr</span><span class="p">;</span><span class="w"> </span><span class="n">npcPtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_@</span><span class="p">(</span><span class="n">npc</span><span class="p">);</span>
+</span><span id="example-2-5"><a id="example-2-5" name="example-2-5"></a>
+</span><span id="example-2-6"><a id="example-2-6" name="example-2-6"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="example-2-7"><a id="example-2-7" name="example-2-7"></a><span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Other">CALL_Begin</span><span class="p">(</span><span class="n">call</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="example-2-8"><a id="example-2-8" name="example-2-8"></a><span class="w">        </span><span class="nb nb-Other">CALL_IntParam</span><span class="p">(</span><span class="n">_@</span><span class="p">(</span><span class="n">type</span><span class="p">));</span>
+</span><span id="example-2-9"><a id="example-2-9" name="example-2-9"></a><span class="w">        </span><span class="nb nb-Other">CALL_PutRetValTo</span><span class="p">(</span><span class="n">_@</span><span class="p">(</span><span class="n">funcID</span><span class="p">));</span>
+</span><span id="example-2-10"><a id="example-2-10" name="example-2-10"></a><span class="w">        </span><span class="nb nb-Other">CALL__thiscall</span><span class="p">(</span><span class="n">_@</span><span class="p">(</span><span class="n">npcPtr</span><span class="p">),</span><span class="w"> </span><span class="n">oCNpc__GetPerceptionFunc</span><span class="p">);</span>
+</span><span id="example-2-11"><a id="example-2-11" name="example-2-11"></a><span class="w">        </span><span class="n">call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Other">CALL_End</span><span class="p">();</span>
+</span><span id="example-2-12"><a id="example-2-12" name="example-2-12"></a><span class="w">    </span><span class="p">};</span>
 </span><span id="example-2-13"><a id="example-2-13" name="example-2-13"></a>
-</span><span id="example-2-14"><a id="example-2-14" name="example-2-14"></a>    var int npcPtr; npcPtr = _@(npc);
-</span><span id="example-2-15"><a id="example-2-15" name="example-2-15"></a>
-</span><span id="example-2-16"><a id="example-2-16" name="example-2-16"></a>    const int call = 0;
-</span><span id="example-2-17"><a id="example-2-17" name="example-2-17"></a>    if (CALL_Begin(call)) {
-</span><span id="example-2-18"><a id="example-2-18" name="example-2-18"></a>        CALL_IntParam(_@(type));
-</span><span id="example-2-19"><a id="example-2-19" name="example-2-19"></a>        CALL_PutRetValTo(_@(funcID));
-</span><span id="example-2-20"><a id="example-2-20" name="example-2-20"></a>        CALL__thiscall(_@(npcPtr), oCNpc__GetPerceptionFunc);
-</span><span id="example-2-21"><a id="example-2-21" name="example-2-21"></a>        call = CALL_End();
-</span><span id="example-2-22"><a id="example-2-22" name="example-2-22"></a>    };
-</span><span id="example-2-23"><a id="example-2-23" name="example-2-23"></a>
-</span><span id="example-2-24"><a id="example-2-24" name="example-2-24"></a>    var int funcID;
-</span><span id="example-2-25"><a id="example-2-25" name="example-2-25"></a>    return +funcID;
-</span><span id="example-2-26"><a id="example-2-26" name="example-2-26"></a>};
+</span><span id="example-2-14"><a id="example-2-14" name="example-2-14"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">funcID</span><span class="p">;</span>
+</span><span id="example-2-15"><a id="example-2-15" name="example-2-15"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="o">+</span><span class="n">funcID</span><span class="p">;</span>
+</span><span id="example-2-16"><a id="example-2-16" name="example-2-16"></a><span class="p">};</span>
 </span></code></pre></div></td></tr></table></div>
+<blockquote>
+<p>Receives a pointer. In case the pointer is non-zero, the code at this position is executed and 0 is returned. In case pointer is zero, the current mode is changed into recyclable mode, this means that the call functions expect instructions to build a recyclable call. This mode will continue until <code>CALL_End()</code>. This allows code like this:</p>
+</blockquote>
 <h2 id="start-and-end">Start and End<a class="headerlink" href="#start-and-end" title="Permanent link"></a></h2>
 <h3 id="call_open"><code>CALL_Open</code><a class="headerlink" href="#call_open" title="Permanent link"></a></h3>
 <p>Initializes a Recyclable call mode.
