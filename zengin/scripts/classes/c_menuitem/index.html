@@ -3129,8 +3129,6 @@
         
           
         
-          
-        
       
       
         
@@ -3165,20 +3163,6 @@
 
             
           
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../externals/hlp/" class="md-nav__link">
-        HLP functions
-      </a>
-    </li>
-  
-
             
           
             
@@ -4909,7 +4893,7 @@
 <span class="normal"><a href="#example-6-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">CONST</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="n">SEL_ACTION_UNDEF</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">// No action. Used when setting game parameters, calling functions...</span>
 </span><span id="example-6-2"><a id="example-6-2" name="example-6-2"></a><span class="kd">CONST</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="n">SEL_ACTION_BACK</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">// Return to the previous menu or game</span>
 </span><span id="example-6-3"><a id="example-6-3" name="example-6-3"></a><span class="kd">CONST</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="n">SEL_ACTION_STARTMENU</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c">// Open a menu</span>
-</span><span id="example-6-4"><a id="example-6-4" name="example-6-4"></a><span class="kd">CONST</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="n">SEL_ACTION_STARTITEM</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">// Special commanf for save slots</span>
+</span><span id="example-6-4"><a id="example-6-4" name="example-6-4"></a><span class="kd">CONST</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="n">SEL_ACTION_STARTITEM</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">// Special command for save slots</span>
 </span><span id="example-6-5"><a id="example-6-5" name="example-6-5"></a><span class="kd">CONST</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="n">SEL_ACTION_CLOSE</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c">// Close menu or game</span>
 </span><span id="example-6-6"><a id="example-6-6" name="example-6-6"></a><span class="kd">CONST</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="n">SEL_ACTION_CONCOMMANDS</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c">// Execute console command</span>
 </span><span id="example-6-7"><a id="example-6-7" name="example-6-7"></a><span class="kd">CONST</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="n">SEL_ACTION_PLAY_SOUND</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c">// Play sound from C_SFX instance</span>
@@ -5332,18 +5316,18 @@
 <span class="normal"><a href="#example-23-14">14</a></span>
 <span class="normal"><a href="#example-23-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-23-1"><a id="example-23-1" name="example-23-1"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_CHROMAKEYED</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </span><span id="example-23-2"><a id="example-23-2" name="example-23-2"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_TRANSPARENT</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-</span><span id="example-23-3"><a id="example-23-3" name="example-23-3"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_SELECTABLE</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">        </span><span class="c">// Elment can be selected</span>
+</span><span id="example-23-3"><a id="example-23-3" name="example-23-3"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_SELECTABLE</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">        </span><span class="c">// Element can be selected</span>
 </span><span id="example-23-4"><a id="example-23-4" name="example-23-4"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_MOVEABLE</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
 </span><span id="example-23-5"><a id="example-23-5" name="example-23-5"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_TXT_CENTER</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w">       </span><span class="c">// Align text to center</span>
-</span><span id="example-23-6"><a id="example-23-6" name="example-23-6"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_DISABLED</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span><span class="w">       </span><span class="c">// Inteactive item</span>
+</span><span id="example-23-6"><a id="example-23-6" name="example-23-6"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_DISABLED</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span><span class="w">       </span><span class="c">// Interactive item</span>
 </span><span id="example-23-7"><a id="example-23-7" name="example-23-7"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_FADE</span><span class="w">                   </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">;</span>
 </span><span id="example-23-8"><a id="example-23-8" name="example-23-8"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_EFFECTS_NEXT</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="mi">128</span><span class="p">;</span><span class="w">      </span><span class="c">// Flag for influencing an adjacent menu item</span>
 </span><span id="example-23-9"><a id="example-23-9" name="example-23-9"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_ONLY_OUT_GAME</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span><span class="p">;</span><span class="w">      </span><span class="c">// Element available only outside the game</span>
 </span><span id="example-23-10"><a id="example-23-10" name="example-23-10"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_ONLY_IN_GAME</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="mi">512</span><span class="p">;</span><span class="w">      </span><span class="c">// Element available only in-game</span>
 </span><span id="example-23-11"><a id="example-23-11" name="example-23-11"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_PERF_OPTION</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">  </span><span class="c">// Option responsible for performance</span>
-</span><span id="example-23-12"><a id="example-23-12" name="example-23-12"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_MULTILINE</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w">  </span><span class="c">// Multiline text element</span>
+</span><span id="example-23-12"><a id="example-23-12" name="example-23-12"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_MULTILINE</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w">  </span><span class="c">// Multi-line text element</span>
 </span><span id="example-23-13"><a id="example-23-13" name="example-23-13"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_NEEDS_APPLY</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w">  </span><span class="c">// Need to apply a settings. Used when changing screen resolution</span>
-</span><span id="example-23-14"><a id="example-23-14" name="example-23-14"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_NEEDS_RESTART</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span><span class="w">  </span><span class="c">// The game need to be resterted</span>
+</span><span id="example-23-14"><a id="example-23-14" name="example-23-14"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_NEEDS_RESTART</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span><span class="w">  </span><span class="c">// The game need to be restarted</span>
 </span><span id="example-23-15"><a id="example-23-15" name="example-23-15"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">IT_EXTENDED_MENU</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">14</span><span class="p">;</span><span class="w">  </span><span class="c">// Advanced menu flag</span>
 </span></code></pre></div></td></tr></table></div>
 <ul>
@@ -5365,8 +5349,8 @@
 <details class="example">
 <summary>Intended use</summary>
 <p>In early engine versions, the initial position of the element could be specified using the <code>startPosX</code> and <code>startPosY</code> properties. The element moved from these coordinates to the desired position.</p>
-<p>At the begining of the video below, it can be seen that the elements slides into the screen. That was probably done using this flag and mentionsed parameters.</p>
-<p><div class="video-container"><iframe src="https://www.youtube.com/watch?v=mfJag6fkfH8" style="width:100%;height:100%" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<p>At the beginning of the video below, it can be seen that the elements slides into the screen. That was probably done using this flag and mentioned parameters.</p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/mfJag6fkfH8" style="width:100%;height:100%" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
 </details>
 </li>
 <li>
