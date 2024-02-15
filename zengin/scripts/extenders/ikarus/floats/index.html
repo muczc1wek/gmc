@@ -8,7 +8,7 @@
         <link rel="prev" href="../constants/">
         <link rel="next" href="../functions/asm/">
       <link rel="icon" href="../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>Floats - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1933,6 +1933,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2206,7 +2215,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../genome/" class="md-nav__link ">
@@ -2215,7 +2224,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2277,7 +2286,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../contribute/" class="md-nav__link ">
@@ -2508,6 +2517,8 @@
 <p>Ikarus floats are saved as int but it doesn't mean that you can use arithmetic operators on them. All operations on floats must be done with functions listed below.</p>
 </div>
 <h3 id="mkf"><code>mkf</code><a class="headerlink" href="#mkf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>mkf</code></p>
 <p>(make float) Converts the input integer x to a float value.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">mkf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2518,7 +2529,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the float representation of the input integer x.</p>
+</div>
 <h3 id="truncf"><code>truncf</code><a class="headerlink" href="#truncf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>truncf</code></p>
 <p>(truncate float) Truncates the decimal part of the input float x.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">truncf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2529,7 +2543,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the integer part of the input float x by discarding the decimal part.</p>
+</div>
 <h3 id="roundf"><code>roundf</code><a class="headerlink" href="#roundf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>roundf</code></p>
 <p>(round float) Rounds the input float x to the nearest integer value.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">roundf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2540,7 +2557,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the nearest integer value to the input float x. If the decimal part is exactly halfway between two integers, the function rounds to the nearest even integer.</p>
+</div>
 <h3 id="addf"><code>addf</code><a class="headerlink" href="#addf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>addf</code></p>
 <p>(add floats) Adds two ikarus floats together.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">addf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2553,7 +2573,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the sum of the input floats <code>x</code> and <code>y</code>. (x + y)</p>
+</div>
 <h3 id="subf"><code>subf</code><a class="headerlink" href="#subf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>subf</code></p>
 <p>(subtract floats) Subtracts the second float from the first float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">subf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2566,7 +2589,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the difference between the first float <code>x</code> and the second float <code>y</code>. (x - y)</p>
+</div>
 <h3 id="negf"><code>negf</code><a class="headerlink" href="#negf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>negf</code></p>
 <p>(negate float) Negates the input float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">negf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2577,7 +2603,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the negation of the input float <code>x</code>.</p>
+</div>
 <h3 id="mulf"><code>mulf</code><a class="headerlink" href="#mulf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>mulf</code></p>
 <p>(multiply floats) Multiplies two ikarus floats.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">mulf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2590,7 +2619,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the product of multiplying the input floats x and y. (x * y)</p>
+</div>
 <h3 id="divf"><code>divf</code><a class="headerlink" href="#divf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>divf</code></p>
 <p>(divide floats) Divides two ikarus floats.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">divf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2603,7 +2635,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the quotient of dividing the input float x by y. (x / y)</p>
+</div>
 <h3 id="invf"><code>invf</code><a class="headerlink" href="#invf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>invf</code></p>
 <p>(inverse float) Computes the inverse of the input float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">invf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2614,7 +2649,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the inverse of the <code>x</code>, calculated as <code>1/x</code>.</p>
+</div>
 <h3 id="gf"><code>gf</code><a class="headerlink" href="#gf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>gf</code></p>
 <p>(greater) Checks if the first float is greater than the second float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">gf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2627,7 +2665,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns <code>TRUE</code> if <code>x</code> is greater than <code>y</code>, <code>FALSE</code> is returned otherwise.</p>
+</div>
 <h3 id="gef"><code>gef</code><a class="headerlink" href="#gef" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>gef</code></p>
 <p>(greater or equal) Checks if the first float is greater than or equal to the second float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">gef</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2640,7 +2681,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns <code>TRUE</code> if <code>x</code> is greater than or equal to <code>y</code>, <code>FALSE</code> is returned otherwise.</p>
+</div>
 <h3 id="lf"><code>lf</code><a class="headerlink" href="#lf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>lf</code></p>
 <p>(lower) Checks if the first float is less than the second float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">lf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2653,7 +2697,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns <code>TRUE</code> if <code>x</code> is less than <code>y</code>, <code>FALSE</code> is returned otherwise.</p>
+</div>
 <h3 id="lef"><code>lef</code><a class="headerlink" href="#lef" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>lef</code></p>
 <p>(lower or equal) Checks if the first float is less than or equal to the second float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-13-1"><a id="example-13-1" name="example-13-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">lef</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2666,29 +2713,64 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns <code>TRUE</code> if <code>x</code> is less than or equal to <code>y</code>, <code>FALSE</code> is returned otherwise.</p>
+</div>
 <h3 id="sqrf"><code>sqrf</code><a class="headerlink" href="#sqrf" title="Permanent link"></a></h3>
-<p>(square float) Calculates the square of the float.
-</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-14-1"><a id="example-14-1" name="example-14-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sqrf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>
-<ul>
-<li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span></code><br>
-    The input float</li>
-</ul>
-<p><strong>Return value</strong></p>
-<p>The function returns the square of the input float <code>x</code>, computed as <code>x * x</code>.</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! function "`sqrf`"
+(square float) Calculates the square of the float.
+```dae
+func int sqrf(var int x)
+```
+**Parameters**
+
+- `#!dae var int x`  
+    The input float
+
+**Return value**
+
+The function returns the square of the input float `x`, computed as `x * x`.
+</code></pre></div></td></tr></table></div>
 <h3 id="sqrtf"><code>sqrtf</code><a class="headerlink" href="#sqrtf" title="Permanent link"></a></h3>
-<p>(square root float) Calculates the square root of the float.
-</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-15-1"><a id="example-15-1" name="example-15-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sqrtf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>
-<ul>
-<li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span></code><br>
-    The input float</li>
-</ul>
-<p><strong>Return value</strong></p>
-<p>The function returns the square root of the input float <code>x</code>.</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! function "`sqrtf`"
+(square root float) Calculates the square root of the float.
+```dae
+func int sqrtf(var int x)
+```
+**Parameters**
+
+- `#!dae var int x`  
+    The input float
+
+**Return value**
+
+The function returns the square root of the input float `x`.
+</code></pre></div></td></tr></table></div>
 <h3 id="sqrtf_approx"><code>sqrtf_approx</code><a class="headerlink" href="#sqrtf_approx" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>sqrtf_approx</code></p>
 <p>Calculates the approximate square root of a float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-16-1"><a id="example-16-1" name="example-16-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sqrtf_approx</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2699,7 +2781,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the approximate square root of the input float as an ikarus float.</p>
+</div>
 <h3 id="absf"><code>absf</code><a class="headerlink" href="#absf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>absf</code></p>
 <p>(absolute value) Computes the absolute value of a float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-17-1"><a id="example-17-1" name="example-17-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">absf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2710,7 +2795,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the absolute value of the input float <code>x</code>, which is the value without the negative sign (if present).</p>
+</div>
 <h3 id="fracf"><code>fracf</code><a class="headerlink" href="#fracf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>fracf</code></p>
 <p>(fraction) Computes the fraction of two integers p and q.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-18-1"><a id="example-18-1" name="example-18-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">fracf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">q</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2723,7 +2811,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the fraction of <code>p</code> divided by <code>q</code> as an ikarus float.</p>
+</div>
 <h3 id="castfromintf"><code>castFromIntf</code><a class="headerlink" href="#castfromintf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>castFromIntf</code></p>
 <p>Converts an ikarus float to a Daedalus float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-19-1"><a id="example-19-1" name="example-19-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nf">castFromIntf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2734,7 +2825,10 @@
 </ul>
 <p><strong>Return Value</strong></p>
 <p>The function returns the value <code>f</code> as a Daedalus float.</p>
+</div>
 <h3 id="casttointf"><code>castToIntf</code><a class="headerlink" href="#casttointf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>castToIntf</code></p>
 <p>Converts a Daedalus float to an ikarus float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-20-1"><a id="example-20-1" name="example-20-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">castToIntf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2745,7 +2839,10 @@
 </ul>
 <p><strong>Return Value</strong></p>
 <p>The function returns the value <code>f</code> as an ikarus float.</p>
+</div>
 <h3 id="tostringf"><code>toStringf</code><a class="headerlink" href="#tostringf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>toStringf</code></p>
 <p>Converts a float value to its string representation.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-21-1"><a id="example-21-1" name="example-21-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">toStringf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2756,7 +2853,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns a string representation of the input float value.</p>
+</div>
 <h3 id="printf"><code>printf</code><a class="headerlink" href="#printf" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>printf</code></p>
 <p>(print float) Prints the float on screen using <code>Print()</code>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-22-1"><a id="example-22-1" name="example-22-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2765,6 +2865,7 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span></code><br>
     The printed float</li>
 </ul>
+</div>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"></a></h2>
 <h3 id="simple-operations">Simple operations<a class="headerlink" href="#simple-operations" title="Permanent link"></a></h3>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-23-1"> 1</a></span>

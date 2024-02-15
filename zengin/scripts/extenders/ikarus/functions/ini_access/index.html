@@ -8,7 +8,7 @@
         <link rel="prev" href="../debug/">
         <link rel="next" href="../jumps_loops/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>Ini File Access - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1889,6 +1889,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2162,7 +2171,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2171,7 +2180,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2233,7 +2242,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2416,13 +2425,18 @@
 <p><a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L4293"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"></path></svg></span> Ikarus.d on GitHub</a></p>
 <h2 id="read-functions">Read functions<a class="headerlink" href="#read-functions" title="Permanent link"></a></h2>
 <h3 id="mem_getcommandline"><code>MEM_GetCommandLine</code><a class="headerlink" href="#mem_getcommandline" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetCommandLine</code></p>
 <p>Returns the contents of the command line passed to Gothic.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">MEM_GetCommandLine</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns contents of the command line passed to Gothic. This could, for example, look like this:</p>
 <p><code>"-TIME:7:35 -GAME:TEST_IKARUS.INI -ZREPARSE -ZWINDOW -ZLOG:5,S -DEVMODE -ZMAXFRAMERATE:30"</code></p>
+</div>
 <h3 id="mem_getgothopt"><code>MEM_GetGothOpt</code><a class="headerlink" href="#mem_getgothopt" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetGothOpt</code></p>
 <p>Searches the <code>Gothic.ini</code> for an option.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">MEM_GetGothOpt</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">sectionname</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">optionname</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2435,7 +2449,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns an option value as a string or empty string if option was not found.</p>
+</div>
 <h3 id="mem_getmodopt"><code>MEM_GetModOpt</code><a class="headerlink" href="#mem_getmodopt" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetModOpt</code></p>
 <p>Searches the loaded mod ini file for option.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_GetModOpt</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">sectionname</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">optionname</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2448,7 +2465,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns an option value as a string or empty string if option was not found.</p>
+</div>
 <h3 id="mem_gothoptsectionexists"><code>MEM_GothOptSectionExists</code><a class="headerlink" href="#mem_gothoptsectionexists" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GothOptSectionExists</code></p>
 <p>Checks whether a section exists in <code>Gothic.ini</code>
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GothOptSectionExists</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">sectionname</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2459,7 +2479,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns <code>TRUE</code> if section exists <code>FALSE</code> is returned otherwise.</p>
+</div>
 <h3 id="mem_modoptsectionexists"><code>MEM_ModOptSectionExists</code><a class="headerlink" href="#mem_modoptsectionexists" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ModOptSectionExists</code></p>
 <p>Checks whether a section exists in loaded mod ini file
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_ModOptSectionExists</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">sectionname</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2470,7 +2493,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns <code>TRUE</code> if section exists <code>FALSE</code> is returned otherwise.</p>
+</div>
 <h3 id="mem_gothoptexists"><code>MEM_GothOptExists</code><a class="headerlink" href="#mem_gothoptexists" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GothOptExists</code></p>
 <p>Checks whether an option exists in <code>Gothic.ini</code>
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GothOptExists</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">sectionname</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">optionname</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2483,7 +2509,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns <code>TRUE</code> if option in a section exist <code>FALSE</code> is returned otherwise.</p>
+</div>
 <h3 id="mem_modoptexists"><code>MEM_ModOptExists</code><a class="headerlink" href="#mem_modoptexists" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ModOptExists</code></p>
 <p>Checks whether an option exists in loaded mod ini file
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_ModOptExists</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">sectionname</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">optionname</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2496,12 +2525,15 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns <code>TRUE</code> if option in a section exist <code>FALSE</code> is returned otherwise.</p>
+</div>
 <h2 id="write-functions">Write functions<a class="headerlink" href="#write-functions" title="Permanent link"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Mod configuration is never saved to disk, therefore no separate functions exist for writing to it.</p>
 </div>
 <h3 id="mem_setgothopt"><code>MEM_SetGothOpt</code><a class="headerlink" href="#mem_setgothopt" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_SetGothOpt</code></p>
 <p>The option <code>option</code> in the section <code>section</code> is set to the <code>value</code>. If the section and/or option does not exist, it will be created.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_SetGothOpt</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">section</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">option</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2514,7 +2546,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">value</span></code><br>
     Value to set the option to</li>
 </ul>
+</div>
 <h3 id="mem_applygothopt"><code>MEM_ApplyGothOpt</code><a class="headerlink" href="#mem_applygothopt" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ApplyGothOpt</code></p>
 <p>Applies the changes and saves the ini to disk
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ApplyGothOpt</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2522,9 +2557,12 @@
 <p class="admonition-title">Tip</p>
 <p>If you introduce new options, it is best to follow certain practices. It is a good practice to name your options in a clear manner and place them in a section named the same as your mod. Do not place your mod options into the <code>[GAME]</code> or <code>[PERFORMANCE]</code> sections.</p>
 </div>
+</div>
 <h2 id="key-functions">Key functions<a class="headerlink" href="#key-functions" title="Permanent link"></a></h2>
 <p>The <code>Gothic.ini</code> contains the assignment of physical keys (e.g. "W") to logical keys (e.g. "keyUp").</p>
 <h3 id="mem_getkey"><code>MEM_GetKey</code><a class="headerlink" href="#mem_getkey" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetKey</code></p>
 <p>Returns the primary key assigned to logical key.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetKey</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2535,7 +2573,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns key assigned to logical key</p>
+</div>
 <h3 id="mem_getsecondarykey"><code>MEM_GetSecondaryKey</code><a class="headerlink" href="#mem_getsecondarykey" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetSecondaryKey</code></p>
 <p>Returns a secondary key assigned to logical key.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetSecondaryKey</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2546,7 +2587,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns key assigned to logical key</p>
+</div>
 <h3 id="mem_setkeys"><code>MEM_SetKeys</code><a class="headerlink" href="#mem_setkeys" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_SetKeys</code></p>
 <p>Sets keyboard keys of the logical key.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_SetKeys</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">primary</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">secondary</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2559,7 +2603,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">secondary</span></code><br>
     Secondary key to be assigned, can be taken from <a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d">Ikarus_Const_G1</a> / <a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d">Ikarus_Const_G2</a> file.</li>
 </ul>
+</div>
 <h3 id="mem_setkey"><code>MEM_SetKey</code><a class="headerlink" href="#mem_setkey" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_SetKey</code></p>
 <p>Sets the primary keyboard key of the logical key.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-13-1"><a id="example-13-1" name="example-13-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_SetKey</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2570,7 +2617,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span></code><br>
     Primary key to be assigned, can be taken from <a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d">Ikarus_Const_G1</a> / <a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d">Ikarus_Const_G2</a> file.</li>
 </ul>
+</div>
 <h3 id="mem_setsecondarykey"><code>MEM_SetSecondaryKey</code><a class="headerlink" href="#mem_setsecondarykey" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_SetSecondaryKey</code></p>
 <p>Sets the secondary keyboard key of the logical key.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-14-1"><a id="example-14-1" name="example-14-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_SetSecondaryKey</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2580,7 +2630,8 @@
     Name of the logical key</li>
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span></code><br>
     Secondary key to be assigned, can be taken from <a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G1.d">Ikarus_Const_G1</a> / <a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus_Const_G2.d">Ikarus_Const_G2</a> file.</li>
-</ul></div>
+</ul>
+</div></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>

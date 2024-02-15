@@ -8,7 +8,7 @@
         <link rel="prev" href="../">
         <link rel="next" href="../mdl/">
       <link rel="icon" href="../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>Log functions - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1793,6 +1793,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2066,7 +2075,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../genome/" class="md-nav__link ">
@@ -2075,7 +2084,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2137,7 +2146,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../contribute/" class="md-nav__link ">
@@ -2213,6 +2222,8 @@
 <div><h1 id="log-external-functions">Log external functions<a class="headerlink" href="#log-external-functions" title="Permanent link"></a></h1>
 <p>Log externals are used to manipulate players log and to track quest progress.</p>
 <h2 id="log_createtopic"><code>Log_CreateTopic</code><a class="headerlink" href="#log_createtopic" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Log_CreateTopic</code></p>
 <p>Creates a new log topic with the name <code>topicName</code> under the section <code>logSection</code></p>
 <p></p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Log_CreateTopic</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topicName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">logSection</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2224,7 +2235,10 @@
     Indicates in which section to create the topic in.<br>
     Takes constants <code>LOG_MISSION</code>, <code>LOG_NOTE</code> as values</li>
 </ul>
+</div>
 <h2 id="log_addentry"><code>Log_AddEntry</code><a class="headerlink" href="#log_addentry" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Log_AddEntry</code></p>
 <p>Adds an entry to a log topic with the name <code>topicName</code> under the section <code>logSection</code></p>
 <p></p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Log_AddEntry</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topicName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">entry</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2257,7 +2271,10 @@
 </span><span id="example-2-9"><a id="example-2-9" name="example-2-9"></a><span class="p">};</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
+</div>
 <h2 id="log_settopicstatus"><code>Log_SetTopicStatus</code><a class="headerlink" href="#log_settopicstatus" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Log_SetTopicStatus</code></p>
 <p>Changes the status of the topic with the name <code>topicName</code></p>
 <p></p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Log_SetTopicStatus</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topicName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2269,6 +2286,7 @@
     The status to be set.<br>
     Takes constants <code>LOG_RUNNING</code>, <code>LOG_SUCCESS</code>, <code>LOG_FAILED</code>, <code>LOG_OBSOLETE</code> as values</li>
 </ul>
+</div>
 <h2 id="zparserextender">zParserExtender<a class="headerlink" href="#zparserextender" title="Permanent link"></a></h2>
 <p>The log external function selection is missing functions to retrieve the status of a log entry. There are only functions to read the log status (as discussed on <a href="https://ataulien.github.io/Inside-Gothic/QuestLog/">Inside Gothic</a>). As a result of this the original scriptwriters had to define additional variable to track the log status in the scripts, even though the value is being already tracked by the engine. 
 zParserExtender fixes this by introducing new <a href="../../extenders/zparserextender/externals/log/">log external functions</a>.</p>

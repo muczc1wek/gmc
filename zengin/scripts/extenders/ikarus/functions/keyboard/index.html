@@ -8,7 +8,7 @@
         <link rel="prev" href="../jumps_loops/">
         <link rel="next" href="../mem_access/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>Keyboard - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1803,6 +1803,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2076,7 +2085,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2085,7 +2094,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2147,7 +2156,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2252,6 +2261,8 @@
 <p>Different players use different keys for specific actions! However, it is possible to get key assigned to the action from Gothic.ini. See <a href="../ini_access/#key-functions">Ini access</a>.</p>
 </div>
 <h3 id="mem_keypressed"><code>MEM_KeyPressed</code><a class="headerlink" href="#mem_keypressed" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_KeyPressed</code></p>
 <p>Checks if the key is hold right at the moment of function call.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_KeyPressed</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2262,7 +2273,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns <code>TRUE</code> if the key is hold, <code>FALSE</code> is returned otherwise.</p>
+</div>
 <h3 id="mem_keystate"><code>MEM_KeyState</code><a class="headerlink" href="#mem_keystate" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_KeyState</code></p>
 <p>Returns the state of the <code>key</code>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_KeyState</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2282,7 +2296,10 @@
 </ul>
 <p><code>KEY_PRESSED</code> or <code>KEY_RELEASED</code> will be returned if the state of the key has changed since the last query.</p>
 <p><code>KEY_UP</code> or <code>KEY_HOLD</code> are returned if the state has not changed.</p>
+</div>
 <h3 id="mem_insertkeyevent"><code>MEM_InsertKeyEvent</code><a class="headerlink" href="#mem_insertkeyevent" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_InsertKeyEvent</code></p>
 <p>Makes the game think that the key was pressed.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_InsertKeyEvent</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2290,7 +2307,8 @@
 <ul>
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span></code><br>
     Key to be "pressed"</li>
-</ul></div>
+</ul>
+</div></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>

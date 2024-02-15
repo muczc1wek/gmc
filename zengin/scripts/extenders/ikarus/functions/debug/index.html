@@ -8,7 +8,7 @@
         <link rel="prev" href="../call/">
         <link rel="next" href="../ini_access/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>Debug - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1851,6 +1851,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2124,7 +2133,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2133,7 +2142,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2195,7 +2204,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2340,6 +2349,8 @@
 <p><a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L135-L327"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"></path></svg></span> Ikarus.d on GitHub</a></p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link"></a></h2>
 <h3 id="mem_checkversion"><code>MEM_CheckVersion</code><a class="headerlink" href="#mem_checkversion" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_CheckVersion</code></p>
 <p>Checks if the version of Ikarus is the specified version or newer.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_CheckVersion</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">major</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">minor</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2354,7 +2365,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns <code>TRUE</code> if the version of Ikarus is the specified version or newer, <code>FALSE</code> is returned otherwise.</p>
+</div>
 <h3 id="mem_setshowdebug"><code>MEM_SetShowDebug</code><a class="headerlink" href="#mem_setshowdebug" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_SetShowDebug</code></p>
 <p>Sets the variable that is also toggled by the <code>toggle debug</code> command. As a result, messages outputted by <code>PrintDebug</code> are directed to the <a href="../../../../../tools/zSpy/">zSpy</a>
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_SetShowDebug</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">on</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2363,7 +2377,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">on</span></code> <br>
     Specifies whether to turn on (<code>TRUE</code>) or off (<code>FALSE</code>) debug information.</li>
 </ul>
+</div>
 <h3 id="mem_sendtospy"><code>MEM_SendToSpy</code><a class="headerlink" href="#mem_sendtospy" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_SendToSpy</code></p>
 <p>Sends a message to the debugging console.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_SendToSpy</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">errorType</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2374,7 +2391,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">text</span></code><br>
     The message to be sent.</li>
 </ul>
+</div>
 <h3 id="mem_errorbox"><code>MEM_ErrorBox</code><a class="headerlink" href="#mem_errorbox" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ErrorBox</code></p>
 <p>Displays an error message in a message box.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ErrorBox</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2383,11 +2403,17 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">text</span></code><br>
     The error message to be displayed.</li>
 </ul>
+</div>
 <h3 id="mem_printstacktrace"><code>MEM_PrintStackTrace</code><a class="headerlink" href="#mem_printstacktrace" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_PrintStackTrace</code></p>
 <p>Prints the stack trace.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_PrintStackTrace</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="mem_error"><code>MEM_Error</code><a class="headerlink" href="#mem_error" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_Error</code></p>
 <p>Handles a fatal error, displaying the error message and printing the stack trace.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Error</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">error</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2396,7 +2422,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">error</span></code><br>
     The error message.</li>
 </ul>
+</div>
 <h3 id="mem_warn"><code>MEM_Warn</code><a class="headerlink" href="#mem_warn" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_Warn</code></p>
 <p>Handles a warning, displaying the warning message and printing the stack trace.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Warn</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">warn</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2405,7 +2434,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">warn</span></code><br>
     The warning message.</li>
 </ul>
+</div>
 <h3 id="mem_info"><code>MEM_Info</code><a class="headerlink" href="#mem_info" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_Info</code></p>
 <p>Handles an information message, printing it if enabled in the settings.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Info</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">info</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2414,7 +2446,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">info</span></code><br>
     The information message.</li>
 </ul>
+</div>
 <h3 id="mem_assertfail"><code>MEM_AssertFail</code><a class="headerlink" href="#mem_assertfail" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_AssertFail</code></p>
 <p>Handles an assertion failure, reporting the error message as a fatal error.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_AssertFail</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">assertFailText</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2423,7 +2458,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">assertFailText</span></code><br>
     The assertion failure message.</li>
 </ul>
+</div>
 <h3 id="mem_debug"><code>MEM_Debug</code><a class="headerlink" href="#mem_debug" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_Debug</code></p>
 <p>Freely configurable debug channel. See how to setup it in the <a href="../../constants/#mem_debug">Constants</a> article.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Debug</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2432,7 +2470,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">message</span></code><br>
     The debug message.</li>
 </ul>
+</div>
 <h3 id="memint_switchg1g2"><code>MEMINT_SwitchG1G2</code><a class="headerlink" href="#memint_switchg1g2" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEMINT_SwitchG1G2</code></p>
 <p>Switches between values based on the game version. Used mainly to change addresses in multi-platform hooks or function calls.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEMINT_SwitchG1G2</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g1Val</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g2Val</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2444,7 +2485,8 @@
     The value to return if the game version is Gothic 2.</li>
 </ul>
 <p><strong>Return value</strong></p>
-<p>The function returns an appropriate value based on the game version.</p></div>
+<p>The function returns an appropriate value based on the game version.</p>
+</div></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>

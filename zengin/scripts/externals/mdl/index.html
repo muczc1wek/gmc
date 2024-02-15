@@ -8,7 +8,7 @@
         <link rel="prev" href="../log/">
         <link rel="next" href="../../">
       <link rel="icon" href="../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>MDL functions - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1835,6 +1835,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2108,7 +2117,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../genome/" class="md-nav__link ">
@@ -2117,7 +2126,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2179,7 +2188,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../contribute/" class="md-nav__link ">
@@ -2297,6 +2306,8 @@
 <div><h1 id="mdl-functions">MDL functions<a class="headerlink" href="#mdl-functions" title="Permanent link"></a></h1>
 <p>Functions to tweak animation and other model related settings.</p>
 <h2 id="mdl_applyoverlaymds"><code>Mdl_ApplyOverlayMDS</code><a class="headerlink" href="#mdl_applyoverlaymds" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Mdl_ApplyOverlayMDS</code></p>
 <p>Apply an animation overlay with <code>overlay_name</code> for the specified <code>npc</code>
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_ApplyOverlayMDS</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2307,7 +2318,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span></code> <br>
     Name of the animation overlay</li>
 </ul>
+</div>
 <h2 id="mdl_applyoverlaymdstimed"><code>Mdl_ApplyOverlayMDSTimed</code><a class="headerlink" href="#mdl_applyoverlaymdstimed" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Mdl_ApplyOverlayMDSTimed</code></p>
 <p>Apply an animation overlay with <code>overlay_name</code> for the specified <code>npc</code> for <code>duration</code> milliseconds
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_ApplyOverlayMDSTimed</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2320,7 +2334,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">duration</span></code> <br>
     Overlay duration in milliseconds</li>
 </ul>
+</div>
 <h2 id="mdl_removeoverlaymds"><code>Mdl_RemoveOverlayMDS</code><a class="headerlink" href="#mdl_removeoverlaymds" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Mdl_RemoveOverlayMDS</code></p>
 <p>Remove the animation overlay <code>overlay_name</code> from specified <code>npc</code> 
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_RemoveOverlayMDS</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2331,7 +2348,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">overlay_name</span></code> <br>
     Name of the animation overlay</li>
 </ul>
+</div>
 <h2 id="mdl_applyrandomani"><code>Mdl_ApplyRandomAni</code><a class="headerlink" href="#mdl_applyrandomani" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Mdl_ApplyRandomAni</code></p>
 <p>Assign a random animation <code>ani2</code> to random animation list of animation <code>ani1</code>
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_ApplyRandomAni</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani1</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani2</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2344,7 +2364,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani2</span></code> <br>
     Animation to be assigned</li>
 </ul>
+</div>
 <h2 id="mdl_applyrandomanifreq"><code>Mdl_ApplyRandomAniFreq</code><a class="headerlink" href="#mdl_applyrandomanifreq" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Mdl_ApplyRandomAniFreq</code></p>
 <p>Sets the random animation frequency for animation <code>ani1</code>
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_ApplyRandomAniFreq</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ani1</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">frequency</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2368,7 +2391,10 @@
 </span><span id="example-5-4"><a id="example-5-4" name="example-5-4"></a><span class="nb nb-Externals">Mdl_ApplyRandomAniFreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="s">"S_WOUNDED"</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
 </span></code></pre></div></td></tr></table></div>
 </details>
+</div>
 <h2 id="mdl_setmodelfatness"><code>Mdl_SetModelFatness</code><a class="headerlink" href="#mdl_setmodelfatness" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Mdl_SetModelFatness</code></p>
 <p>Set the procedural model fatness
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_SetModelFatness</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">fatness</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2379,7 +2405,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">fatness</span></code> <br>
     Fatness value</li>
 </ul>
+</div>
 <h2 id="mdl_setmodelscale"><code>Mdl_SetModelScale</code><a class="headerlink" href="#mdl_setmodelscale" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Mdl_SetModelScale</code></p>
 <p>Set model scale per axis
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_SetModelScale</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">c_npc</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2394,7 +2423,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span></code> <br>
     Scale along the z-axis, 1.0 = 100%, 1.5 = 150%, 0.9 = 90% </li>
 </ul>
+</div>
 <h2 id="mdl_setvisualbody"><code>Mdl_SetVisualBody</code><a class="headerlink" href="#mdl_setvisualbody" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Mdl_SetVisualBody</code></p>
 <p>Sets up the visual of an NPC
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span>
 <span class="normal"><a href="#example-8-2">2</a></span>
@@ -2431,7 +2463,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">armor_inst</span></code> <br>
     Armor (<a href="../../classes/c_item/"><code>C_ITEM</code></a> instance) to be equipped or <code>-1</code> for no armor </li>
 </ul>
+</div>
 <h2 id="mdl_setvisual"><code>Mdl_SetVisual</code><a class="headerlink" href="#mdl_setvisual" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Mdl_SetVisual</code></p>
 <p>Set the animation set (also dictates models you can set using the <code>Mdl_SetVisualBody</code>)
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Mdl_SetVisual</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">animation_set</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2442,7 +2477,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">animation_set</span></code> <br>
     Name of the MDS file that contains the animation set</li>
 </ul>
+</div>
 <h2 id="mdl_startfaceani"><code>Mdl_StartFaceAni</code><a class="headerlink" href="#mdl_startfaceani" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Mdl_StartFaceAni</code></p>
 <p>Start a face animation
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span>
 <span class="normal"><a href="#example-10-2">2</a></span>
@@ -2463,7 +2501,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">holdtime</span></code> <br>
     How long should the animation be held for <code>-2</code> will use the MMS defined value, '-1' will make the hold time infinite</li>
 </ul>
+</div>
 <h2 id="mdl_applyrandomfaceani"><code>Mdl_ApplyRandomFaceAni</code><a class="headerlink" href="#mdl_applyrandomfaceani" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Mdl_ApplyRandomFaceAni</code></p>
 <p>Start a random face animation
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span>
 <span class="normal"><a href="#example-11-2">2</a></span>
@@ -2496,6 +2537,7 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">probmin</span></code> <br>
     Probability (0.0 to 1.0) to choose the lower boundary time</li>
 </ul>
+</div>
 <h2 id="externals-with-docu-comments">Externals with docu comments<a class="headerlink" href="#externals-with-docu-comments" title="Permanent link"></a></h2>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1"> 1</a></span>
 <span class="normal"><a href="#example-12-2"> 2</a></span>

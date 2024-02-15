@@ -8,7 +8,7 @@
         <link rel="prev" href="../ini_access/">
         <link rel="next" href="../keyboard/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>Jumps and Loops - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1881,6 +1881,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2154,7 +2163,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2163,7 +2172,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2225,7 +2234,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2586,6 +2595,8 @@ D --&gt; |Jump| B;</code></pre>
 <h2 id="label-and-goto">Label and Goto<a class="headerlink" href="#label-and-goto" title="Permanent link"></a></h2>
 <p>Besides the normal <a href="#jumps">jumps</a> Ikarus implements <code>MEM_Label</code> and <code>MEM_Goto</code> functions. They work similar to the stack manipulation with <code>var int label</code> but the interface is much more user-friendly and defining new variables is not needed.</p>
 <h3 id="mem_label"><code>MEM_Label</code><a class="headerlink" href="#mem_label" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_Label</code></p>
 <p>Function that works like a <code>label = MEM_StackPos.position;</code>. You could jump to it with <a href="#mem_goto"><code>MEM_Goto</code></a>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Label</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">lbl</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2594,7 +2605,10 @@ D --&gt; |Jump| B;</code></pre>
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">lbl</span></code> <br>
     Number of the label, used for nested loop or multiple loops within one function</li>
 </ul>
+</div>
 <h3 id="mem_goto"><code>MEM_Goto</code><a class="headerlink" href="#mem_goto" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_Goto</code></p>
 <p>Function that works like a <code>MEM_StackPos.position = label;</code>. Executes a jump to a <a href="#mem_label"><code>MEM_Label</code></a> with specified number.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Goto</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">lbl</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2603,6 +2617,7 @@ D --&gt; |Jump| B;</code></pre>
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">lbl</span></code> <br>
     Number of the label, the function will jump to</li>
 </ul>
+</div>
 <h3 id="usage_1">Usage<a class="headerlink" href="#usage_1" title="Permanent link"></a></h3>
 <p>Usage of Label and Goto is probably self-explanatory, since it is same as in the regular Ikarus Jump. But before using it reading the <a href="#notes-and-warnings">Notes and warnings</a> of the Jumps is recommended.</p>
 <p><strong>Label-Goto loop flowchart</strong>

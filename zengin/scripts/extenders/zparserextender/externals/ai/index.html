@@ -8,7 +8,7 @@
         <link rel="prev" href="../../daedalus_injection/other/">
         <link rel="next" href="../cast/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>AI functions - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1847,6 +1847,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2120,7 +2129,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2129,7 +2138,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2191,7 +2200,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2320,7 +2329,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>    </a>
 <div><h1 id="ai---functions-for-working-with-ai">AI - functions for working with AI<a class="headerlink" href="#ai---functions-for-working-with-ai" title="Permanent link"></a></h1>
 <p>Functions to work with the new <a href="../../classes/c_trigger/"><code>C_Trigger</code></a> class and NPC's AI queue.</p>
-<h2 id="ai_callscript">AI_CallScript<a class="headerlink" href="#ai_callscript" title="Permanent link"></a></h2>
+<h2 id="ai_callscript"><code>AI_CallScript</code><a class="headerlink" href="#ai_callscript" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>AI_CallScript</code></p>
 <p>Adds a <code>funcName</code> function call to the AI queue</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
 <span class="normal"><a href="#example-0-2">2</a></span>
@@ -2333,7 +2344,10 @@
 <li><code>slf</code> - will be inserted into global <code>self</code> instance</li>
 <li><code>oth</code> - will be inserted into global <code>other</code> instance</li>
 </ul>
-<h2 id="ai_starttriggerscript">AI_startTriggerScript<a class="headerlink" href="#ai_starttriggerscript" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_starttriggerscript"><code>AI_startTriggerScript</code><a class="headerlink" href="#ai_starttriggerscript" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>AI_startTriggerScript</code></p>
 <p>Creates a trigger script that calls function <code>funcName</code> once every <code>interval</code> in milliseconds</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">AI_startTriggerScript</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">funcName</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">interval</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2342,7 +2356,10 @@
 <li><code>interval</code> - call period in milliseconds</li>
 <li><code>return</code> - created C_Trigger instance</li>
 </ul>
-<h2 id="ai_starttriggerscriptex">AI_startTriggerScriptEx<a class="headerlink" href="#ai_starttriggerscriptex" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_starttriggerscriptex"><code>AI_startTriggerScriptEx</code><a class="headerlink" href="#ai_starttriggerscriptex" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>AI_startTriggerScriptEx</code></p>
 <p>Extended version call - Creates a trigger script, that calls function <code>funcName</code> once every <code>interval</code> in milliseconds also updates the <code>self</code>, <code>other</code> and <code>victim</code> global instances based on <code>slf</code>, <code>oth</code> and <code>vct</code> parameters respectively</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
 <span class="normal"><a href="#example-2-2">2</a></span>
@@ -2362,7 +2379,10 @@
 <li><code>vct</code> - will be inserted into global <code>victim</code> instance</li>
 <li><code>return</code> - created C_Trigger instance</li>
 </ul>
-<h2 id="ai_gettriggerbyid">AI_GetTriggerByID<a class="headerlink" href="#ai_gettriggerbyid" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_gettriggerbyid"><code>AI_GetTriggerByID</code><a class="headerlink" href="#ai_gettriggerbyid" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>AI_GetTriggerByID</code></p>
 <p>Returns a C_Trigger instance from the array of active triggers by the array index <code>ID</code></p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">AI_GetTriggerByID</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ID</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2370,14 +2390,20 @@
 <li><code>ID</code> - array id</li>
 <li><code>return</code> - active C_Trigger instance</li>
 </ul>
-<h2 id="ai_gettriggersnum">AI_GetTriggersNum<a class="headerlink" href="#ai_gettriggersnum" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_gettriggersnum"><code>AI_GetTriggersNum</code><a class="headerlink" href="#ai_gettriggersnum" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>AI_GetTriggersNum</code></p>
 <p>Returns the number of active C_Trigger scripts</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">AI_GetTriggersNum</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>return</code> - number of active C_Trigger scripts</li>
 </ul>
-<h2 id="ai_gettriggernpc">AI_GetTriggerNPC<a class="headerlink" href="#ai_gettriggernpc" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_gettriggernpc"><code>AI_GetTriggerNPC</code><a class="headerlink" href="#ai_gettriggernpc" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>AI_GetTriggerNPC</code></p>
 <p>Returns the npc associated with the C_Trigger script based on the ID
 selfID   = 0;
 otherID  = 1;
@@ -2389,7 +2415,10 @@ victimID = 2;</p>
 <li><code>npcID</code> - NPC id</li>
 <li><code>return</code> - active C_Trigger instance</li>
 </ul>
-<h2 id="ai_gettriggerfunc">AI_GetTriggerFunc<a class="headerlink" href="#ai_gettriggerfunc" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_gettriggerfunc"><code>AI_GetTriggerFunc</code><a class="headerlink" href="#ai_gettriggerfunc" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>AI_GetTriggerFunc</code></p>
 <p>Returns the function associated with the specified C_Trigger</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="nf">AI_GetTriggerFunc</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">trigger</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2397,7 +2426,10 @@ victimID = 2;</p>
 <li><code>trigger</code> - C_Trigger script</li>
 <li><code>return</code> - trigger function</li>
 </ul>
-<h2 id="ai_gettriggerfuncname">AI_GetTriggerFuncName<a class="headerlink" href="#ai_gettriggerfuncname" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_gettriggerfuncname"><code>AI_GetTriggerFuncName</code><a class="headerlink" href="#ai_gettriggerfuncname" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>AI_GetTriggerFuncName</code></p>
 <p>Returns the function name of a function associated with the specified C_Trigger</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">AI_GetTriggerFuncName</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">trigger</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2405,7 +2437,10 @@ victimID = 2;</p>
 <li><code>trigger</code> - C_Trigger script</li>
 <li><code>return</code> - active C_Trigger instance</li>
 </ul>
-<h2 id="ai_getnexttriggerbyfunc">Ai_GetNextTriggerByFunc<a class="headerlink" href="#ai_getnexttriggerbyfunc" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_getnexttriggerbyfunc"><code>Ai_GetNextTriggerByFunc</code><a class="headerlink" href="#ai_getnexttriggerbyfunc" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Ai_GetNextTriggerByFunc</code></p>
 <p>Returns the next trigger in the active trigger array based on the trigger function,
 starting on the <code>startTrigger</code> trigger</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">Ai_GetNextTriggerByFunc</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">startTrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">function</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
@@ -2415,7 +2450,10 @@ starting on the <code>startTrigger</code> trigger</p>
 <li><code>function</code> - function to be matched</li>
 <li><code>return</code> - C_Trigger instance</li>
 </ul>
-<h2 id="ai_getnexttriggerbyfuncname">Ai_GetNextTriggerByFuncName<a class="headerlink" href="#ai_getnexttriggerbyfuncname" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_getnexttriggerbyfuncname"><code>Ai_GetNextTriggerByFuncName</code><a class="headerlink" href="#ai_getnexttriggerbyfuncname" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Ai_GetNextTriggerByFuncName</code></p>
 <p>Returns the next trigger in the active trigger array based on the trigger function
 name, starting on the <code>startTrigger</code> trigger</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">Ai_GetNextTriggerByFuncName</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">startTrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">functionName</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
@@ -2425,7 +2463,10 @@ name, starting on the <code>startTrigger</code> trigger</p>
 <li><code>functionName</code> - name of a function to be matched</li>
 <li><code>return</code> - C_Trigger instance</li>
 </ul>
-<h2 id="ai_getnexttriggerbyself">Ai_GetNextTriggerBySelf<a class="headerlink" href="#ai_getnexttriggerbyself" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_getnexttriggerbyself"><code>Ai_GetNextTriggerBySelf</code><a class="headerlink" href="#ai_getnexttriggerbyself" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Ai_GetNextTriggerBySelf</code></p>
 <p>Returns the next trigger in the active trigger array based on the <code>self</code> trigger
 parameter, starting on the <code>startTrigger</code> instance set in the trigger</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">Ai_GetNextTriggerBySelf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">startTrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
@@ -2435,7 +2476,10 @@ parameter, starting on the <code>startTrigger</code> instance set in the trigger
 <li><code>self</code> - C_NPC instance</li>
 <li><code>return</code> - C_Trigger instance</li>
 </ul>
-<h2 id="ai_getnexttriggerbyother">Ai_GetNextTriggerByOther<a class="headerlink" href="#ai_getnexttriggerbyother" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_getnexttriggerbyother"><code>Ai_GetNextTriggerByOther</code><a class="headerlink" href="#ai_getnexttriggerbyother" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Ai_GetNextTriggerByOther</code></p>
 <p>Returns the next trigger in the active trigger array based on the <code>other</code> trigger
 parameter, starting on the <code>startTrigger</code> instance set in the trigger</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">Ai_GetNextTriggerByOther</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">startTrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
@@ -2445,7 +2489,10 @@ parameter, starting on the <code>startTrigger</code> instance set in the trigger
 <li><code>other</code> - C_NPC instance</li>
 <li><code>return</code> - C_Trigger instance</li>
 </ul>
-<h2 id="ai_getnexttriggerbyvictim">Ai_GetNextTriggerByVictim<a class="headerlink" href="#ai_getnexttriggerbyvictim" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_getnexttriggerbyvictim"><code>Ai_GetNextTriggerByVictim</code><a class="headerlink" href="#ai_getnexttriggerbyvictim" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Ai_GetNextTriggerByVictim</code></p>
 <p>Returns the next trigger in the active trigger array based on the <code>victim</code> trigger
 parameter, starting on the <code>startTrigger</code> instance set in the trigger</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="nf">Ai_GetNextTriggerByVictim</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_Trigger</span><span class="w"> </span><span class="n">startTrigger</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">victim</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
@@ -2455,7 +2502,10 @@ parameter, starting on the <code>startTrigger</code> instance set in the trigger
 <li><code>victim</code> - C_NPC instance</li>
 <li><code>return</code> - C_Trigger instance</li>
 </ul>
-<h2 id="ai_getnexttriggerbynpcs">Ai_GetNextTriggerByNPCs<a class="headerlink" href="#ai_getnexttriggerbynpcs" title="Permanent link"></a></h2>
+</div>
+<h2 id="ai_getnexttriggerbynpcs"><code>Ai_GetNextTriggerByNPCs</code><a class="headerlink" href="#ai_getnexttriggerbynpcs" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Ai_GetNextTriggerByNPCs</code></p>
 <p>Returns the next trigger in the active trigger array based on all the NPCs
 set in the trigger script <code>self</code>, <code>other</code> and <code>victim</code>,
 starting on the <code>startTrigger</code> instance set in the trigger</p>
@@ -2473,7 +2523,8 @@ starting on the <code>startTrigger</code> instance set in the trigger</p>
 <li><code>other</code> - other C_NPC instance</li>
 <li><code>victim</code> - victim C_NPC instance</li>
 <li><code>return</code> - C_Trigger instance</li>
-</ul></div>
+</ul>
+</div></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>

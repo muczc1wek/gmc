@@ -8,7 +8,7 @@
         <link rel="prev" href="../par/">
         <link rel="next" href="../vob/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>String functions - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1809,6 +1809,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2082,7 +2091,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2091,7 +2100,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2153,7 +2162,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2244,7 +2253,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>    </a>
 <div><h1 id="string-functions">String functions<a class="headerlink" href="#string-functions" title="Permanent link"></a></h1>
 <p>Functions to manipulate and format strings.</p>
-<h2 id="str_format">Str_Format<a class="headerlink" href="#str_format" title="Permanent link"></a></h2>
+<h2 id="str_format"><code>Str_Format</code><a class="headerlink" href="#str_format" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Str_Format</code></p>
 <p>Returns formatted string using format specifiers</p>
 <p>Format specifiers:</p>
 <ul>
@@ -2260,14 +2271,17 @@
 <ul>
 <li><code>return</code> - formatted string</li>
 </ul>
-<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"></a></h3>
+</div>
+<h3 id="examples"><code>Examples</code><a class="headerlink" href="#examples" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>Examples</code></p>
 <p>Very powerful function, can be used to streamline strings used in the scripts as well as optimize them for translations.</p>
-<p>Define constants containing the string with format specifiers.
-</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
+<p>Define constants containing the string with format specifiers.</p>
+<div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span>
 <span class="normal"><a href="#example-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">MENU_SAVE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Slot %i - press ENTER to save in this slot."</span><span class="p">;</span>
 </span><span id="example-1-2"><a id="example-1-2" name="example-1-2"></a><span class="kd">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">MENU_LOAD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Slot %i - press ENTER to load saved game."</span><span class="p">;</span>
 </span></code></pre></div></td></tr></table></div>
-Then define two format functions as such:
+<p>Then define two format functions as such:</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
 <span class="normal"><a href="#example-2-2">2</a></span>
 <span class="normal"><a href="#example-2-3">3</a></span>
@@ -2289,7 +2303,10 @@ Then define two format functions as such:
 <p>Since the whole translatable string is saved in one constant, it is very easy for translators to change the word order. This was not possible to do without code change to the <code>ConcatStrings</code> function calls within the scripts.<br>
 With this simple change, translators have to translate only 2 strings instead of 30 (15 + 15 slots) and only 2 strings are compiled into the compiled <code>Menu.dat</code> file.</p>
 </div>
-<h2 id="str_getlocalizedstring">Str_GetLocalizedString<a class="headerlink" href="#str_getlocalizedstring" title="Permanent link"></a></h2>
+</div>
+<h2 id="str_getlocalizedstring"><code>Str_GetLocalizedString</code><a class="headerlink" href="#str_getlocalizedstring" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Str_GetLocalizedString</code></p>
 <p>Returns a string in the current language, otherwise in English.
 Arguments MUST be encoded in UTF-8! The result string will be converted to appropriate ANSI string.</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span>
@@ -2307,7 +2324,10 @@ Arguments MUST be encoded in UTF-8! The result string will be converted to appro
 <li><code>polish</code> -  Polish string</li>
 <li><code>return</code> - string in the current language</li>
 </ul>
-<h2 id="str_getlocalizedstringex">Str_GetLocalizedStringEx<a class="headerlink" href="#str_getlocalizedstringex" title="Permanent link"></a></h2>
+</div>
+<h2 id="str_getlocalizedstringex"><code>Str_GetLocalizedStringEx</code><a class="headerlink" href="#str_getlocalizedstringex" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Str_GetLocalizedStringEx</code></p>
 <p>Returns a string in the current language, otherwise in English.
 Offers additional languages</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span>
@@ -2337,7 +2357,10 @@ Offers additional languages</p>
 <li><code>spanish</code> -  Spanish string</li>
 <li><code>return</code> - string in the current language</li>
 </ul>
-<h2 id="str_utf8_to_ansi">Str_UTF8_to_ANSI<a class="headerlink" href="#str_utf8_to_ansi" title="Permanent link"></a></h2>
+</div>
+<h2 id="str_utf8_to_ansi"><code>Str_UTF8_to_ANSI</code><a class="headerlink" href="#str_utf8_to_ansi" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Str_UTF8_to_ANSI</code></p>
 <p>Converts UTF-8 string into an ANSI string with codePage</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Str_UTF8_to_ANSI</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">utf8</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">codePage</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2346,21 +2369,28 @@ Offers additional languages</p>
 <li><code>codePage</code> - codePage id, can be obtained from Str_GetCurrentCP</li>
 <li><code>return</code> -</li>
 </ul>
-<h2 id="str_getcurrentcp">Str_GetCurrentCP<a class="headerlink" href="#str_getcurrentcp" title="Permanent link"></a></h2>
+</div>
+<h2 id="str_getcurrentcp"><code>Str_GetCurrentCP</code><a class="headerlink" href="#str_getcurrentcp" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Str_GetCurrentCP</code></p>
 <p>Return the code page corresponding to the current language set in the Union System
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Str_GetCurrentCP</span><span class="p">()</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>return</code> - code page corresponding to the current language</li>
 </ul>
-<h2 id="str_getlength">Str_GetLength<a class="headerlink" href="#str_getlength" title="Permanent link"></a></h2>
+</div>
+<h2 id="str_getlength"><code>Str_GetLength</code><a class="headerlink" href="#str_getlength" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Str_GetLength</code></p>
 <p>Returns the length of a string</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Str_GetLength</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
 <ul>
 <li><code>str</code> - string to be measured</li>
 <li><code>return</code> - length of the string</li>
-</ul></div>
+</ul>
+</div></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>

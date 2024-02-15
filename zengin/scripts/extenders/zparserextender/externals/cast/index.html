@@ -8,7 +8,7 @@
         <link rel="prev" href="../ai/">
         <link rel="next" href="../events_vars/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>CAST functions - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1829,6 +1829,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2102,7 +2111,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2111,7 +2120,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2173,7 +2182,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2284,7 +2293,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>    </a>
 <div><h1 id="cast---data-type-conversion-functions">CAST - data type conversion functions<a class="headerlink" href="#cast---data-type-conversion-functions" title="Permanent link"></a></h1>
 <p>External functions for data type conversion and pointer casting.</p>
-<h2 id="cast_pointertoinstance">Cast_PointerToInstance<a class="headerlink" href="#cast_pointertoinstance" title="Permanent link"></a></h2>
+<h2 id="cast_pointertoinstance"><code>Cast_PointerToInstance</code><a class="headerlink" href="#cast_pointertoinstance" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Cast_PointerToInstance</code></p>
 <p>Converts memory address (pointer) to an instance</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="nf">Cast_PointerToInstance</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2292,7 +2303,10 @@
 <li><code>address</code> - object pointer</li>
 <li><code>return</code> - instance of the object</li>
 </ul>
-<h2 id="cast_instancetopointer">Cast_InstanceToPointer<a class="headerlink" href="#cast_instancetopointer" title="Permanent link"></a></h2>
+</div>
+<h2 id="cast_instancetopointer"><code>Cast_InstanceToPointer</code><a class="headerlink" href="#cast_instancetopointer" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Cast_InstanceToPointer</code></p>
 <p>Converts instance to a memory address (pointer)</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceToPointer</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2300,7 +2314,10 @@
 <li><code>object</code> - object instance</li>
 <li><code>return</code> - memory address (pointer) of the object</li>
 </ul>
-<h2 id="cast_pointertonpc">Cast_PointerToNpc<a class="headerlink" href="#cast_pointertonpc" title="Permanent link"></a></h2>
+</div>
+<h2 id="cast_pointertonpc"><code>Cast_PointerToNpc</code><a class="headerlink" href="#cast_pointertonpc" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Cast_PointerToNpc</code></p>
 <p>Casts memory address (pointer) to an NPC</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="nf">Cast_PointerToNpc</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2308,7 +2325,10 @@
 <li><code>address</code> - npc pointer</li>
 <li><code>return</code> - NPC instance</li>
 </ul>
-<h2 id="cast_pointertoitem">Cast_PointerToItem<a class="headerlink" href="#cast_pointertoitem" title="Permanent link"></a></h2>
+</div>
+<h2 id="cast_pointertoitem"><code>Cast_PointerToItem</code><a class="headerlink" href="#cast_pointertoitem" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Cast_PointerToItem</code></p>
 <p>Casts memory address (pointer) to an Item</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">C_ITEM</span><span class="w"> </span><span class="nf">Cast_PointerToItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2316,7 +2336,10 @@
 <li><code>address</code> - item pointer</li>
 <li><code>return</code> - Item instance</li>
 </ul>
-<h2 id="cast_instanceisnpc">Cast_InstanceIsNpc<a class="headerlink" href="#cast_instanceisnpc" title="Permanent link"></a></h2>
+</div>
+<h2 id="cast_instanceisnpc"><code>Cast_InstanceIsNpc</code><a class="headerlink" href="#cast_instanceisnpc" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Cast_InstanceIsNpc</code></p>
 <p>Checks whether object is an NPC</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsNpc</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2324,7 +2347,10 @@
 <li><code>object</code> - object to check</li>
 <li><code>return</code> - <code>TRUE</code> or <code>FALSE</code></li>
 </ul>
-<h2 id="cast_instanceisitem">Cast_InstanceIsItem<a class="headerlink" href="#cast_instanceisitem" title="Permanent link"></a></h2>
+</div>
+<h2 id="cast_instanceisitem"><code>Cast_InstanceIsItem</code><a class="headerlink" href="#cast_instanceisitem" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Cast_InstanceIsItem</code></p>
 <p>Checks whether object is an Item</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsItem</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2332,7 +2358,10 @@
 <li><code>object</code> - object to check</li>
 <li><code>return</code> - <code>TRUE</code> or <code>FALSE</code></li>
 </ul>
-<h2 id="cast_instanceismob">Cast_InstanceIsMob<a class="headerlink" href="#cast_instanceismob" title="Permanent link"></a></h2>
+</div>
+<h2 id="cast_instanceismob"><code>Cast_InstanceIsMob</code><a class="headerlink" href="#cast_instanceismob" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Cast_InstanceIsMob</code></p>
 <p>Checks whether object is an MOB</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_InstanceIsMob</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2340,7 +2369,10 @@
 <li><code>object</code> - object to check</li>
 <li><code>return</code> - <code>TRUE</code> or <code>FALSE</code></li>
 </ul>
-<h2 id="cast_getinstanceindex">Cast_GetInstanceIndex<a class="headerlink" href="#cast_getinstanceindex" title="Permanent link"></a></h2>
+</div>
+<h2 id="cast_getinstanceindex"><code>Cast_GetInstanceIndex</code><a class="headerlink" href="#cast_getinstanceindex" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Cast_GetInstanceIndex</code></p>
 <p>Returns symbolID of the object, returns -1 when not found</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetInstanceIndex</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2348,7 +2380,10 @@
 <li><code>object</code> - instance of an object</li>
 <li><code>return</code> - symbol table index, -1 when not found</li>
 </ul>
-<h2 id="cast_getclassid">Cast_GetClassID<a class="headerlink" href="#cast_getclassid" title="Permanent link"></a></h2>
+</div>
+<h2 id="cast_getclassid"><code>Cast_GetClassID</code><a class="headerlink" href="#cast_getclassid" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Cast_GetClassID</code></p>
 <p>Returns the class identifier of a class by its name</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">className</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2356,7 +2391,10 @@
 <li><code>className</code> - name of the class</li>
 <li><code>return</code> - class identifier</li>
 </ul>
-<h2 id="cast_getvobclassid">Cast_GetVobClassID<a class="headerlink" href="#cast_getvobclassid" title="Permanent link"></a></h2>
+</div>
+<h2 id="cast_getvobclassid"><code>Cast_GetVobClassID</code><a class="headerlink" href="#cast_getvobclassid" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Cast_GetVobClassID</code></p>
 <p>Returns class identifier of the zCObject vob class</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_GetVobClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2364,7 +2402,10 @@
 <li><code>object</code> - object instance</li>
 <li><code>return</code> - class zCObject identifier</li>
 </ul>
-<h2 id="cast_checkvobclassid">Cast_CheckVobClassID<a class="headerlink" href="#cast_checkvobclassid" title="Permanent link"></a></h2>
+</div>
+<h2 id="cast_checkvobclassid"><code>Cast_CheckVobClassID</code><a class="headerlink" href="#cast_checkvobclassid" title="Permanent link"></a></h2>
+<div class="admonition function">
+<p class="admonition-title"><code>Cast_CheckVobClassID</code></p>
 <p>Checks if the classId class is the parent class of the object</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Cast_CheckVobClassID</span><span class="p">(</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">classId</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">instance</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2372,7 +2413,8 @@
 <li><code>classId</code> - class identifier, from Cast_GetClassID function</li>
 <li><code>object</code> - object instance</li>
 <li><code>return</code> - class zCObject identifier</li>
-</ul></div>
+</ul>
+</div></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>

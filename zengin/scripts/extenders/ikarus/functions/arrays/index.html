@@ -8,7 +8,7 @@
         <link rel="prev" href="../menu_access/">
         <link rel="next" href="../call/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>Arrays (zCArray) - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1887,6 +1887,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2160,7 +2169,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2169,7 +2178,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2231,7 +2240,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2412,12 +2421,17 @@
 <p><a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L2017-L2338"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"></path></svg></span> Ikarus.d on GitHub</a></p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link"></a></h2>
 <h3 id="mem_arraycreate"><code>MEM_ArrayCreate</code><a class="headerlink" href="#mem_arraycreate" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayCreate</code></p>
 <p>Creates an empty <code>zCArray</code> (allocates memory) and returns a pointer to it.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_ArrayCreate</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns a pointer to the created <code>zCArray</code>.</p>
+</div>
 <h3 id="mem_arrayfree"><code>MEM_ArrayFree</code><a class="headerlink" href="#mem_arrayfree" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayFree</code></p>
 <p>Frees the memory allocated for a <code>zCArray</code> and its data.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ArrayFree</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2426,7 +2440,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span></code> <br>
     Pointer to the <code>zCArray</code> to be freed</li>
 </ul>
+</div>
 <h3 id="mem_arrayclear"><code>MEM_ArrayClear</code><a class="headerlink" href="#mem_arrayclear" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayClear</code></p>
 <p>Clears the data of a <code>zCArray</code>, freeing the memory used by its elements. The array becomes empty.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ArrayClear</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2435,7 +2452,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span></code> <br>
     Pointer to the <code>zCArray</code> to be cleared</li>
 </ul>
+</div>
 <h3 id="mem_arraysize"><code>MEM_ArraySize</code><a class="headerlink" href="#mem_arraysize" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArraySize</code></p>
 <p>Returns the size (number of elements) of an array.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_ArraySize</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2446,7 +2466,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns a number of a <code>zCArray</code> elements.</p>
+</div>
 <h3 id="mem_arraywrite"><code>MEM_ArrayWrite</code><a class="headerlink" href="#mem_arraywrite" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayWrite</code></p>
 <p>Writes a value at a specific position in the <code>zCArray</code>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ArrayWrite</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2459,7 +2482,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span></code> <br>
     Value to be written</li>
 </ul>
+</div>
 <h3 id="mem_arrayread"><code>MEM_ArrayRead</code><a class="headerlink" href="#mem_arrayread" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayRead</code></p>
 <p>Reads the value at a specific position in the <code>zCArray</code>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_ArrayRead</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2472,7 +2498,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the value at a specific position in the <code>zCArray</code>.</p>
+</div>
 <h3 id="mem_arrayinsert"><code>MEM_ArrayInsert</code><a class="headerlink" href="#mem_arrayinsert" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayInsert</code></p>
 <p>Appends a value to the end of the <code>zCArray</code>. The array is automatically resized if it is too small.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ArrayInsert</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2483,7 +2512,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span></code> <br>
     Value to be inserted</li>
 </ul>
+</div>
 <h3 id="mem_arraypush"><code>MEM_ArrayPush</code><a class="headerlink" href="#mem_arraypush" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayPush</code></p>
 <p>Alias for <a href="#mem_arrayinsert"><code>MEM_ArrayInsert</code></a>, inserts a value at the end of the <code>zCArray</code>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ArrayPush</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2494,7 +2526,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span></code> <br>
     Value to be inserted</li>
 </ul>
+</div>
 <h3 id="mem_arraypop"><code>MEM_ArrayPop</code><a class="headerlink" href="#mem_arraypop" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayPop</code></p>
 <p>Removes and returns the last element from the <code>zCArray</code>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_ArrayPop</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2505,7 +2540,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the element removed from the end of an array.</p>
+</div>
 <h3 id="mem_arraytop"><code>MEM_ArrayTop</code><a class="headerlink" href="#mem_arraytop" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayTop</code></p>
 <p>Returns the last element of the <code>zCArray</code> without removing it.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_ArrayTop</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2516,7 +2554,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the last element of an array.</p>
+</div>
 <h3 id="mem_arrayindexof"><code>MEM_ArrayIndexOf</code><a class="headerlink" href="#mem_arrayindexof" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayIndexOf</code></p>
 <p>Searches the <code>zCArray</code> for the first occurrence of a <code>value</code> and returns its index.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_ArrayIndexOf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2529,7 +2570,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the index of a first occurrence of a <code>value</code>. If not found <code>-1</code> is returned.</p>
+</div>
 <h3 id="mem_arrayremoveindex"><code>MEM_ArrayRemoveIndex</code><a class="headerlink" href="#mem_arrayremoveindex" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayRemoveIndex</code></p>
 <p>Removes the element at a specific index from the <code>zCArray</code>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ArrayRemoveIndex</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2540,7 +2584,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span></code> <br>
     Index of the element to be removed</li>
 </ul>
+</div>
 <h3 id="mem_arrayremovevalue"><code>MEM_ArrayRemoveValue</code><a class="headerlink" href="#mem_arrayremovevalue" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayRemoveValue</code></p>
 <p>Removes all occurrences of a value from the <code>zCArray</code>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-13-1"><a id="example-13-1" name="example-13-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ArrayRemoveValue</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2551,7 +2598,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span></code> <br>
     Value to be removed</li>
 </ul>
+</div>
 <h3 id="mem_arrayremovevalueonce"><code>MEM_ArrayRemoveValueOnce</code><a class="headerlink" href="#mem_arrayremovevalueonce" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayRemoveValueOnce</code></p>
 <p>Removes the first occurrence of a value from the <code>zCArray</code>. If value is not found, a warning is issued.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-14-1"><a id="example-14-1" name="example-14-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ArrayRemoveValueOnce</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2562,7 +2612,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span></code> <br>
     Value to be removed</li>
 </ul>
+</div>
 <h3 id="mem_arraysort"><code>MEM_ArraySort</code><a class="headerlink" href="#mem_arraysort" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArraySort</code></p>
 <p>Sorts the elements of the <code>zCArray</code> in ascending order.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-15-1"><a id="example-15-1" name="example-15-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ArraySort</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2571,7 +2624,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span></code> <br>
     Pointer to the <code>zCArray</code></li>
 </ul>
+</div>
 <h3 id="mem_arrayunique"><code>MEM_ArrayUnique</code><a class="headerlink" href="#mem_arrayunique" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayUnique</code></p>
 <p>Removes duplicate elements from the <code>zCArray</code>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-16-1"><a id="example-16-1" name="example-16-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ArrayUnique</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2580,7 +2636,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span></code> <br>
     Pointer to the <code>zCArray</code></li>
 </ul>
+</div>
 <h3 id="mem_arraytostring"><code>MEM_ArrayToString</code><a class="headerlink" href="#mem_arraytostring" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ArrayToString</code></p>
 <p>Converts the <code>zCArray</code> to a string representation.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-17-1"><a id="example-17-1" name="example-17-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">MEM_ArrayToString</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zCArray_ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2590,7 +2649,8 @@
     Pointer to the <code>zCArray</code></li>
 </ul>
 <p><strong>Return value</strong></p>
-<p>The function returns a string representation of a given array.</p></div>
+<p>The function returns a string representation of a given array.</p>
+</div></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>

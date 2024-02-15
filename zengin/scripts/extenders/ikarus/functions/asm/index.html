@@ -8,7 +8,7 @@
         <link rel="prev" href="../../floats/">
         <link rel="next" href="../menu_access/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>ASM - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1885,6 +1885,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2158,7 +2167,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2167,7 +2176,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2229,7 +2238,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2422,6 +2431,8 @@
 </ul>
 <p>The internal stack is implemented using an array, and the following functions are provided:</p>
 <h3 id="asmint_push"><code>ASMINT_Push</code><a class="headerlink" href="#asmint_push" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASMINT_Push</code></p>
 <p>Pushes the specified <code>data</code> onto the internal stack.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ASMINT_Push</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2430,15 +2441,21 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span></code> <br>
     Data pushed onto internal stack</li>
 </ul>
+</div>
 <h3 id="asmint_pop"><code>ASMINT_Pop</code><a class="headerlink" href="#asmint_pop" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASMINT_Pop</code></p>
 <p>Pops and returns the topmost data from the internal stack.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">ASMINT_Pop</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns a data popped form the internal stack.</p>
+</div>
 <h2 id="functions-core">Functions (Core)<a class="headerlink" href="#functions-core" title="Permanent link"></a></h2>
 <p>The ASM core functionality provides a framework for assembling machine code instructions and executing them. The following functions are included:</p>
 <h3 id="asmint_init"><code>ASMINT_Init</code><a class="headerlink" href="#asmint_init" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASMINT_Init</code></p>
 <p>Initializes the ASM system by creating an internal stack and finding function addresses.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ASMINT_Init</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2446,7 +2463,10 @@
 <p class="admonition-title">Tip</p>
 <p>It's worth noting that <code>ASMINT_Ini</code> is also invoked by the <code>MEM_InitAll</code> function.</p>
 </div>
+</div>
 <h3 id="asm_open"><code>ASM_Open</code><a class="headerlink" href="#asm_open" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASM_Open</code></p>
 <p>Changes the size of the memory allocated at the start o the dictation</p>
 <p>The memory in which the machine code is stored is allocated at the beginning of the dictation. If this function isn't called a default size (see <strong>Constant</strong> below) is allocated by <a href="#asm"><code>ASM</code></a> or <a href="#ams_here"><code>ASM_Here</code></a> function. The 256 bytes is often sufficient for simple applications, but if more memory is required, this function must be called at the beginning of the dictation.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ASM_Open</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">space</span><span class="p">)</span>
@@ -2460,7 +2480,10 @@
 <p><code>ASM_StandardStreamLength</code> constant defines the default space available for an Assembler sequence (in bytes).</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ASM_StandardStreamLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span><span class="p">;</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="asm"><code>ASM</code><a class="headerlink" href="#asm" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASM</code></p>
 <p>Writes machine code instructions to the stream.</p>
 <p>Using this function it is possible to dictate machine code little by little. The <code>data</code> bytes of the <code>length</code> (maximum 4!) are appended to the previously dictated part. This creates a program piece by piece that can be executed by the processor.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ASM</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
@@ -2472,10 +2495,13 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span></code> <br>
     Length of the <code>data</code> (max 4 bytes)</li>
 </ul>
+</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">ASM_1</label><label for="__tabbed_1_2">ASM_2</label><label for="__tabbed_1_3">ASM_3</label><label for="__tabbed_1_4">ASM_4</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <h3 id="asm_1"><code>ASM_1</code><a class="headerlink" href="#asm_1" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASM_1</code></p>
 <p><a href="#asm"><code>ASM</code></a> with <code>length</code> parameter hardcoded to 1. Writes one byte machine code instructions to the stream.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ASM_1</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div></td></tr></table></div>
@@ -2485,8 +2511,11 @@
     One byte machine code instruction or its part</li>
 </ul>
 </div>
+</div>
 <div class="tabbed-block">
 <h3 id="asm_2"><code>ASM_2</code><a class="headerlink" href="#asm_2" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASM_2</code></p>
 <p><a href="#asm"><code>ASM</code></a> with <code>length</code> parameter hardcoded to 2. Writes two bytes machine code instructions to the stream.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ASM_1</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div></td></tr></table></div>
@@ -2496,8 +2525,11 @@
     Two bytes machine code instruction or its part</li>
 </ul>
 </div>
+</div>
 <div class="tabbed-block">
 <h3 id="asm_3"><code>ASM_3</code><a class="headerlink" href="#asm_3" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASM_3</code></p>
 <p><a href="#asm"><code>ASM</code></a> with <code>length</code> parameter hardcoded to 3. Writes three bytes machine code instructions to the stream.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ASM_1</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div></td></tr></table></div>
@@ -2507,8 +2539,11 @@
     Three bytes machine code instruction or its part</li>
 </ul>
 </div>
+</div>
 <div class="tabbed-block">
 <h3 id="asm_4"><code>ASM_4</code><a class="headerlink" href="#asm_4" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASM_4</code></p>
 <p><a href="#asm"><code>ASM</code></a> with <code>length</code> parameter hardcoded to 4. Writes four bytes machine code instructions to the stream.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ASM_1</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div></td></tr></table></div>
@@ -2520,13 +2555,19 @@
 </div>
 </div>
 </div>
+</div>
 <h3 id="asm_here"><code>ASM_Here</code><a class="headerlink" href="#asm_here" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASM_Here</code></p>
 <p>Provides, the address of the cursor, i.e., the address of the location that will be described next by a call to <a href="#asm"><code>ASM</code></a>. It is guaranteed that the location where the code is written is also the location where it will be executed.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">ASM_Here</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Return value</strong></p>
 <p>The function returns an address that is the current position in the machine code stream.</p>
+</div>
 <h3 id="asm_close"><code>ASM_Close</code><a class="headerlink" href="#asm_close" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASM_Close</code></p>
 <p>Finalizes the stream by adding a return instruction and returns the starting address of the stream. This pointer can now be passed to at any time and any number of times to execute the machine code. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2536,7 +2577,10 @@
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns a starting address of the stream (pointer to the stream).</p>
+</div>
 <h3 id="asm_run"><code>ASM_Run</code><a class="headerlink" href="#asm_run" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASM_Run</code></p>
 <p>Executes a machine code (stream) from a pointer.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2549,10 +2593,14 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr</span></code> <br>
     Pointer to the executed code (returned form <a href="#asm_close"><code>ASM_Close</code></a>)</li>
 </ul>
+</div>
 <h3 id="asm_runonce"><code>ASM_RunOnce</code><a class="headerlink" href="#asm_runonce" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>ASM_RunOnce</code></p>
 <p>Executes the code dictated up to that point, similar to how an external function is executed. After that the code is released, and new code can be dictated.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-14-1"><a id="example-14-1" name="example-14-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ASM_RunOnce</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link"></a></h2>
 <p>The following function sets the NPC passed as slf as the player, as if you had pressed <strong>O</strong> in Marvin mode with this NPC in focus. This is so short because there is already a function for this exact purpose, it's just not normally accessible from the scripts. It is therefore sufficient to write assembly code that pushes the parameter of the function (the <code>this</code> pointer) into the appropriate register and then calls the function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-15-1"> 1</a></span>

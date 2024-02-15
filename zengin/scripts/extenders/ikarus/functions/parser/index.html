@@ -8,7 +8,7 @@
         <link rel="prev" href="../mem_utility/">
         <link rel="next" href="../string/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>Parser stuff - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2153,6 +2153,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2426,7 +2435,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2435,7 +2444,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2497,7 +2506,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2947,6 +2956,8 @@
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="nb nb-Other">MEM_InitAll</span><span class="p">();</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="mem_reinitparser"><code>MEM_ReinitParser</code><a class="headerlink" href="#mem_reinitparser" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ReinitParser</code></p>
 <p>Parser operations are initialized with this function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ReinitParser</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2954,8 +2965,11 @@
 <p class="admonition-title">Tip</p>
 <p>It's worth noting that <code>MEM_ReinitParser</code> is also invoked by the <code>MEM_InitAll</code> function.</p>
 </div>
+</div>
 <h2 id="pointers-and-instances">Pointers and instances<a class="headerlink" href="#pointers-and-instances" title="Permanent link"></a></h2>
 <h3 id="mem_ptrtoinst"><code>MEM_PtrToInst</code><a class="headerlink" href="#mem_ptrtoinst" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_PtrToInst</code></p>
 <p>Returns an instance pointed to by the pointer. If the pointer is null an error is thrown.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">MEMINT_HelperClass</span><span class="w"> </span><span class="nf">MEM_PtrToInst</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2977,11 +2991,17 @@ is equivalent to
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">var</span><span class="w"> </span><span class="kt">oCNpc</span><span class="w"> </span><span class="n">her</span><span class="p">;</span><span class="w"> </span><span class="n">her</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_^</span><span class="p">(</span><span class="n">heroPtr</span><span class="p">);</span>
 </span></code></pre></div></td></tr></table></div>
 </details>
+</div>
 <h3 id="mem_nulltoinst"><code>MEM_NullToInst</code><a class="headerlink" href="#mem_nulltoinst" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_NullToInst</code></p>
 <p>Returns an instance from a null pointer.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">MEMINT_HelperClass</span><span class="w"> </span><span class="nf">MEM_NullToInst</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="mem_assigninst"><code>MEM_AssignInst</code><a class="headerlink" href="#mem_assigninst" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_AssignInst</code></p>
 <p>Takes an instance from a pointer and assigns it to a given instance. If the pointer is null an error is thrown.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_AssignInst</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3005,7 +3025,10 @@ is equivalent to
 </span><span id="example-9-2"><a id="example-9-2" name="example-9-2"></a><span class="n">inst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Other">MEM_PtrToInst</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
 </span></code></pre></div></td></tr></table></div>
 </details>
+</div>
 <h3 id="mem_assigninstnull"><code>MEM_AssignInstNull</code><a class="headerlink" href="#mem_assigninstnull" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_AssignInstNull</code></p>
 <p>Assigns null pointer to a given instance.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_AssignInstNull</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3014,7 +3037,10 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span></code><br>
     Instance to which the null pointer will be assigned</li>
 </ul>
+</div>
 <h3 id="mem_insttoptr"><code>MEM_InstToPtr</code><a class="headerlink" href="#mem_insttoptr" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_InstToPtr</code></p>
 <p>Returns a pointer to given instance.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_InstToPtr</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3023,7 +3049,10 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span></code><br>
     The instance to which the pointer is returned</li>
 </ul>
+</div>
 <h3 id="mem_instgetoffset"><code>MEM_InstGetOffset</code><a class="headerlink" href="#mem_instgetoffset" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_InstGetOffset</code></p>
 <p>Alias to <code>MEM_InstToPtr</code>. Returns a pointer to given instance.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_InstGetOffset</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3032,7 +3061,10 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span></code><br>
     The instance to which the pointer is returned</li>
 </ul>
+</div>
 <h3 id="mem_cpyinst"><code>MEM_CpyInst</code><a class="headerlink" href="#mem_cpyinst" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_CpyInst</code></p>
 <p>Returns a copy of a given instance
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-13-1"><a id="example-13-1" name="example-13-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">MEMINT_HelperClass</span><span class="w"> </span><span class="nf">MEM_CpyInst</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3050,6 +3082,7 @@ is equivalent to
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-15-1"><a id="example-15-1" name="example-15-1"></a><span class="n">selfCopy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Other">MEM_PtrToInst</span><span class="w"> </span><span class="p">(</span><span class="nb nb-Other">MEM_InstToPtr</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="p">));</span>
 </span></code></pre></div></td></tr></table></div>
 </details>
+</div>
 <h2 id="call-function">Call function<a class="headerlink" href="#call-function" title="Permanent link"></a></h2>
 <p>You don't always know at compile time when you want to call which function. For example, if you want to call the condition function of a mob that the player has in focus, you are at a loss at compile time because you have no idea which mob the player will choose. Ikarus provides a way to call functions based on their name or symbol index. In the example of the mob, the name of the condition function can simply be looked up in the mob.</p>
 <div class="admonition note">
@@ -3059,6 +3092,8 @@ is equivalent to
 <h3 id="passing-parameters">Passing Parameters<a class="headerlink" href="#passing-parameters" title="Permanent link"></a></h3>
 <p>If the function to be called has parameters, these must first be placed on the data stack. The parameters must be pushed in the correct order, from left to right. </p>
 <h4 id="mem_pushintparam"><code>MEM_PushIntParam</code><a class="headerlink" href="#mem_pushintparam" title="Permanent link"></a></h4>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_PushIntParam</code></p>
 <p>Passes an integer as a parameter to the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-16-1"><a id="example-16-1" name="example-16-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_PushIntParam</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">param</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3067,7 +3102,10 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">param</span></code><br>
     Integer to pass as a function parameter</li>
 </ul>
+</div>
 <h4 id="mem_pushinstparam"><code>MEM_PushInstParam</code><a class="headerlink" href="#mem_pushinstparam" title="Permanent link"></a></h4>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_PushInstParam</code></p>
 <p>Passes an instance as a parameter to the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-17-1"><a id="example-17-1" name="example-17-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_PushInstParam</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3076,17 +3114,30 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span></code><br>
     Instance to pass as a function parameter</li>
 </ul>
+</div>
 <h4 id="mem_pushstringparam"><code>MEM_PushStringParam</code><a class="headerlink" href="#mem_pushstringparam" title="Permanent link"></a></h4>
-<p>Passes a string as a parameter to the called function.
-</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-18-1"><a id="example-18-1" name="example-18-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_PushStringParam</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
-<strong>Parameters</strong>
-<ul>
-<li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span></code><br>
-    String to pass as a function parameter</li>
-</ul>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! function "`MEM_PushStringParam`"
+Passes a string as a parameter to the called function.
+```dae
+func void MEM_PushStringParam (var string str)
+```
+**Parameters**
+
+- `#!dae var string str`  
+    String to pass as a function parameter
+</code></pre></div></td></tr></table></div>
 <h3 id="the-call">The call<a class="headerlink" href="#the-call" title="Permanent link"></a></h3>
 <h4 id="mem_call"><code>MEM_Call</code><a class="headerlink" href="#mem_call" title="Permanent link"></a></h4>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_Call</code></p>
 <p>Calls a function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-19-1"><a id="example-19-1" name="example-19-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_Call</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">fnc</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3095,7 +3146,10 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">fnc</span></code><br>
     Function to be called</li>
 </ul>
+</div>
 <h4 id="mem_callbyid"><code>MEM_CallByID</code><a class="headerlink" href="#mem_callbyid" title="Permanent link"></a></h4>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_CallByID</code></p>
 <p>Calls a function by its ID.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-20-1"><a id="example-20-1" name="example-20-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_CallByID</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">symbID</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3104,7 +3158,10 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">symbID</span></code><br>
     The ID of the function to be called</li>
 </ul>
+</div>
 <h4 id="mem_callbyptr"><code>MEM_CallByPtr</code><a class="headerlink" href="#mem_callbyptr" title="Permanent link"></a></h4>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_CallByPtr</code></p>
 <p>Calls a function by its pointer.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-21-1"><a id="example-21-1" name="example-21-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_CallByPtr</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3113,7 +3170,10 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr</span></code><br>
     The pointer of the function to be called</li>
 </ul>
+</div>
 <h4 id="mem_callbyoffset"><code>MEM_CallByOffset</code><a class="headerlink" href="#mem_callbyoffset" title="Permanent link"></a></h4>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_CallByOffset</code></p>
 <p>Calls a function by its offset.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-22-1"><a id="example-22-1" name="example-22-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_CallByOffset</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">offset</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3122,7 +3182,10 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">offset</span></code><br>
     The offset of the function to be called</li>
 </ul>
+</div>
 <h4 id="mem_callbystring"><code>MEM_CallByString</code><a class="headerlink" href="#mem_callbystring" title="Permanent link"></a></h4>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_CallByString</code></p>
 <p>Calls a function by its name.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-23-1"><a id="example-23-1" name="example-23-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_CallByString</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fnc</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3131,28 +3194,40 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fnc</span></code><br>
     The name of the function IN CAPITAL LETTERS.</li>
 </ul>
+</div>
 <h3 id="return-value">Return value<a class="headerlink" href="#return-value" title="Permanent link"></a></h3>
 <p>If a function has a return value, it should be fetched from the data stack after it is called, otherwise stack overflows can occur under unfavorable circumstances (aside from that, you may simply want the return value because it contains important information).</p>
 <h4 id="mem_popintresult"><code>MEM_PopIntResult</code><a class="headerlink" href="#mem_popintresult" title="Permanent link"></a></h4>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_PopIntResult</code></p>
 <p>Retrieves an integer returned by the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-24-1"><a id="example-24-1" name="example-24-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_PopIntResult</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns an integer returned by the previously called script function.</p>
+</div>
 <h4 id="mem_popstringresult"><code>MEM_PopStringResult</code><a class="headerlink" href="#mem_popstringresult" title="Permanent link"></a></h4>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_PopStringResult</code></p>
 <p>Retrieves a daedalus string returned by the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-25-1"><a id="example-25-1" name="example-25-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">MEM_PopStringResult</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns a string returned by the previously called script function.</p>
+</div>
 <h4 id="mem_popinstresult"><code>MEM_PopInstResult</code><a class="headerlink" href="#mem_popinstresult" title="Permanent link"></a></h4>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_PopInstResult</code></p>
 <p>Retrieves an instance returned by the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-26-1"><a id="example-26-1" name="example-26-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">MEMINT_HelperClass</span><span class="w"> </span><span class="nf">MEM_PopInstResult</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns an instance returned by the previously called script function.</p>
+</div>
 <h2 id="function-stuff">Function stuff<a class="headerlink" href="#function-stuff" title="Permanent link"></a></h2>
 <h3 id="mem_getfuncid"><code>MEM_GetFuncID</code><a class="headerlink" href="#mem_getfuncid" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetFuncID</code></p>
 <p>Returns the ID of the given function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-27-1"><a id="example-27-1" name="example-27-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetFuncID</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">fnc</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3161,7 +3236,10 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">fnc</span></code><br>
     The function whose ID is returned</li>
 </ul>
+</div>
 <h3 id="mem_getfuncptr"><code>MEM_GetFuncPtr</code><a class="headerlink" href="#mem_getfuncptr" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetFuncPtr</code></p>
 <p>Returns the pointer of the given function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-28-1"><a id="example-28-1" name="example-28-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetFuncPtr</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">fnc</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3170,7 +3248,10 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">fnc</span></code><br>
     The function whose pointer is returned</li>
 </ul>
+</div>
 <h3 id="mem_getfuncoffset"><code>MEM_GetFuncOffset</code><a class="headerlink" href="#mem_getfuncoffset" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetFuncOffset</code></p>
 <p>Returns the offset of the given function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-29-1"><a id="example-29-1" name="example-29-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetFuncOffset</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">fnc</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3179,7 +3260,10 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">fnc</span></code><br>
     The function whose offset is returned</li>
 </ul>
+</div>
 <h3 id="mem_getfuncidbyoffset"><code>MEM_GetFuncIDByOffset</code><a class="headerlink" href="#mem_getfuncidbyoffset" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetFuncIDByOffset</code></p>
 <p><a href="#mem_getfuncid"><code>MEM_GetFuncID</code></a>, but with an offset as a parameter.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-30-1"><a id="example-30-1" name="example-30-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetFuncIDByOffset</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">offset</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3190,7 +3274,10 @@ is equivalent to
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns an ID of a function with a given offset.</p>
+</div>
 <h3 id="mem_replacefunc"><code>MEM_ReplaceFunc</code><a class="headerlink" href="#mem_replacefunc" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ReplaceFunc</code></p>
 <p>Replaces the <code>f1</code> function with <code>f2</code> function so if you call the first function, the second function is called.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-31-1"><a id="example-31-1" name="example-31-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_ReplaceFunc</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">f1</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">f2</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3201,12 +3288,18 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">f2</span></code><br>
     Function called instead of <code>f1</code></li>
 </ul>
+</div>
 <h2 id="parser-stack">Parser stack<a class="headerlink" href="#parser-stack" title="Permanent link"></a></h2>
 <h3 id="mem_getframeboundary"><code>MEM_GetFrameBoundary</code><a class="headerlink" href="#mem_getframeboundary" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetFrameBoundary</code></p>
 <p>Returns the address/pointer to the boundary of a stack frame (ESP).
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-32-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-32-1"><a id="example-32-1" name="example-32-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetFrameBoundary</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="mem_getcallerstackpos"><code>MEM_GetCallerStackPos</code><a class="headerlink" href="#mem_getcallerstackpos" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetCallerStackPos</code></p>
 <p>Retrieves the stack position (pop position) of the caller's caller (look at the example for better understanding).
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-33-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-33-1"><a id="example-33-1" name="example-33-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetCallerStackPos</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3232,7 +3325,10 @@ is equivalent to
 </span><span id="example-34-8"><a id="example-34-8" name="example-34-8"></a><span class="p">};</span>
 </span></code></pre></div></td></tr></table></div>
 </details>
+</div>
 <h3 id="mem_setcallerstackpos"><code>MEM_SetCallerStackPos</code><a class="headerlink" href="#mem_setcallerstackpos" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_SetCallerStackPos</code></p>
 <p>Sets the stack position (pop position) of the caller's caller.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-35-1"><a id="example-35-1" name="example-35-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_SetCallerStackPos</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">popPos</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3241,8 +3337,11 @@ is equivalent to
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">popPos</span></code><br>
     An integer parameter representing the new stack position of the caller's caller</li>
 </ul>
+</div>
 <h2 id="get-address">Get address<a class="headerlink" href="#get-address" title="Permanent link"></a></h2>
 <h3 id="mem_getaddress_init"><code>MEM_GetAddress_Init</code><a class="headerlink" href="#mem_getaddress_init" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetAddress_Init</code></p>
 <p>Initializes the <code>MEM_GetIntAddress</code>, <code>MEM_GetFloatAddress</code> and <code>MEM_GetStringAddress</code> functions.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-36-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-36-1"><a id="example-36-1" name="example-36-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_GetAddress_Init</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3250,7 +3349,10 @@ is equivalent to
 <p class="admonition-title">Tip</p>
 <p>It's worth noting that <code>MEM_GetAddress_Init</code> is also invoked by the <code>MEM_InitAll</code> function.</p>
 </div>
+</div>
 <h3 id="mem_getintaddress"><code>MEM_GetIntAddress</code><a class="headerlink" href="#mem_getintaddress" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetIntAddress</code></p>
 <p>Returns an address of a given integer.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-37-1"><a id="example-37-1" name="example-37-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetIntAddress</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3263,7 +3365,10 @@ is equivalent to
 <p>In addition there is a function <strong><code>_@</code></strong> with the same signature and functionality as <code>MEM_GetIntAddress</code>.</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-38-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-38-1"><a id="example-38-1" name="example-38-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">_@</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="mem_getfloataddress"><code>MEM_GetFloatAddress</code><a class="headerlink" href="#mem_getfloataddress" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetFloatAddress</code></p>
 <p>Returns an address of a given daedalus float.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-39-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-39-1"><a id="example-39-1" name="example-39-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetFloatAddress</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3276,7 +3381,10 @@ is equivalent to
 <p>In addition there is a function <strong><code>_@f</code></strong> with the same signature and functionality as <code>MEM_GetFloatAddress</code>.</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-40-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-40-1"><a id="example-40-1" name="example-40-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">_@s</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="mem_getstringaddress"><code>MEM_GetStringAddress</code><a class="headerlink" href="#mem_getstringaddress" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetStringAddress</code></p>
 <p>Returns an address of a given string.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-41-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-41-1"><a id="example-41-1" name="example-41-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetStringAddress</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3289,14 +3397,21 @@ is equivalent to
 <p>In addition there is a function <strong><code>_@s</code></strong> with the same signature and functionality as <code>MEM_GetStringAddress</code>.</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-42-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-42-1"><a id="example-42-1" name="example-42-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">_@s</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="str_getaddressinit"><code>STR_GetAddressInit</code><a class="headerlink" href="#str_getaddressinit" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_GetAddressInit</code></p>
 <p>Alias to <a href="#mem_getaddress_init"><code>MEM_GetAddress_Init</code></a>, kept for downward compatibility.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-43-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-43-1"><a id="example-43-1" name="example-43-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">STR_GetAddressInit</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="str_getaddress"><code>STR_GetAddress</code><a class="headerlink" href="#str_getaddress" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_GetAddress</code></p>
 <p>Function similar to <code>MEM_GetStringAddress</code>. There is a guarantee, that this function works initialized i.e. invokes <a href="#mem_getaddress_init"><code>MEM_GetAddress_Init</code></a>, but the first time may only return an address of a copy of the string.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-44-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-44-1"><a id="example-44-1" name="example-44-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_GetAddress</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h2 id="static-arrays">Static arrays<a class="headerlink" href="#static-arrays" title="Permanent link"></a></h2>
 <p>Accessing static arrays like this below is very tedious in Daedalus.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-45-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-45-1"><a id="example-45-1" name="example-45-1"></a><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">myStaticArray</span><span class="p">[</span><span class="mi">42</span><span class="p">];</span>
@@ -3307,10 +3422,15 @@ It is not possible to access <code>myStaticArray[i]</code> with a variable index
 <p>Neither function performs any kind of validity check. If the value passed is not an array or offsets are beyond the boundaries of the array passed, the behavior is undefined.</p>
 </div>
 <h3 id="mem_initstatarrs"><code>MEM_InitStatArrs</code><a class="headerlink" href="#mem_initstatarrs" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_InitStatArrs</code></p>
 <p>Initializes static arrays read and write functions.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-46-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-46-1"><a id="example-46-1" name="example-46-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_InitStatArrs</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="mem_writestatarr"><code>MEM_WriteStatArr</code><a class="headerlink" href="#mem_writestatarr" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_WriteStatArr</code></p>
 <p>Changes the value at the <code>offset</code> of a static integer-array.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-47-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-47-1"><a id="example-47-1" name="example-47-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_WriteStatArr</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">offset</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3323,7 +3443,10 @@ It is not possible to access <code>myStaticArray[i]</code> with a variable index
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span></code><br>
     The new value</li>
 </ul>
+</div>
 <h3 id="mem_readstatarr"><code>MEM_ReadStatArr</code><a class="headerlink" href="#mem_readstatarr" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ReadStatArr</code></p>
 <p>Reads the value at the specific offset of a static integer-array.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-48-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-48-1"><a id="example-48-1" name="example-48-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_ReadStatArr</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">offset</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3336,7 +3459,10 @@ It is not possible to access <code>myStaticArray[i]</code> with a variable index
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns an integer value from the <code>offset</code> of a given static array.</p>
+</div>
 <h3 id="mem_writestatstringarr"><code>MEM_WriteStatStringArr</code><a class="headerlink" href="#mem_writestatstringarr" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_WriteStatStringArr</code></p>
 <p>Changes the value at the <code>offset</code> of a static string-array.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-49-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-49-1"><a id="example-49-1" name="example-49-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_WriteStatStringArr</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">offset</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3349,7 +3475,10 @@ It is not possible to access <code>myStaticArray[i]</code> with a variable index
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">value</span></code><br>
     The new value</li>
 </ul>
+</div>
 <h3 id="mem_readstatstringarr"><code>MEM_ReadStatStringArr</code><a class="headerlink" href="#mem_readstatstringarr" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_ReadStatStringArr</code></p>
 <p>Reads the value at the specific offset of a static string-array.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-50-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-50-1"><a id="example-50-1" name="example-50-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">MEM_ReadStatStringArr</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">offset</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3362,8 +3491,11 @@ It is not possible to access <code>myStaticArray[i]</code> with a variable index
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns a string form the <code>offset</code> of a given static array.</p>
+</div>
 <h2 id="parser-symbol">Parser symbol<a class="headerlink" href="#parser-symbol" title="Permanent link"></a></h2>
 <h3 id="mem_setcurrparsersymb"><code>MEM_SetCurrParserSymb</code><a class="headerlink" href="#mem_setcurrparsersymb" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_SetCurrParserSymb</code></p>
 <p>Makes <a href="#currparsersymb"><code>currParserSymb</code></a> point to the symbol of the specified instance.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-51-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-51-1"><a id="example-51-1" name="example-51-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">MEM_SetCurrParserSymb</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3372,11 +3504,17 @@ It is not possible to access <code>myStaticArray[i]</code> with a variable index
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inst</span></code><br>
     Instance to whose symbol <code>currParserSymb</code> will be set</li>
 </ul>
+</div>
 <h4 id="currparsersymb"><code>currParserSymb</code><a class="headerlink" href="#currparsersymb" title="Permanent link"></a></h4>
+<div class="admonition function">
+<p class="admonition-title"><code>currParserSymb</code></p>
 <p>An instance representing current parser symbol.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-52-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-52-1"><a id="example-52-1" name="example-52-1"></a><span class="kd">INSTANCE</span><span class="w"> </span><span class="n">currParserSymb</span><span class="w"> </span><span class="p">(</span><span class="nc">zCPar_Symbol</span><span class="p">);</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="mem_findparsersymbol"><code>MEM_FindParserSymbol</code><a class="headerlink" href="#mem_findparsersymbol" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_FindParserSymbol</code></p>
 <p>Returns the index of the parser symbol with name <code>inst</code> if such a symbol exists.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-53-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-53-1"><a id="example-53-1" name="example-53-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_FindParserSymbol</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">inst</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3387,7 +3525,10 @@ It is not possible to access <code>myStaticArray[i]</code> with a variable index
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the index of the parser symbol with name <code>inst</code> if such a symbol exists. If non exists, a warning is issued and <code>-1</code> is returned.</p>
+</div>
 <h3 id="mem_getsymbolindex"><code>MEM_GetSymbolIndex</code><a class="headerlink" href="#mem_getsymbolindex" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetSymbolIndex</code></p>
 <p>Alias to <a href="#mem_findparsersymbol"><code>MEM_FindParserSymbol</code></a>. Returns the index of the parser symbol with name <code>inst</code> if such a symbol exists.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-54-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-54-1"><a id="example-54-1" name="example-54-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetSymbolIndex</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">inst</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3398,7 +3539,10 @@ It is not possible to access <code>myStaticArray[i]</code> with a variable index
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the index of the parser symbol with name <code>inst</code> if such a symbol exists. If non exists, a warning is issued and <code>-1</code> is returned.</p>
+</div>
 <h3 id="mem_getparsersymbol"><code>MEM_GetParserSymbol</code><a class="headerlink" href="#mem_getparsersymbol" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetParserSymbol</code></p>
 <p>Looks for the parser symbol with the name <code>inst</code> and returns a pointer to the appropriate <code>zCPar_Symbol</code> structure.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-55-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-55-1"><a id="example-55-1" name="example-55-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetParserSymbol</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">inst</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3409,7 +3553,10 @@ It is not possible to access <code>myStaticArray[i]</code> with a variable index
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the appropriate <code>zCPar_Symbol</code> structure of the parser symbol with name <code>inst</code> if such a symbol exists. If non exists, a warning is issued and <code>0</code> is returned.</p>
+</div>
 <h3 id="mem_getsymbol"><code>MEM_GetSymbol</code><a class="headerlink" href="#mem_getsymbol" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetSymbol</code></p>
 <p>Alias to <a href="#mem_getparsersymbol"><code>MEM_GetParserSymbol</code></a>. Looks for the parser symbol with the name <code>inst</code> and returns a pointer to the appropriate <code>zCPar_Symbol</code> structure.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-56-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-56-1"><a id="example-56-1" name="example-56-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetSymbol</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">inst</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3420,7 +3567,10 @@ It is not possible to access <code>myStaticArray[i]</code> with a variable index
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the appropriate <code>zCPar_Symbol</code> structure of the parser symbol with name <code>inst</code> if such a symbol exists. If non exists, a warning is issued and <code>0</code> is returned.</p>
+</div>
 <h3 id="mem_getsymbolbyindex"><code>MEM_GetSymbolByIndex</code><a class="headerlink" href="#mem_getsymbolbyindex" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>MEM_GetSymbolByIndex</code></p>
 <p><a href="#mem_getparsersymbol"><code>MEM_GetParserSymbol</code></a>, but with ID (index) as a parameter.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-57-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-57-1"><a id="example-57-1" name="example-57-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MEM_GetSymbolByIndex</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -3430,7 +3580,8 @@ It is not possible to access <code>myStaticArray[i]</code> with a variable index
     ID (index) of the symbol to be found</li>
 </ul>
 <p><strong>Return value</strong></p>
-<p>The function returns the appropriate <code>zCPar_Symbol</code> structure of the parser symbol with name <code>inst</code> if such a symbol exists. If non exists, a warning is issued and <code>0</code> is returned.</p></div>
+<p>The function returns the appropriate <code>zCPar_Symbol</code> structure of the parser symbol with name <code>inst</code> if such a symbol exists. If non exists, a warning is issued and <code>0</code> is returned.</p>
+</div></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>

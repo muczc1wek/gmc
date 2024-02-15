@@ -8,7 +8,7 @@
         <link rel="prev" href="../arrays/">
         <link rel="next" href="../debug/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>CALL Package - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2015,6 +2015,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2288,7 +2297,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2297,7 +2306,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2359,7 +2368,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2735,10 +2744,15 @@
 </blockquote>
 <h2 id="start-and-end">Start and End<a class="headerlink" href="#start-and-end" title="Permanent link"></a></h2>
 <h3 id="call_open"><code>CALL_Open</code><a class="headerlink" href="#call_open" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_Open</code></p>
 <p>Initializes a Recyclable call mode.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_Open</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="call_begin"><code>CALL_Begin</code><a class="headerlink" href="#call_begin" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_Begin</code></p>
 <p>A practical wrapper for <code>CALL_Open</code>. Makes a call if it had been already created, initializes it otherwise.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_Begin</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2749,11 +2763,17 @@
 </ul>
 <p><strong>Return Value</strong></p>
 <p>The function returns <code>1</code> if the new call has been created, <code>0</code> is returned otherwise.</p>
+</div>
 <h3 id="call_close"><code>CALL_Close</code><a class="headerlink" href="#call_close" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_Close</code></p>
 <p>Finalizes a function call in recyclable mode, restoring the previous execution context.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_Close</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="call_end"><code>CALL_End</code><a class="headerlink" href="#call_end" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_End</code></p>
 <p>Finalizes a function call, pushes the pointer onto the stack, and runs the associated assembly code (makes an actual call).
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_End</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2763,6 +2783,7 @@
 <p class="admonition-title">Tip</p>
 <p><code>CALL_Close</code> only finalizes the function call, returning the pointer, while <code>CALL_End</code> additionally handles pushing the pointer onto the stack and running associated assembly code.   </p>
 </div>
+</div>
 <h2 id="passing-parameters">Passing parameters<a class="headerlink" href="#passing-parameters" title="Permanent link"></a></h2>
 <p>Parameters must be arranged on the machine stack from right to left i.e. from the parameter on the far right to the parameter on the far left. These functions generate machine code that will place parameters on the machine stack when executed.</p>
 <div class="admonition note">
@@ -2770,6 +2791,8 @@
 <p>These functions do not impose any parameters on the Machine stack. Exactly it should say: You create the machine code that will put parameters on the machine stack when it is executed. And it is only carried out in the second step with the announcement of the calling convention.</p>
 </div>
 <h3 id="call_intparam"><code>CALL_IntParam</code><a class="headerlink" href="#call_intparam" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_IntParam</code></p>
 <p>Passes an integer (<code>int32</code>) as a parameter to the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_IntParam</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">param</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2778,7 +2801,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">param</span></code> <br>
     Address of an integer to be passed</li>
 </ul>
+</div>
 <h3 id="call_floatparam"><code>CALL_FloatParam</code><a class="headerlink" href="#call_floatparam" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_FloatParam</code></p>
 <p>Passes an IEEE 7554 floating-point number (<code>single</code> / <code>zREAL</code>) as a parameter to the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_FloatParam</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">param</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2787,7 +2813,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">param</span></code> <br>
     Address of a float to be passed</li>
 </ul>
+</div>
 <h3 id="call_ptrparam"><code>CALL_PtrParam</code><a class="headerlink" href="#call_ptrparam" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_PtrParam</code></p>
 <p>Passes a pointer (<code>void*</code>) as a parameter to the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_PtrParam</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">param</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2796,7 +2825,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">param</span></code> <br>
     Pointer to be passed</li>
 </ul>
+</div>
 <h3 id="call_zstringptrparam"><code>CALL_zStringPtrParam</code><a class="headerlink" href="#call_zstringptrparam" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_zStringPtrParam</code></p>
 <p>Passes a string (<code>zString*</code>) as a parameter to the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_zStringPtrParam</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">param</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2809,7 +2841,10 @@
 <p class="admonition-title">Warning</p>
 <p>This function only works when writing a disposable call!</p>
 </div>
+</div>
 <h3 id="call_cstringptrparam"><code>CALL_cStringPtrParam</code><a class="headerlink" href="#call_cstringptrparam" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_cStringPtrParam</code></p>
 <p>Passes a char array (<code>char **</code>) as a parameter to the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_cStringPtrParam</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">param</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2822,7 +2857,10 @@
 <p class="admonition-title">Warning</p>
 <p>This function only works when writing a disposable call!</p>
 </div>
+</div>
 <h3 id="call_structparam"><code>CALL_StructParam</code><a class="headerlink" href="#call_structparam" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_StructParam</code></p>
 <p>Passes a structure (struct) as a parameter to the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_StructParam</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">words</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2837,10 +2875,13 @@
 <p class="admonition-title">Note</p>
 <p><code>CALL_IntParam</code>, <code>CALL_FloatParam</code>, and <code>CALL_PtrParam</code> are functionally identical and are differentiated for code readability.</p>
 </div>
+</div>
 <h2 id="the-call">The call<a class="headerlink" href="#the-call" title="Permanent link"></a></h2>
 <p>The calling convention determines how the function's parameters are passed. IDA or another disassembler can be used to identify the convention used by a specific engine function.</p>
 <p>The announcement of the calling convention, i.e. the call of one of the four functions below is also the time of calling the function. In particular, all parameters must already be specified at this point.</p>
 <h3 id="call__stdcall"><code>CALL__stdcall</code><a class="headerlink" href="#call__stdcall" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL__stdcall</code></p>
 <p>Calls a function with <a href="https://learn.microsoft.com/en-us/cpp/cpp/stdcall?view=msvc-170"><code>__stdcall</code></a> (Standard Call) calling convention.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-13-1"><a id="example-13-1" name="example-13-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL__stdcall</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">adr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2849,7 +2890,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">adr</span></code> <br>
     Address of a function</li>
 </ul>
+</div>
 <h3 id="call__thiscall"><code>CALL__thiscall</code><a class="headerlink" href="#call__thiscall" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL__thiscall</code></p>
 <p>Calls a function with <a href="https://learn.microsoft.com/en-us/cpp/cpp/thiscall?view=msvc-170"><code>__thiscall</code></a> calling convention. Used with a member functions.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-14-1"><a id="example-14-1" name="example-14-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL__thiscall</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">this</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">adr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2860,7 +2904,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">adr</span></code> <br>
     Address of a function</li>
 </ul>
+</div>
 <h3 id="call__cdecl"><code>CALL__cdecl</code><a class="headerlink" href="#call__cdecl" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL__cdecl</code></p>
 <p>Calls a function with <a href="https://learn.microsoft.com/en-us/cpp/cpp/cdecl?view=msvc-170"><code>__cdecl</code></a> calling convention. Used with non-Windows API and non-class functions.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-15-1"><a id="example-15-1" name="example-15-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL__cdecl</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">adr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2869,7 +2916,10 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">adr</span></code> <br>
     Address of a function</li>
 </ul>
+</div>
 <h3 id="call__fastcall"><code>CALL__fastcall</code><a class="headerlink" href="#call__fastcall" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL__fastcall</code></p>
 <p>Calls a function with <a href="https://learn.microsoft.com/en-us/cpp/cpp/fastcall?view=msvc-170"><code>__fastcall</code></a> calling convention.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-16-1"><a id="example-16-1" name="example-16-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL__fastcall</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ecx</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edx</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">adr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2882,6 +2932,7 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">adr</span></code> <br>
     Address of a function</li>
 </ul>
+</div>
 <h2 id="return-value">Return Value<a class="headerlink" href="#return-value" title="Permanent link"></a></h2>
 <p>As soon as the function call has taken place, i.e. after step 2, the return value can be queried. The following functions interpret the return value (usually this is the content of EAX immediately after the call) in the manner suggested in the function name. The result is then returned in a manner usable in Daedalus.</p>
 <div class="admonition note">
@@ -2890,6 +2941,8 @@
 <p>Following functions are provided: <a href="#call_retvalisfloat"><code>CALL_RetValIsFloat</code></a>, <a href="#call_retvaliszstring"><code>CALL_RetValIszString</code></a>, <a href="#call_retvalisstruct"><code>CALL_RetValIsStruct</code></a>.</p>
 </div>
 <h3 id="call_putretvalto"><code>CALL_PutRetValTo</code><a class="headerlink" href="#call_putretvalto" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_PutRetValTo</code></p>
 <p>Simply places the return value to the given address (mostly the address of a daedalus integer). Must be called before <a href="#the-call">The Call</a> function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-17-1"><a id="example-17-1" name="example-17-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_PutRetValTo</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">adr</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2898,29 +2951,44 @@
 <li><code class="language-dae highlight"><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">adr</span></code> <br>
     Destination address of the return value</li>
 </ul>
+</div>
 <h3 id="call_retvalasint"><code>CALL_RetValAsInt</code><a class="headerlink" href="#call_retvalasint" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_RetValAsInt</code></p>
 <p>Retrieves an integer returned by the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-18-1"><a id="example-18-1" name="example-18-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_RetValAsInt</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns an integer returned by the previously called engine function.</p>
+</div>
 <h3 id="call_retvalisfloat"><code>CALL_RetValIsFloat</code><a class="headerlink" href="#call_retvalisfloat" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_RetValIsFloat</code></p>
 <p>Specifies that the return value is a float. Must be called before <a href="#the-call">The Call</a> function to allow getting the return value with <a href="#call_retvalasfloat"><code>CALL_RetValAsFloat</code></a>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-19-1"><a id="example-19-1" name="example-19-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_RetValIsFloat</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
 <h3 id="call_retvalasfloat"><code>CALL_RetValAsFloat</code><a class="headerlink" href="#call_retvalasfloat" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_RetValAsFloat</code></p>
 <p>Retrieves a float returned by the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-20-1"><a id="example-20-1" name="example-20-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_RetValAsFloat</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns a float returned by the previously called engine function.</p>
+</div>
 <h3 id="call_retvalasptr"><code>CALL_RetValAsPtr</code><a class="headerlink" href="#call_retvalasptr" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_RetValAsPtr</code></p>
 <p>Retrieves a pointer (<code>void*</code>) returned by the called function.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-21-1"><a id="example-21-1" name="example-21-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CALL_RetValAsPtr</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns a pointer returned by the previously called engine function.</p>
+</div>
 <h3 id="call_retvalisstruct"><code>CALL_RetValIsStruct</code><a class="headerlink" href="#call_retvalisstruct" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_RetValIsStruct</code></p>
 <p>Specifies that the return value is a Structure. Must be called before <a href="#the-call">The Call</a> function to allow getting the return value with <a href="#call_retvalasstructptr"><code>CALL_RetValAsStructPtr</code></a>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-22-1"><a id="example-22-1" name="example-22-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CALL_RetValIsStruct</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2937,13 +3005,19 @@
 <p class="admonition-title">Warning</p>
 <p>It is in your responsibility to free the structure memory, when the return value is not needed any more.</p>
 </div>
+</div>
 <h3 id="call_retvalasstructptr"><code>CALL_RetValAsStructPtr</code><a class="headerlink" href="#call_retvalasstructptr" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_RetValAsStructPtr</code></p>
 <p>Retrieves a pointer to the structure returned by the called function and converts it to the instance. Can be used to make an assignment to an instance, for example an assignment to a <code>var zCVob</code> if the return value is a pointer to a <code>zCVob</code>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-23-1"><a id="example-23-1" name="example-23-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">MEMINT_HelperClass</span><span class="w"> </span><span class="nf">CALL_RetValAsStructPtr</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns an instance returned by the previously called engine function.</p>
+</div>
 <h3 id="call_retvaliszstring"><code>CALL_RetValIszString</code><a class="headerlink" href="#call_retvaliszstring" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_RetValIszString</code></p>
 <p>Specifies that the return value is a <code>zString</code> (20 bytes structure). Must be called before <a href="#the-call">The Call</a> function to allow getting the return value with <a href="#call_retvalasstructptr"><code>CALL_RetValAszStringPtr</code></a> and <a href="#call_retvalaszstring"><code>CALL_RetValAszString</code></a>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-24-1"><a id="example-24-1" name="example-24-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">CALL_RetValAszString</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2951,13 +3025,19 @@
 <p class="admonition-title">Note</p>
 <p><code>CALL_RetValAszStringPtr</code> and <code>CALL_RetValAszString</code> are quite different and should not be confused. Using <code>CALL_RetValAszString</code> frees up memory that may still be needed. In a reverse with <code>CALL_RetValAszStringPtr</code> memory that is no longer needed is not freed and can cause memory leak.</p>
 </div>
+</div>
 <h3 id="call_retvalaszstringptr"><code>CALL_RetValAszStringPtr</code><a class="headerlink" href="#call_retvalaszstringptr" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_RetValAszStringPtr</code></p>
 <p>Retrieves a <code>zString</code> pointer and converts it to the daedalus string. (don't frees the memory)
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-25-1"><a id="example-25-1" name="example-25-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">CALL_RetValAszStringPtr</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Return value</strong>
 <p>The function returns a daedalus string form a <code>zString</code> returned by the previously called engine function.</p>
+</div>
 <h3 id="call_retvalaszstring"><code>CALL_RetValAszString</code><a class="headerlink" href="#call_retvalaszstring" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>CALL_RetValAszString</code></p>
 <p>Retrieves a <code>zString</code> pointer and converts it to the daedalus string. (frees the memory)
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-26-1"><a id="example-26-1" name="example-26-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">CALL_RetValAszString</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2973,6 +3053,7 @@ This function copies the contents of the <code>zString</code> into a
 daedalus string and frees the <code>zString</code> afterwards.</p>
 </blockquote>
 </details>
+</div>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"></a></h2>
 <h3 id="apply-overlay-disposable">Apply overlay (Disposable)<a class="headerlink" href="#apply-overlay-disposable" title="Permanent link"></a></h3>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-27-1">1</a></span>

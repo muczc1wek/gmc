@@ -8,7 +8,7 @@
         <link rel="prev" href="../parser/">
         <link rel="next" href="../time_benchmark/">
       <link rel="icon" href="../../../../../../assets/images/gmc_logo.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
         <title>String operations - Gothic Modding Community</title>
       <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.f2e4d321.min.css">
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -186,7 +186,7 @@
   </div>
 </a>    </div>
   <ul class="md-nav__list" data-md-scrollfix>
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../.." class="md-nav__link ">
@@ -195,7 +195,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -1863,6 +1863,15 @@
       </a>
     </li>
 
+                    <li class="md-nav__item">
+      <a href="../../../../../tools/daedalus_tools/decdat/" class="md-nav__link">
+          <span class="md-ellipsis">
+    DecDat
+  </span>
+
+      </a>
+    </li>
+
           </ul>
         </nav>
     </li>
@@ -2136,7 +2145,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../genome/" class="md-nav__link ">
@@ -2145,7 +2154,7 @@
   </span>
 
             </a>
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
           </div>
@@ -2207,7 +2216,7 @@
         </nav>
     </li>
 
-          <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+          <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
           <div class="md-nav__link md-nav__container">
             <a href="../../../../../../contribute/" class="md-nav__link ">
@@ -2364,6 +2373,8 @@
 <p><a href="https://github.com/Lehona/Ikarus/blob/master/Ikarus.d#L2341"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"></path></svg></span> Ikarus.d on GitHub</a></p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link"></a></h2>
 <h3 id="str_getcharat"><code>STR_GetCharAt</code><a class="headerlink" href="#str_getcharat" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_GetCharAt</code></p>
 <p>Returns the ASCII value of a character at a specific position in a string.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_GetCharAt</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2376,7 +2387,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the ASCII value of the character at the specified position.</p>
+</div>
 <h3 id="str_len"><code>STR_Len</code><a class="headerlink" href="#str_len" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_Len</code></p>
 <p>Returns the length of a string.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_Len</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2387,7 +2401,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns the length of the string in characters.</p>
+</div>
 <h3 id="str_tochar"><code>STR_toChar</code><a class="headerlink" href="#str_tochar" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_toChar</code></p>
 <p>Converts a string to a pointer to its character array.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_toChar</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2398,7 +2415,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns a pointer to the character array representing the input string <code>str</code></p>
+</div>
 <h3 id="str_fromchar"><code>STR_FromChar</code><a class="headerlink" href="#str_fromchar" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_FromChar</code></p>
 <p>Converts a character array to a string.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">STR_FromChar</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">char</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2409,7 +2429,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns a string representation of the character array.</p>
+</div>
 <h3 id="str_substr"><code>STR_SubStr</code><a class="headerlink" href="#str_substr" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_SubStr</code></p>
 <p>Extracts a substring from a given string.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-5-1"><a id="example-5-1" name="example-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">STR_SubStr</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2424,7 +2447,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns a substring, if the starting position is invalid an empty string is returned.</p>
+</div>
 <h3 id="str_prefix"><code>STR_Prefix</code><a class="headerlink" href="#str_prefix" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_Prefix</code></p>
 <p>Extracts a prefix of a given string, similar to <a href="#str_substr"><code>STR_SubStr</code></a>, but with the starting position set to the first character of the string.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">STR_Prefix</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2437,7 +2463,10 @@
 </ul>
 <p><strong>Return value</strong></p>
 <p>The function returns a prefix of the input string with the specified length.</p>
+</div>
 <h3 id="str_compare"><code>STR_Compare</code><a class="headerlink" href="#str_compare" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_Compare</code></p>
 <p>Compares two strings lexicographically and returns a result indicating their relative order.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_Compare</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str1</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str2</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2493,7 +2522,10 @@
 </span><span id="example-8-17"><a id="example-8-17" name="example-8-17"></a><span class="c">// The 'result6' variable now contains STR_GREATER</span>
 </span></code></pre></div></td></tr></table></div>
 </details>
+</div>
 <h3 id="str_toint"><code>STR_ToInt</code><a class="headerlink" href="#str_toint" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_ToInt</code></p>
 <p>Converts a string to an integer.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_ToInt</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2504,7 +2536,10 @@
 </ul>
 <p><strong>Return Value</strong></p>
 <p>The function returns an integer value of the string, if a string is invalid (doesn't contain an integer) zero is returned.</p>
+</div>
 <h3 id="str_indexof"><code>STR_IndexOf</code><a class="headerlink" href="#str_indexof" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_IndexOf</code></p>
 <p>Searches for a substring <code>tok</code> within a given string and returns the index of the first occurrence of <code>tok</code>, taking into account upper and lower case letters.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_IndexOf</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">tok</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2560,7 +2595,10 @@
 </span><span id="example-11-20"><a id="example-11-20" name="example-11-20"></a><span class="c">// The 'index7' variable now contains 0</span>
 </span></code></pre></div></td></tr></table></div>
 </details>
+</div>
 <h3 id="str_splitcount"><code>STR_SplitCount</code><a class="headerlink" href="#str_splitcount" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_SplitCount</code></p>
 <p>Counts the number of parts a string splits into when using a specified separator.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">STR_SplitCount</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">separator</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2582,7 +2620,10 @@
 </span><span id="example-13-3"><a id="example-13-3" name="example-13-3"></a><span class="c">// The 'count' variable now contains 4</span>
 </span></code></pre></div></td></tr></table></div>
 </details>
+</div>
 <h3 id="str_split"><code>STR_Split</code><a class="headerlink" href="#str_split" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_Split</code></p>
 <p>Splits a string into multiple substrings based on a specified separator and returns the substring at a specified offset.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-14-1"><a id="example-14-1" name="example-14-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">STR_Split</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">separator</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">offset</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2615,7 +2656,10 @@
 </span></code></pre></div></td></tr></table></div>
 At the end of the function, <code>tok1</code> contains "This", <code>tok2</code> contains "is", <code>tok3</code> contains "a", and <code>tok4</code> contains "sentence.".
 </details>
+</div>
 <h3 id="str_upper"><code>STR_Upper</code><a class="headerlink" href="#str_upper" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_Upper</code></p>
 <p>Converts a string to uppercase.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-16-1"><a id="example-16-1" name="example-16-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">STR_Upper</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2626,7 +2670,10 @@ At the end of the function, <code>tok1</code> contains "This", <code>tok2</code>
 </ul>
 <p><strong>Return Value</strong></p>
 <p>The function returns a copy of <code>str</code> with all uppercase letters converted to their corresponding uppercase letters.</p>
+</div>
 <h3 id="str_lower"><code>STR_Lower</code><a class="headerlink" href="#str_lower" title="Permanent link"></a></h3>
+<div class="admonition function">
+<p class="admonition-title"><code>STR_Lower</code></p>
 <p>Converts a string to lowercase.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-17-1"><a id="example-17-1" name="example-17-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">STR_Lower</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2636,7 +2683,8 @@ At the end of the function, <code>tok1</code> contains "This", <code>tok2</code>
     The input string</li>
 </ul>
 <p><strong>Return Value</strong></p>
-<p>The function returns a copy of <code>str</code> with all lowercase letters converted to their corresponding uppercase letters.</p></div>
+<p>The function returns a copy of <code>str</code> with all lowercase letters converted to their corresponding uppercase letters.</p>
+</div></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>
