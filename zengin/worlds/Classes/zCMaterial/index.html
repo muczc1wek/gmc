@@ -2103,9 +2103,9 @@
                     <li class="md-nav__item md-nav__item--nested">
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_1_2_4_4" >
           <div class="md-nav__link md-nav__container">
-            <a href="../zCVob/zCEffect/zCTouchDamage/" class="md-nav__link ">
+            <a href="../zCVob/zCEffect/zCTouchAnimate/" class="md-nav__link ">
                 <span class="md-ellipsis">
-    zCTouchDamage
+    zCTouchAnimate
   </span>
 
             </a>
@@ -2115,6 +2115,38 @@
           </div>
         <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_2_10_1_2_4_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_10_1_2_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            zCTouchAnimate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+                    <li class="md-nav__item">
+      <a href="../zCVob/zCEffect/zCTouchAnimate/zCTouchAnimateSound/" class="md-nav__link">
+          <span class="md-ellipsis">
+    zCTouchAnimateSound
+  </span>
+
+      </a>
+    </li>
+
+          </ul>
+        </nav>
+    </li>
+
+                    <li class="md-nav__item md-nav__item--nested">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_1_2_4_5" >
+          <div class="md-nav__link md-nav__container">
+            <a href="../zCVob/zCEffect/zCTouchDamage/" class="md-nav__link ">
+                <span class="md-ellipsis">
+    zCTouchDamage
+  </span>
+
+            </a>
+              <label class="md-nav__link " for="__nav_2_10_1_2_4_5" id="__nav_2_10_1_2_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+          </div>
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_2_10_1_2_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_1_2_4_5">
             <span class="md-nav__icon md-icon"></span>
             zCTouchDamage
           </label>
@@ -2268,6 +2300,15 @@
       <a href="../zCVob/zCTriggerBase/zCTrigger/zCTriggerList/" class="md-nav__link">
           <span class="md-ellipsis">
     zCTriggerList
+  </span>
+
+      </a>
+    </li>
+
+                    <li class="md-nav__item">
+      <a href="../zCVob/zCTriggerBase/zCTrigger/zCTriggerTeleport/" class="md-nav__link">
+          <span class="md-ellipsis">
+    zCTriggerTeleport
   </span>
 
       </a>
@@ -2636,7 +2677,7 @@
                     <li class="md-nav__item">
       <a href="../../../tools/vdfs_tools/vdfs_tool/" class="md-nav__link">
           <span class="md-ellipsis">
-    VDFS Tool1
+    VDFS Tool
   </span>
 
       </a>
@@ -3209,16 +3250,16 @@
 <li><code>SNOW</code> - Snow.</li>
 </ul>
 <h3 class="sp-color" id="color"><code>color</code><a class="headerlink" href="#color" title="Permanent link"></a></h3>
-<p>Texture replacement color in RGBA format. The color the polygon will be painted in until the texture is applied.</p>
+<p>Texture replacement color in RGBA format. Polygon is in this color until engine applies the texture.</p>
 <h3 class="sp-float" id="smoothangle"><code>smoothAngle</code><a class="headerlink" href="#smoothangle" title="Permanent link"></a></h3>
 <p>Defines the angle of material smoothing between two faces.</p>
 <h3 class="sp-string" id="texture"><code>texture</code><a class="headerlink" href="#texture" title="Permanent link"></a></h3>
-<p>Defines the name of the texture file used for the material. Also determines by file name whether the texture is animated or static. An animated texture is recognized by its file name.</p>
-<p>To create animated textures, add a prefix to the file name <code>_A0</code>, e.g., <code>NW_Fire_A0.TGA</code>, <code>NW_Fire_A1.TGA</code> etc. The texture <code>NW_Fire_A0.TGA</code> is the first frame. The game engine will automatically search your hard drive for remaining animation files.</p>
+<p>Defines the name of the texture file used for the material, which also determines whether the texture is animated or static.</p>
+<p>To create animated textures, add a suffix to the file name <code>_A0</code>, e.g., <code>NW_Fire_A0.TGA</code>, <code>NW_Fire_A1.TGA</code> etc. The texture <code>NW_Fire_A0.TGA</code> is the first frame. The game engine will automatically search your hard drive for remaining animation files.</p>
 <h3 class="sp-string" id="texscale"><code>texScale</code><a class="headerlink" href="#texscale" title="Permanent link"></a></h3>
-<p>Scaling along the x and y axes. Assigning the necessary texture coordinates to polygons.</p>
+<p>Defines the scaling along the X and Y axes. Assigns the necessary texture coordinates to polygons.</p>
 <h3 class="sp-float" id="texanifps"><code>texAniFPS</code><a class="headerlink" href="#texanifps" title="Permanent link"></a></h3>
-<p>If the texture is animated (<code>NAME_A0.*</code>), then the speed of texture animation is indicated here.</p>
+<p>Defines the FPS (frames per seconds) of texture animation, but only if the texture is animated (<code>NAME_A0.*</code>).</p>
 <h3 class="sp-enum" id="texanimapmode"><code>texAniMapMode</code><a class="headerlink" href="#texanimapmode" title="Permanent link"></a></h3>
 <p>Texture animation mode.</p>
 <p><strong>Accepted values:</strong></p>
@@ -3227,13 +3268,17 @@
 <li><code>LINEAR</code> - Linear texture animation.</li>
 </ul>
 <h3 class="sp-string" id="texanimapdir"><code>texAniMapDir</code><a class="headerlink" href="#texanimapdir" title="Permanent link"></a></h3>
-<p>The direction of movement and speed of movement of animated textures by polygons. The Accepted values should be significantly lower than 1 (For example 0.00005). The animation is only enabled when <a href="#texanimapmode"><code>texAniMapMode</code></a> is set to <code>LINEAR</code> mode.</p>
+<p>Defines the direction and movement speed of animated textures. The values should be significantly lower than 1 (For example 0.00005). </p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>The animation movement is only enabled when <a href="#texanimapmode"><code>texAniMapMode</code></a> is set to <code>LINEAR</code> mode.</p>
+</div>
 <h3 class="sp-bool" id="nocolldet"><code>noCollDet</code><a class="headerlink" href="#nocolldet" title="Permanent link"></a></h3>
-<p>Handling collisions with dynamic objects. In other words, whether the character will be able to pass through this texture or not.</p>
+<p>Defines if collision detection is disabled.</p>
 <p><strong>Accepted values:</strong></p>
 <ul>
-<li><code>TRUE</code> - Passes through.</li>
-<li><code>FALSE</code> - Does not pass.</li>
+<li><code>TRUE</code> - Collisions disabled.</li>
+<li><code>FALSE</code> - Collisions enabled.</li>
 </ul>
 <h3 class="sp-bool" id="nolightmap"><code>noLightmap</code><a class="headerlink" href="#nolightmap" title="Permanent link"></a></h3>
 <p>Light map enable/disable switch.</p>
@@ -3254,9 +3299,9 @@
 <p>To prevent the texture from being distorted, you can cancel the creation of a MipMap. It is advisable to use for small objects.</p>
 </div>
 <h3 class="sp-string" id="detailobject"><code>detailObject</code><a class="headerlink" href="#detailobject" title="Permanent link"></a></h3>
-<p>An option that allows you to complement the material with a different texture.</p>
+<p>An option that allows you to complement the material with an additional texture.</p>
 <h3 class="sp-float" id="detailobjectscale"><code>detailObjectScale</code><a class="headerlink" href="#detailobjectscale" title="Permanent link"></a></h3>
-<p>Tiling the overlay image selected in the <a href="#detailobject"><code>detailObject</code></a> property.</p>
+<p>Tiling of the overlay image selected in the <a href="#detailobject"><code>detailObject</code></a> property.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This option is only available in Gothic II (Spacer2).</p>
@@ -3273,7 +3318,7 @@
 <p>This option is only available in Gothic II (Spacer2).</p>
 </div>
 <h3 class="sp-bool" id="environmentalmapping"><code>environmentalMapping</code><a class="headerlink" href="#environmentalmapping" title="Permanent link"></a></h3>
-<p>Environment reflection mode, creating glare.</p>
+<p>Environment mapping mode. Creates glare on the texture.</p>
 <p><strong>Accepted values:</strong></p>
 <ul>
 <li><code>TRUE</code> - Enable reflection mode.</li>
@@ -3284,7 +3329,7 @@
 <p>This option is only available in Gothic II (Spacer2).</p>
 </div>
 <h3 class="sp-float" id="environmentalmappingstrength"><code>environmentalMappingStrength</code><a class="headerlink" href="#environmentalmappingstrength" title="Permanent link"></a></h3>
-<p>The amount of reflection of the environment.</p>
+<p>The strength of reflection on the environment.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This option is only available in Gothic II (Spacer2).</p>
@@ -3331,7 +3376,7 @@
 <p>This option is only available in Gothic II (Spacer2).</p>
 </div>
 <h3 class="sp-bool" id="ignoresunlight"><code>ignoreSunLight</code><a class="headerlink" href="#ignoresunlight" title="Permanent link"></a></h3>
-<p>Ignoring sunlight. In effect, the material will no longer support shadows.</p>
+<p>Defines if the material ignores sunlight (doesn't cast shadows).</p>
 <p><strong>Accepted values:</strong></p>
 <ul>
 <li><code>TRUE</code> - Ignore.</li>
@@ -3342,7 +3387,7 @@
 <p>This option is only available in Gothic II (Spacer2).</p>
 </div>
 <h3 class="sp-bool" id="alphafunc"><code>alphaFunc</code><a class="headerlink" href="#alphafunc" title="Permanent link"></a></h3>
-<p>Alpha channel calculation function.</p>
+<p>Alpha channel blending function.</p>
 <p><strong>Accepted values:</strong></p>
 <ul>
 <li><code>NONE</code> - None.</li>
