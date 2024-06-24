@@ -2603,19 +2603,19 @@
 <li class="md-nav__item">
   <a href="#comment" class="md-nav__link">
     <span class="md-ellipsis">
-      Comment=
+      Comment
     </span>
   </a>
 </li><li class="md-nav__item">
   <a href="#basedir" class="md-nav__link">
     <span class="md-ellipsis">
-      BaseDir=
+      BaseDir
     </span>
   </a>
 </li><li class="md-nav__item">
   <a href="#vdfname" class="md-nav__link">
     <span class="md-ellipsis">
-      VDFName=
+      VDFName
     </span>
   </a>
 </li>      </ul>
@@ -2787,6 +2787,15 @@
       <a href="../../../union/plugins/zbassmusic/" class="md-nav__link">
           <span class="md-ellipsis">
     zBassMusic
+  </span>
+
+      </a>
+    </li>
+
+                    <li class="md-nav__item">
+      <a href="../../../union/plugins/zSplitDialogs/" class="md-nav__link">
+          <span class="md-ellipsis">
+    zSplitDialogs
   </span>
 
       </a>
@@ -3036,19 +3045,19 @@
 <li class="md-nav__item">
   <a href="#comment" class="md-nav__link">
     <span class="md-ellipsis">
-      Comment=
+      Comment
     </span>
   </a>
 </li><li class="md-nav__item">
   <a href="#basedir" class="md-nav__link">
     <span class="md-ellipsis">
-      BaseDir=
+      BaseDir
     </span>
   </a>
 </li><li class="md-nav__item">
   <a href="#vdfname" class="md-nav__link">
     <span class="md-ellipsis">
-      VDFName=
+      VDFName
     </span>
   </a>
 </li>      </ul>
@@ -3111,17 +3120,22 @@
 </ul>
 <p>When you specify the <code>Filename</code> the VDFS will load the volume and display some information.</p>
 <p><img alt="Viewer" src="../../../../assets/images/vdfs_viewer2.png" style="width:500px;"> </p>
-<p><strong>Comment</strong> is an information about loaded volume left by the author and <strong>Timestamp</strong> is a date and time set by the author. Usually the date coincides with the actual date of the volume's build, but it cannot be taken for granted as it can be easily changed.</p>
+<p><strong>Comment</strong> is an information about loaded volume left by the author.</p>
+<p><strong>Timestamp</strong> is a date and time set by the author. Usually the date coincides with the actual date of the volume's build, but it cannot be taken for granted as it can be easily changed.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The timestamp defines order of loading volumes into the game. Volumes with the latest timestamp are loaded first.</p>
+</div>
 <p>At the bottom there are three different options for extracting files from archive:</p>
 <ol>
 <li>Extract Volume - extract the whole volume to the Root Path</li>
 <li>Extract Directory - extract only selected folder</li>
 <li>Extract Selected - extract currently selected files</li>
 </ol>
-<p>In addition, you can choose if files should keep their stucture after extraction or get extracted directly to the Root Path.</p>
+<p>In addition, you can choose if files should keep their structure after extraction or get extracted directly to the Root Path.</p>
 <h3 id="builder">Builder<a class="headerlink" href="#builder" title="Permanent link"></a></h3>
 <p>The second working area is the Builder. It allows you to create new VDF archives.</p>
-<p>Thats how initial builder looks like:</p>
+<p>That's how initial builder looks like:</p>
 <p><img alt="Builder" src="../../../../assets/images/vdfs_builder1.png" style="width:500px;"> </p>
 <p>There are two paths to choose at the top:</p>
 <ul>
@@ -3143,7 +3157,7 @@
 <p>Example build configuration could look like this:</p>
 <p><img alt="Builder" src="../../../../assets/images/vdfs_builder2.png" style="width:500px;"></p>
 <h2 id="cli-interface">CLI Interface<a class="headerlink" href="#cli-interface" title="Permanent link"></a></h2>
-<p>CLI interface is very simple and allows to build and extract VDF archives without GUI. Thats good for automation and scripting.</p>
+<p>CLI interface is very simple and allows building and extracting VDF archives without GUI. That's good for automation and scripting.</p>
 <h3 id="build-vdf-from-script">Build VDF from script<a class="headerlink" href="#build-vdf-from-script" title="Permanent link"></a></h3>
 <div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a>GothicVDFS.exe<span class="w"> </span>/B<span class="w"> </span>script.vm
 </span></code></pre></div></td></tr></table></div>
@@ -3154,11 +3168,11 @@
 <p>GothicVDFS uses simple script language to define VDF archives. The script is a simple text file with <code>.vm</code> extension. The script is divided into sections, each section is marked by a header in square brackets. The script must contain at least <code>[BEGINVDF]</code> and <code>[ENDVDF]</code> sections.</p>
 <h3 id="beginvdf"><code>[BEGINVDF]</code><a class="headerlink" href="#beginvdf" title="Permanent link"></a></h3>
 <p>Marks the start of script and contains VDF properties.</p>
-<h4 id="comment"><code>Comment=</code><a class="headerlink" href="#comment" title="Permanent link"></a></h4>
-<p>Comment of VDF achive. Equivalent of "Comment" from GUI.</p>
-<h4 id="basedir"><code>BaseDir=</code><a class="headerlink" href="#basedir" title="Permanent link"></a></h4>
+<h4 id="comment"><code>Comment</code><a class="headerlink" href="#comment" title="Permanent link"></a></h4>
+<p>Comment of VDF archive. Equivalent of "Comment" from GUI.</p>
+<h4 id="basedir"><code>BaseDir</code><a class="headerlink" href="#basedir" title="Permanent link"></a></h4>
 <p>Root path of local files (relative to working directory). Equivalent of "Root Path" from GUI.</p>
-<h4 id="vdfname"><code>VDFName=</code><a class="headerlink" href="#vdfname" title="Permanent link"></a></h4>
+<h4 id="vdfname"><code>VDFName</code><a class="headerlink" href="#vdfname" title="Permanent link"></a></h4>
 <p>Name of final VDF file (relative to working directory). Equivalent of "Filename" from GUI.</p>
 <h3 id="files"><code>[FILES]</code><a class="headerlink" href="#files" title="Permanent link"></a></h3>
 <p>List of file masks to load in VDF archive (relative to BaseDir). Equivalent of "File(mask)(s) to search for" from GUI.</p>
