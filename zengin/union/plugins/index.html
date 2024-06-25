@@ -2884,12 +2884,6 @@
   </a>
 </li>      </ul>
     </nav>
-</li><li class="md-nav__item">
-  <a href="#callback-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Callback functions
-    </span>
-  </a>
 </li>    </ul>
 </nav>                  </div>
                 </div>
@@ -2901,7 +2895,7 @@
     <a href="https://github.com/Gothic-Modding-Community/gmc/raw/main/docs/zengin/union/plugins/index.md" title="View source of this page" class="md-content__button md-icon">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>    </a>
 <div><h1 id="union-plugins">Union Plugins<a class="headerlink" href="#union-plugins" title="Permanent link"></a></h1>
-<p>Plugins are libraries dynamically loaded via Union. They can be used to modify the behavior of the game, add new features, and fix bugs. Plugins are written in C++ and compiled into DLL files. The <a href="../sdk/">Union SDK</a> and Gothc API provide a set of functions and classes that can be used to create plugins.</p>
+<p>Plugins are libraries dynamically loaded via Union. They can be used to modify the behavior of the game, add new features, and fix bugs. Plugins are written in C++ and compiled into DLL files. The <a href="../sdk/">Union SDK</a> and Gothic API provide a set of functions and classes that can be used to create plugins.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The plugin system is also a potential source of errors. If the plugin is written incorrectly, it can cause the game to crash or behave incorrectly. Therefore, when using plugins, you should be careful and follow the instructions of the plugin authors.</p>
@@ -2922,11 +2916,9 @@
 </li>
 </ol>
 <h3 id="autorun">Autorun<a class="headerlink" href="#autorun" title="Permanent link"></a></h3>
-<p>If the library is located in the Physical Directory <code>System/Autorun</code> or in the Virtual Directory <code>*/Autorun</code>, then the library will be loaded along with the engine, as in step 1.III. In current versions of Union, the order of loading plugins from this folder is determined by the dependencies of the libraries on each other. This means that if one plugin imports symbols from another,then the Exporting will be loaded first, and then the Importing.</p>
+<p>If the library is located in the Physical Directory <code>System/Autorun</code> or in the Virtual Directory <code>*/Autorun</code>, then the library will be loaded along with the engine, as in step 1.III. In current versions of Union, the order of loading plugins from this folder is determined by the dependencies of the libraries on each other. This means that if one plugin imports symbols from another, then the Exporting will be loaded first, and then the Importing.</p>
 <h3 id="patch-file">Patch File<a class="headerlink" href="#patch-file" title="Permanent link"></a></h3>
-<p>The patch files start automatically. This means that plugins can also run patches along with them. There are two script functions: <code>LoadLibrary ("plugin.dll")</code> and <code>LoadPlugins ("plugin1.dll", ..., "pluginN.dll")</code>.</p>
-<h2 id="callback-functions">Callback functions<a class="headerlink" href="#callback-functions" title="Permanent link"></a></h2>
-<p>If plugins are written using the Union SDK, then each plugin can have a Standard set of callback functions. These are functions that called during key <a href="../sdk/events/">game events</a>. To call these functions, Union intercepts related procedures through Hookie-patches (see Interception of functions). Interception of each individual procedure is performed only if there is at least one non-Null callback function and a non-empty function. Union determines whether a function is empty by its bytecode. If the function begins with a <a href="https://c9x.me/x86/html/file_module_x86_id_280.html">RET instruction</a>, then it is considered as empty.</p></div>
+<p>The patch files start automatically. This means that plugins can also run patches along with them. There are two script functions: <code>LoadLibrary("plugin.dll")</code> and <code>LoadPlugins("plugin1.dll", ..., "pluginN.dll")</code>.</p></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>
