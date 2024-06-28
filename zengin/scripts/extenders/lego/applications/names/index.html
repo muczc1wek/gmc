@@ -2993,7 +2993,7 @@
 <h3 id="setname"><code>SetName</code><a class="headerlink" href="#setname" title="Permanent link"></a></h3>
 <div class="admonition function">
 <p class="admonition-title"><code>SetName</code></p>
-<p>Should be set in <code>Init_Global()</code> function.
+<p>Should be set in InitGlobal().
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">SetName</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Parameters</strong>
@@ -3007,7 +3007,7 @@
 <h3 id="showname"><code>ShowName</code><a class="headerlink" href="#showname" title="Permanent link"></a></h3>
 <div class="admonition function">
 <p class="admonition-title"><code>ShowName</code></p>
-<p>Permanently displays the name set by <a href="#setname"><code>SetName</code></a> function above the NPC.
+<p>Permanently displays the name set by <code>SetName</code> function above the npc.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ShowName</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">npc</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <strong>Parameters</strong>
@@ -3041,7 +3041,7 @@
 </span><span id="example-2-11"><a id="example-2-11" name="example-2-11"></a><span class="p">};</span>
 </span></code></pre></div></td></tr></table></div>
 At the start of the game, the name "Paladin" is displayed above <code>PAL_100_Friend</code>.
-<p>After calling <code>ShowName(PAL_100_Friend);</code> (e.g. during a dialogue), the name "Arto" is permanently visible above the NPC.</p></div>
+<p>If <code>ShowName(PAL_100_Friend);</code> is used during a dialogue, the name "Arto" is permanently visible above the npc.</p></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>
