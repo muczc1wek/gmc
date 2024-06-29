@@ -354,13 +354,55 @@
 
                     <li class="md-nav__item md-nav__item--active">
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+            <span class="md-ellipsis">
+    Meshes
+  </span>
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       <a href="./" class="md-nav__link md-nav__link--active">
           <span class="md-ellipsis">
     Meshes
   </span>
 
       </a>
-    </li>
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+<li class="md-nav__item">
+  <a href="#mesh-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mesh types
+    </span>
+  </a>
+    <nav class="md-nav" aria-label="Mesh types">
+      <ul class="md-nav__list">
+<li class="md-nav__item">
+  <a href="#world-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      World Meshes
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#object-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object Meshes
+    </span>
+  </a>
+</li>      </ul>
+    </nav>
+</li><li class="md-nav__item">
+  <a href="#file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Format
+    </span>
+  </a>
+</li>    </ul>
+</nav>    </li>
 
                     <li class="md-nav__item">
       <a href="../music/" class="md-nav__link">
@@ -2861,6 +2903,40 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+<li class="md-nav__item">
+  <a href="#mesh-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mesh types
+    </span>
+  </a>
+    <nav class="md-nav" aria-label="Mesh types">
+      <ul class="md-nav__list">
+<li class="md-nav__item">
+  <a href="#world-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      World Meshes
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#object-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object Meshes
+    </span>
+  </a>
+</li>      </ul>
+    </nav>
+</li><li class="md-nav__item">
+  <a href="#file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Format
+    </span>
+  </a>
+</li>    </ul>
 </nav>                  </div>
                 </div>
               </div>
@@ -2871,7 +2947,16 @@
     <a href="https://github.com/Gothic-Modding-Community/gmc/raw/main/docs/zengin/meshes.md" title="View source of this page" class="md-content__button md-icon">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>    </a>
 <div><h1 id="meshes">Meshes<a class="headerlink" href="#meshes" title="Permanent link"></a></h1>
-<p>Everything about 3D models in ZenGin.</p></div>
+<p>In 3D graphics, meshes are collections of vertices, edges, and faces that create 3D objects. Game engine use meshes to create the world and objects in the world.</p>
+<h2 id="mesh-types">Mesh types<a class="headerlink" href="#mesh-types" title="Permanent link"></a></h2>
+<p>In ZenGin there are two types of meshes: </p>
+<h3 id="world-meshes">World Meshes<a class="headerlink" href="#world-meshes" title="Permanent link"></a></h3>
+<p>These are the meshes that are used to create the world terrain. In world meshes, there are some special materials that allow creating things like water or occluders.</p>
+<h3 id="object-meshes">Object Meshes<a class="headerlink" href="#object-meshes" title="Permanent link"></a></h3>
+<p>These are the meshes that are used to create static (non-animated) objects in the world (<a href="../worlds/Classes/zCVob/">Vobs</a>).</p>
+<h2 id="file-format">File Format<a class="headerlink" href="#file-format" title="Permanent link"></a></h2>
+<p>ZenGin uses the <code>.3ds</code> file format for meshes. This is a file format that is used by 3D Studio Max. However, ZenGin compiles the <code>.3ds</code> files into <code>.MRM</code> (Multi Resolution Mesh) files, or embeds them into the <code>.ZEN</code> files.</p>
+<p>The <code>.3ds</code> files can be opened with any 3D modeling software that supports this format. But, to easily import/export them with engine-specific settings, it is recommended to use Blender 2.80+ with the <a href="https://gitlab.com/Patrix9999/krximpexp">KrxImpExp</a> extension</p></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>
