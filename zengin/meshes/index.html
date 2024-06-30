@@ -401,6 +401,16 @@
       File Format
     </span>
   </a>
+    <nav class="md-nav" aria-label="File Format">
+      <ul class="md-nav__list">
+<li class="md-nav__item">
+  <a href="#3ds-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3DS limitations
+    </span>
+  </a>
+</li>      </ul>
+    </nav>
 </li>    </ul>
 </nav>    </li>
 
@@ -2453,15 +2463,6 @@
       </a>
     </li>
 
-                    <li class="md-nav__item">
-      <a href="../worlds/water/" class="md-nav__link">
-          <span class="md-ellipsis">
-    Water
-  </span>
-
-      </a>
-    </li>
-
           </ul>
         </nav>
     </li>
@@ -2945,6 +2946,16 @@
       File Format
     </span>
   </a>
+    <nav class="md-nav" aria-label="File Format">
+      <ul class="md-nav__list">
+<li class="md-nav__item">
+  <a href="#3ds-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3DS limitations
+    </span>
+  </a>
+</li>      </ul>
+    </nav>
 </li>    </ul>
 </nav>                  </div>
                 </div>
@@ -2965,7 +2976,9 @@
 <p>These are the meshes that are used to create static (non-animated) objects in the world (<a href="../worlds/Classes/zCVob/">Vobs</a>).</p>
 <h2 id="file-format">File Format<a class="headerlink" href="#file-format" title="Permanent link"></a></h2>
 <p>ZenGin uses the <code>.3ds</code> file format for meshes. This is a file format that is used by 3D Studio Max. However, ZenGin compiles the <code>.3ds</code> files into <code>.MRM</code> (Multi Resolution Mesh) files, or embeds them into the <code>.ZEN</code> files.</p>
-<p>The <code>.3ds</code> files can be opened with any 3D modeling software that supports this format. But, to easily import/export them with engine-specific settings, it is recommended to use Blender 2.80+ with the <a href="https://gitlab.com/Patrix9999/krximpexp">KrxImpExp</a> extension</p></div>
+<p>The <code>.3ds</code> files can be opened with any 3D modeling software that supports this format. But, to easily import/export them with engine-specific settings, it is recommended to use Blender 2.80+ with the <a href="https://gitlab.com/Patrix9999/krximpexp">KrxImpExp</a> extension</p>
+<h3 id="3ds-limitations">3DS limitations<a class="headerlink" href="#3ds-limitations" title="Permanent link"></a></h3>
+<p>The 3DS file format has some disadvantages when building levels. With very large levels such as <code>SURFACE.3DS</code>, you reach the upper limit of 65,536 polygons per object that are permitted in a <code>.3ds</code> file. To get around this problem, proceed as follows: simply “cut” the mesh into several small parts that are below the 64K poly limit. For example, the <code>SURFACE.3DS</code> was dismantled into 4 parts of roughly equal size and then completely exported. This mesh is then melted together again into an object in the spacer. This happens due to overlapping vertices.</p></div>
               </article>
             </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>        </div>
