@@ -372,15 +372,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
                     <li class="md-nav__item">
-      <a href="../meshes/portals/" class="md-nav__link">
-          <span class="md-ellipsis">
-    Portals
-  </span>
-
-      </a>
-    </li>
-
-                    <li class="md-nav__item">
       <a href="../meshes/water/" class="md-nav__link">
           <span class="md-ellipsis">
     Water
@@ -2971,18 +2962,18 @@
 <h2 id="world-contents">World contents<a class="headerlink" href="#world-contents" title="Permanent link"></a></h2>
 <p>The content of worlds in Gothic can be roughly separated in the following way:</p>
 <ul>
-<li>Base level mesh - terrain and buildings, sometimes also trees0</li>
+<li>Base level mesh - terrain and buildings, sometimes also trees.</li>
 <li>VOBs (<a href="Classes/zCVob/"><code>zCVob</code></a> and subclasses) - all interactive objects, items, foliage, small rocks, huts, furniture, ramps etc.</li>
 </ul>
 <p>Asides from those elements, there are also many invisible VOBs, such as:</p>
 <ul>
-<li>Waypoints (<a href="Classes/zCVob/zCVobWaypoint/"><code>zCVobWaypoint</code></a>) - used for NPC navigation</li>
-<li>Freepoints (<a href="Classes/zCVob/zCVobSpot/"><code>zCVobSpot</code></a>) - used mainly for NPC routines and roaming behavior for monsters</li>
+<li>Waypoints (<a href="Classes/zCVob/zCVobWaypoint/"><code>zCVobWaypoint</code></a>) - used for NPC navigation.</li>
+<li>Freepoints (<a href="Classes/zCVob/zCVobSpot/"><code>zCVobSpot</code></a>) - used mainly for NPC routines and roaming behavior for monsters.</li>
 <li>Startpoints (<a href="Classes/zCVob/zCVobStartpoint/"><code>zCVobStartpoint</code></a>) - used only to spawn the player when starting a new game. Teleporting between levels is handled with scripts and uses freepoints to determine where the player will appear.</li>
 <li>Sound emitters</li>
 <li>Music zones  <ul>
-<li><a href="Classes/zCVob/zCZone/oCZoneMusic/"><code>oCZoneMusic</code></a> - music which plays inside the bounding box of this zone</li>
-<li><a href="Classes/zCVob/zCZone/oCZoneMusic/oCZoneMusicDefault/"><code>oCZoneMusicDefault</code></a> - default music which plays whenever the player is not inside some oCZoneMusic</li>
+<li><a href="Classes/zCVob/zCZone/oCZoneMusic/"><code>oCZoneMusic</code></a> - music which plays inside the bounding box of this zone.</li>
+<li><a href="Classes/zCVob/zCZone/oCZoneMusic/oCZoneMusicDefault/"><code>oCZoneMusicDefault</code></a> - default music which plays whenever the player is not inside some <code>oCZoneMusic</code>.</li>
 </ul>
 </li>
 <li>Fog zones (<a href="Classes/zCVob/zCZone/zCZoneZFog/"><code>zCZoneZFog</code></a>) - areas which add fog, e.g. like in swamp areas where the sky is not visible. The setting to fade out the sky is optional though.</li>
