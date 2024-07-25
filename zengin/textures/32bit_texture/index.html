@@ -372,6 +372,15 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
                     <li class="md-nav__item">
+      <a href="../../meshes/portals/" class="md-nav__link">
+          <span class="md-ellipsis">
+    Portals
+  </span>
+
+      </a>
+    </li>
+
+                    <li class="md-nav__item">
       <a href="../../meshes/water/" class="md-nav__link">
           <span class="md-ellipsis">
     Water
@@ -2956,44 +2965,44 @@
     <a href="https://github.com/Gothic-Modding-Community/gmc/raw/main/docs/zengin/textures/32bit_texture.md" title="View source of this page" class="md-content__button md-icon">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>    </a>
 <div><h1 id="32-bit-texture-support">32 Bit texture support<a class="headerlink" href="#32-bit-texture-support" title="Permanent link"></a></h1>
-<p>By default ZenGin supports only compresed <code>DXT1</code> and <code>DXT3</code> textures. <a href="https://worldofplayers.ru/threads/43009/page-3#post-1180504">zSurface32 patch</a>, created by Gratt improves texture quality by adding proper <code>RGBA8888</code>, <code>BGRA8888</code>, <code>ARGB8888</code> and <code>ABGR8888</code> format readout and DirectX 32 Bit surface support in ZenGin<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+<p>By default, ZenGin supports only compressed <code>DXT1</code> and <code>DXT3</code> textures. <a href="https://worldofplayers.ru/threads/43009/page-3#post-1180504">zSurface32 patch</a>, created by Gratt improves texture quality by adding proper <code>RGBA8888</code>, <code>BGRA8888</code>, <code>ARGB8888</code> and <code>ABGR8888</code> format readout and DirectX 32 Bit surface support in ZenGin<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
 <p>To use the patch you must have <a href="../../union/">Union</a> installed. Download the <code>.patch</code> file <a href="https://worldofplayers.ru/attachments/114570/">here</a>, and put it into <code>system\</code> directory.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>It is advised to use <code>BGRA8888</code> due to performance reasons, as other colorspaces require additional conversion at runtime.</p>
+<p>It is advised to use <code>BGRA8888</code> due to performance reasons, as other <a href="https://en.wikipedia.org/wiki/RGBA_color_model">color spaces</a> require additional conversion at runtime.</p>
 </div>
 <h2 id="compilation">Compilation<a class="headerlink" href="#compilation" title="Permanent link"></a></h2>
 <p>ZenGin doesn’t natively support the compilation of such textures. This can only be achieved using external programs. The simplest method to create a texture is by utilizing <a href="https://gitlab.com/Shoun2137/ztexipy">zTEXiPy</a>.</p>
 <ol>
 <li>Open your texture in zTEXiPy<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>:
-<img alt="zTEXiPy's splash dialog" src="../../../assets/images/STEP_1.WEBP"></li>
+<img alt="zTEXiPy's splash dialog" src="../../../assets/images/32bit-texture-support/STEP_1.WEBP"></li>
 <li>Choose <code>Save TEX as...</code></li>
 <li>In this window:
-<img alt="zTEXiPy's saving dialog" src="../../../assets/images/STEP_3.WEBP"><ul>
+<img alt="zTEXiPy's saving dialog" src="../../../assets/images/32bit-texture-support/STEP_3.WEBP"><ul>
 <li>Uncheck <code>Generate Mipmaps</code> if your texture is meant to be used as UI.</li>
 <li>Set the <code>Colorspace</code> to <code>BGRA8888 (zEnum:3)</code> or other supported format.</li>
 </ul>
 </li>
 <li>Press <code>Save</code> and check your texture in-game:
-<img alt="Ingame Example" src="../../../assets/images/EXAMPLE_INGAME.WEBP"></li>
+<img alt="In-game Example" src="../../../assets/images/32bit-texture-support/EXAMPLE_INGAME.WEBP"></li>
 </ol>
 <h2 id="but-why">But why?<a class="headerlink" href="#but-why" title="Permanent link"></a></h2>
 <p>This type of texture is compatible with any asset, whether it’s armour or a sword. However, the primary application for such high-quality textures is in user interface elements, which make extensive use of gradients and the alpha channel:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">BGRA8888 vs DXT3</label><label for="__tabbed_1_2">BGRA8888 vs DXT1</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="Comparison between BGRA8888 vs DXT3 (Alpha)" src="../../../assets/images/EXAMPLE_1.WEBP"></p>
-<p>This example shows comparison between raw BGRA8888 colorspace and DXT3 (BC2)<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup> compression.
-DXT3 shows noticible banding throughout entire texture wherever there's alpha channel, while BGRA8888 has smooth gradient transition.</p>
+<p><img alt="Comparison between BGRA8888 vs DXT3 (Alpha)" src="../../../assets/images/32bit-texture-support/EXAMPLE_1.WEBP" style="background-color: white;"></p>
+<p>This example shows comparison between raw BGRA8888 color space and DXT3 (BC2)<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup> compression.
+DXT3 shows noticeable banding throughout entire texture wherever there's alpha channel, while BGRA8888 has smooth gradient transition.</p>
 </div>
 <div class="tabbed-block">
-<p><img alt="Comparison between BGRA8888 vs DXT1" src="../../../assets/images/EXAMPLE_2.WEBP"></p>
-<p>This example shows comparison between raw BGRA8888 colorspace and DXT1 (BC1)<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> compression.
+<p><img alt="Comparison between BGRA8888 vs DXT1" src="../../../assets/images/32bit-texture-support/EXAMPLE_2.WEBP"></p>
+<p>This example shows comparison between raw BGRA8888 color space and DXT1 (BC1)<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> compression.
 DXT1 shows lossy quantization artifacts, while BGRA8888 has none.</p>
 </div>
 </div>
 </div>
-<p><a href="../../../assets/EXAMPLE_SOURCE.7z">Source comparison files are available here.</a></p>
+<p><a href="../../../assets/examples/32bit_texture_support.7z">Source comparison files are available here.</a></p>
 <p>The drawback of using these textures is their large size, as they contain uncompressed color data. However, this is a small price to pay for the improved quality of the final product.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
