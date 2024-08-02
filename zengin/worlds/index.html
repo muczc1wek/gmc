@@ -2946,12 +2946,6 @@
     </span>
   </a>
 </li><li class="md-nav__item">
-  <a href="#water_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Water
-    </span>
-  </a>
-</li><li class="md-nav__item">
   <a href="#optimisation" class="md-nav__link">
     <span class="md-ellipsis">
       Optimisation
@@ -2972,8 +2966,7 @@
 <p class="admonition-title">Acknowledgment</p>
 <p>This article is heavily inspired by various tutorials from the polish <a href="https://themodders.org/index.php#c13">TheModders forums</a>.</p>
 </div>
-<p>Worlds, saved as <code>.ZEN</code> files in ZenGin, are archives that contain the world mesh (model), BSP tree, materials and the information of all objects in the world. These objects are called VOBs ("virtual objects"). ZEN files can be saved in two ways; compiled and uncompiled. The compiled version is a full-fledged level with a terrain model. Uncompiled ZENs only save the VOB tree and are meant for specific use-cases.
-Worlds, saved as <code>.ZEN</code> files in ZenGin, are archives that contain the world mesh (model), BSP tree, materials and the information of all objects in the world. These objects are called VOBs ("virtual objects"). ZEN files can be saved in two ways; compiled and uncompiled. The compiled version is a full-fledged level with a terrain model. Uncompiled ZENs only save the VOB tree and are meant for specific use-cases.</p>
+<p>Worlds, saved as <code>.ZEN</code> files in ZenGin, are archives that contain the world mesh (model), BSP tree, materials and the information of all objects in the world. These objects are called VOBs ("virtual objects"). ZEN files can be saved in two ways; compiled and uncompiled. The compiled version is a full-fledged level with a terrain model. Uncompiled ZENs only save the VOB tree and are meant for specific use-cases.</p>
 <p>Spacer is used to create these <code>.ZEN</code> files. There are also <a href="../tools/">other world editors</a>. The way of doing things can vary between these editors, so the specifics will be discussed in separate articles for those tools; at the same time, a lot of knowledge carries over between them. Also have in mind that Spacer is the least comfortable of the editors.</p>
 <h2 id="world-contents">World contents<a class="headerlink" href="#world-contents" title="Permanent link"></a></h2>
 <p>The content of worlds in Gothic can be roughly separated in the following way:</p>
@@ -3000,7 +2993,6 @@ Worlds, saved as <code>.ZEN</code> files in ZenGin, are archives that contain th
 <p>This list isn't exhaustive.</p>
 </div>
 <p>World also contains information about all materials used by level mesh and VOBs. They are stored in the form of <a href="Classes/zCMaterial/"><code>zCMaterial</code></a> instances.</p>
-<p>World also contains information about all materials used by level mesh and VOBs. They are stored in the form of <a href="Classes/zCMaterial/"><code>zCMaterial</code></a> instances.</p>
 <h2 id="creating-a-zen-file">Creating a ZEN file<a class="headerlink" href="#creating-a-zen-file" title="Permanent link"></a></h2>
 <p>Before VOBs can be added to a world model, the world needs to be compiled.
 After importing a 3ds model, the world can be compiled as an outdoor or indoor world and saved as a ZEN.</p>
@@ -3017,8 +3009,6 @@ After importing a 3ds model, the world can be compiled as an outdoor or indoor w
 <h2 id="portals">Portals<a class="headerlink" href="#portals" title="Permanent link"></a></h2>
 <p>Portals are special parts of outdoor world meshes which separate interiors from exteriors. This allows the level to have dark areas: otherwise interiors are lit the same way as any outside area. Additionally, portals help with performance (interiors aren't rendered unless the player is nearby). Creation of portals has many caveats and will be discussed in a separate article. Portals are also related to NPC behavior (e.g. setting ownership of a room).</p>
 <h2 id="water">Water<a class="headerlink" href="#water" title="Permanent link"></a></h2>
-<p>Water is a special surface in the world. It has to be properly modelled, and its material has to be set up correctly. You can read more about it in the <a href="../meshes/water/">dedicated article</a>.</p>
-<h2 id="water_1">Water<a class="headerlink" href="#water_1" title="Permanent link"></a></h2>
 <p>Water is a special surface in the world. It has to be properly modelled, and its material has to be set up correctly. You can read more about it in the <a href="../meshes/water/">dedicated article</a>.</p>
 <h2 id="optimisation">Optimisation<a class="headerlink" href="#optimisation" title="Permanent link"></a></h2>
 <p>The game uses occlusion culling, which means that if an object is covered by another object, it is not rendered and saves performance. This means that the performance in a level can be boosted by a lot by creating city walls and mountains and valleys which separate areas.</p>
