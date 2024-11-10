@@ -3066,30 +3066,13 @@
 </p><div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a>P[N]:Front_Back
 </span></code></pre></div></td></tr></table></div>
 <p>All materials of portal type, have to start with <code>P:</code> or <code>PN:</code>, the difference between each of them is only in game engine, <code>PN:</code> stands for Portal NonFading, and<code>P:</code> stands for Portals and if player is standing close by, then opacity of near portals will increase.</p>
-<p>For every portal, 2 materials have to be created - one for each direction. Its names have to be set in proper order. First name <code>Front</code> is always place or room to which you are entering from, and second <code>Back</code> name is place where you want to go. For example, if you are entering room 2 from room 1, then you need to name portal <code>P:room1_room2</code>. If you want to go back from room 2 to room 1, then you need to name portal <code>P:room2_room1</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Material names with the prefix <code>PN:</code> (“N” for NoFade) “open” visually as the camera approaches, but do not fade out like the other <code>P:</code> portals. This makes sense, for example, if there is a texture with an alpha channel on such a portal.</p>
 </div>
+<p>For every portal, 2 materials have to be created - one for each direction. Its names have to be set in proper order. First name <code>Front</code> is always place or room to which you are entering from, and second <code>Back</code> name is place where you want to go. For example, if you are entering room 2 from room 1, then you need to name portal <code>P:room1_room2</code>. If you want to go back from room 2 to room 1, then you need to name portal <code>P:room2_room1</code>.</p>
+<p>In addition, the empty string <code>""</code> is used to mark the portal to the outside world. For example, if you are entering corridor 1 from the outside world, then you need to name portal <code>P:corridor1_</code>. If you want to go back from corridor 1 to the outside world, then you need to name portal <code>P:_corridor1</code>.</p>
 <p><img alt="" src="../../../assets/images/portals/outdoor_naming.png"></p>
-<!-- Example:
-
-"<" and ">" indicate the directions of the normals.
-
-```
-   * * *
-   *A*BC*D
-   * <|> <|>
-   * * *
-   * * *
-   *Room1 *Room2* Outside world
-   ***************
-
-   Material A: "P:Room1_Room2" from Room1 to Room2
-   Material B: "P:Room2_Room1" from Room2 to Room1
-   Material C: "P:Room2_" from Room2 to the outside world
-   Material D: "P:_Room2" from outside world to Room2 
-``` -->
 <h3 id="modeling">Modeling<a class="headerlink" href="#modeling" title="Permanent link"></a></h3>
 <p>Outdoor portals must be double-sided polygons, pointing the opposite directions. The portal should close the area between two sectors, by touching all vertices of the sector entrance/exit. </p>
 <p><img alt="" src="../../../assets/images/portals/outdoor_modeling1.png"></p>
