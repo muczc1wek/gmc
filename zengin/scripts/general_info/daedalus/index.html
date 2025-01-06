@@ -5,8 +5,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="Gothic Modding Community is a collection of helpful resources for modding Gothic and Risen games.">
         <link rel="canonical" href="https://gothic-modding-community.github.io/gmc/zengin/scripts/general_info/daedalus/">
-        <link rel="prev" href="../../../music/">
-        <link rel="next" href="../parsing/">
+        <link rel="prev" href="../compilation/">
+        <link rel="next" href="../../classes/c_info/">
       <link rel="icon" href="../../../../assets/images/gmc_logo.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
         <title>Daedalus script language - Gothic Modding Community</title>
@@ -372,15 +372,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
                     <li class="md-nav__item">
-      <a href="../../../meshes/portals/" class="md-nav__link">
-          <span class="md-ellipsis">
-    Portals
-  </span>
-
-      </a>
-    </li>
-
-                    <li class="md-nav__item">
       <a href="../../../meshes/water/" class="md-nav__link">
           <span class="md-ellipsis">
     Water
@@ -436,6 +427,15 @@
             General information
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+                    <li class="md-nav__item">
+      <a href="../compilation/" class="md-nav__link">
+          <span class="md-ellipsis">
+    Compilation
+  </span>
+
+      </a>
+    </li>
+
                     <li class="md-nav__item md-nav__item--active">
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -458,17 +458,33 @@
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
 <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-</li><li class="md-nav__item">
   <a href="#syntax-description" class="md-nav__link">
     <span class="md-ellipsis">
       Syntax Description
     </span>
   </a>
+    <nav class="md-nav" aria-label="Syntax Description">
+      <ul class="md-nav__list">
+<li class="md-nav__item">
+  <a href="#indentifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indentifiers
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keywords
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Literals
+    </span>
+  </a>
+</li>      </ul>
+    </nav>
 </li><li class="md-nav__item">
   <a href="#commentaries" class="md-nav__link">
     <span class="md-ellipsis">
@@ -476,40 +492,12 @@
     </span>
   </a>
 </li><li class="md-nav__item">
-  <a href="#statements" class="md-nav__link">
+  <a href="#constants-and-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Statements
+      Constants and Variables
     </span>
   </a>
-</li><li class="md-nav__item">
-  <a href="#expressions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expressions
-    </span>
-  </a>
-    <nav class="md-nav" aria-label="Expressions">
-      <ul class="md-nav__list">
-<li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
-    <span class="md-ellipsis">
-      Operators
-    </span>
-  </a>
-</li><li class="md-nav__item">
-  <a href="#expressions_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expressions
-    </span>
-  </a>
-</li>      </ul>
-    </nav>
-</li><li class="md-nav__item">
-  <a href="#types-variables-and-constants" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types, Variables and Constants
-    </span>
-  </a>
-    <nav class="md-nav" aria-label="Types, Variables and Constants">
+    <nav class="md-nav" aria-label="Constants and Variables">
       <ul class="md-nav__list">
 <li class="md-nav__item">
   <a href="#elementary-types" class="md-nav__link">
@@ -518,29 +506,53 @@
     </span>
   </a>
 </li><li class="md-nav__item">
-  <a href="#c-and-daedalus" class="md-nav__link">
+  <a href="#other-types" class="md-nav__link">
     <span class="md-ellipsis">
-      C++ and DAEDALUS
+      Other Types
     </span>
   </a>
 </li><li class="md-nav__item">
-  <a href="#variables-and-constants" class="md-nav__link">
+  <a href="#declaration" class="md-nav__link">
     <span class="md-ellipsis">
-      Variables and Constants
+      Declaration
     </span>
   </a>
 </li><li class="md-nav__item">
-  <a href="#framework-global-local" class="md-nav__link">
+  <a href="#arrays" class="md-nav__link">
     <span class="md-ellipsis">
-      Framework: global, local
+      Arrays
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignment
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#global-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global, Local
     </span>
   </a>
 </li>      </ul>
     </nav>
 </li><li class="md-nav__item">
-  <a href="#assignments" class="md-nav__link">
+  <a href="#operators" class="md-nav__link">
     <span class="md-ellipsis">
-      Assignments
+      Operators
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expressions
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#statement-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statement Blocks
     </span>
   </a>
 </li><li class="md-nav__item">
@@ -572,12 +584,12 @@
 </li>      </ul>
     </nav>
 </li><li class="md-nav__item">
-  <a href="#classes-design-patterns-and-instances" class="md-nav__link">
+  <a href="#classes-prototypes-and-instances" class="md-nav__link">
     <span class="md-ellipsis">
-      Classes, Design Patterns and Instances
+      Classes, Prototypes and Instances
     </span>
   </a>
-    <nav class="md-nav" aria-label="Classes, Design Patterns and Instances">
+    <nav class="md-nav" aria-label="Classes, Prototypes and Instances">
       <ul class="md-nav__list">
 <li class="md-nav__item">
   <a href="#classes" class="md-nav__link">
@@ -608,42 +620,21 @@
     <nav class="md-nav" aria-label="Control flows">
       <ul class="md-nav__list">
 <li class="md-nav__item">
-  <a href="#branching-if-then-else" class="md-nav__link">
+  <a href="#if-statement" class="md-nav__link">
     <span class="md-ellipsis">
-      Branching: if-then-else
+      if statement
     </span>
   </a>
 </li><li class="md-nav__item">
-  <a href="#function-value-return-return" class="md-nav__link">
+  <a href="#return-statement" class="md-nav__link">
     <span class="md-ellipsis">
-      Function value return: return
+      return statement
     </span>
   </a>
 </li>      </ul>
     </nav>
-</li><li class="md-nav__item">
-  <a href="#dynamic-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dynamic Variables
-    </span>
-  </a>
-</li><li class="md-nav__item">
-  <a href="#important-differences-to-c" class="md-nav__link">
-    <span class="md-ellipsis">
-      Important Differences to C++
-    </span>
-  </a>
 </li>    </ul>
 </nav>    </li>
-
-                    <li class="md-nav__item">
-      <a href="../parsing/" class="md-nav__link">
-          <span class="md-ellipsis">
-    Parsing
-  </span>
-
-      </a>
-    </li>
 
           </ul>
         </nav>
@@ -3162,17 +3153,33 @@
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
 <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-</li><li class="md-nav__item">
   <a href="#syntax-description" class="md-nav__link">
     <span class="md-ellipsis">
       Syntax Description
     </span>
   </a>
+    <nav class="md-nav" aria-label="Syntax Description">
+      <ul class="md-nav__list">
+<li class="md-nav__item">
+  <a href="#indentifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indentifiers
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keywords
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Literals
+    </span>
+  </a>
+</li>      </ul>
+    </nav>
 </li><li class="md-nav__item">
   <a href="#commentaries" class="md-nav__link">
     <span class="md-ellipsis">
@@ -3180,40 +3187,12 @@
     </span>
   </a>
 </li><li class="md-nav__item">
-  <a href="#statements" class="md-nav__link">
+  <a href="#constants-and-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Statements
+      Constants and Variables
     </span>
   </a>
-</li><li class="md-nav__item">
-  <a href="#expressions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expressions
-    </span>
-  </a>
-    <nav class="md-nav" aria-label="Expressions">
-      <ul class="md-nav__list">
-<li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
-    <span class="md-ellipsis">
-      Operators
-    </span>
-  </a>
-</li><li class="md-nav__item">
-  <a href="#expressions_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expressions
-    </span>
-  </a>
-</li>      </ul>
-    </nav>
-</li><li class="md-nav__item">
-  <a href="#types-variables-and-constants" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types, Variables and Constants
-    </span>
-  </a>
-    <nav class="md-nav" aria-label="Types, Variables and Constants">
+    <nav class="md-nav" aria-label="Constants and Variables">
       <ul class="md-nav__list">
 <li class="md-nav__item">
   <a href="#elementary-types" class="md-nav__link">
@@ -3222,29 +3201,53 @@
     </span>
   </a>
 </li><li class="md-nav__item">
-  <a href="#c-and-daedalus" class="md-nav__link">
+  <a href="#other-types" class="md-nav__link">
     <span class="md-ellipsis">
-      C++ and DAEDALUS
+      Other Types
     </span>
   </a>
 </li><li class="md-nav__item">
-  <a href="#variables-and-constants" class="md-nav__link">
+  <a href="#declaration" class="md-nav__link">
     <span class="md-ellipsis">
-      Variables and Constants
+      Declaration
     </span>
   </a>
 </li><li class="md-nav__item">
-  <a href="#framework-global-local" class="md-nav__link">
+  <a href="#arrays" class="md-nav__link">
     <span class="md-ellipsis">
-      Framework: global, local
+      Arrays
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignment
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#global-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global, Local
     </span>
   </a>
 </li>      </ul>
     </nav>
 </li><li class="md-nav__item">
-  <a href="#assignments" class="md-nav__link">
+  <a href="#operators" class="md-nav__link">
     <span class="md-ellipsis">
-      Assignments
+      Operators
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expressions
+    </span>
+  </a>
+</li><li class="md-nav__item">
+  <a href="#statement-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statement Blocks
     </span>
   </a>
 </li><li class="md-nav__item">
@@ -3276,12 +3279,12 @@
 </li>      </ul>
     </nav>
 </li><li class="md-nav__item">
-  <a href="#classes-design-patterns-and-instances" class="md-nav__link">
+  <a href="#classes-prototypes-and-instances" class="md-nav__link">
     <span class="md-ellipsis">
-      Classes, Design Patterns and Instances
+      Classes, Prototypes and Instances
     </span>
   </a>
-    <nav class="md-nav" aria-label="Classes, Design Patterns and Instances">
+    <nav class="md-nav" aria-label="Classes, Prototypes and Instances">
       <ul class="md-nav__list">
 <li class="md-nav__item">
   <a href="#classes" class="md-nav__link">
@@ -3312,31 +3315,19 @@
     <nav class="md-nav" aria-label="Control flows">
       <ul class="md-nav__list">
 <li class="md-nav__item">
-  <a href="#branching-if-then-else" class="md-nav__link">
+  <a href="#if-statement" class="md-nav__link">
     <span class="md-ellipsis">
-      Branching: if-then-else
+      if statement
     </span>
   </a>
 </li><li class="md-nav__item">
-  <a href="#function-value-return-return" class="md-nav__link">
+  <a href="#return-statement" class="md-nav__link">
     <span class="md-ellipsis">
-      Function value return: return
+      return statement
     </span>
   </a>
 </li>      </ul>
     </nav>
-</li><li class="md-nav__item">
-  <a href="#dynamic-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dynamic Variables
-    </span>
-  </a>
-</li><li class="md-nav__item">
-  <a href="#important-differences-to-c" class="md-nav__link">
-    <span class="md-ellipsis">
-      Important Differences to C++
-    </span>
-  </a>
 </li>    </ul>
 </nav>                  </div>
                 </div>
@@ -3347,319 +3338,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>    </a>
     <a href="https://github.com/Gothic-Modding-Community/gmc/raw/main/docs/zengin/scripts/general_info/daedalus.md" title="View source of this page" class="md-content__button md-icon">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>    </a>
-<div><h1 id="the-script-language-daedalus">The Script language "DAEDALUS"<a class="headerlink" href="#the-script-language-daedalus" title="Permanent link"></a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link"></a></h2>
-<p>The script language designed by us will be referred to as DAEDALUS in the following text. The game programme as such, that interprets the script code, will be regularly referred to as "C++"-Code.</p>
-<p>This chapter describes the script language DAEDALUS. During the design we were primarily inspired by the programming language "C", the script language "<a href="https://en.wikipedia.org/wiki/QuakeC">QuakeC</a>" and to some extent Pascal. But DAEDALUS deviates from these in a few areas.</p>
-<p>Application of DAEDALUS</p>
-<ul>
-<li>Dialogues / Informations</li>
-<li>NPC-AI</li>
-<li>Missions</li>
-<li>Text-Pool</li>
-<li>NPCs (Prototypes and Instances)</li>
-<li>Items (Prototypes and Instances)</li>
-<li>Implementations of Concept-Rules</li>
-<li>"Event-Programmes" (Realisation of complex logical riddles)</li>
-<li>Declaration of Sound-Resources</li>
-<li>Declaration of Graphic-Resources (also with Ani information)</li>
-</ul>
+<div><h1 id="the-script-language-daedalus">The Script language Daedalus<a class="headerlink" href="#the-script-language-daedalus" title="Permanent link"></a></h1>
+<p>ZenGin engine uses its own script language called Daedalus. The language is used to define the game logic, dialogues, AI, missions, and other game-related content.</p>
 <h2 id="syntax-description">Syntax Description<a class="headerlink" href="#syntax-description" title="Permanent link"></a></h2>
-<p>There are five kinds of so called tokens: identifier, keywords, literals, operators and other separators. A script is composed of these tokens. Spaces, line breaks, commentaries etc. are ignored. The length of identifiers is non-restricted.</p>
+<p>Daedalus synatx is a mix of C and C++, designed to be easy to use. The script language is not case-sensitive and whitespace is ignored. </p>
+<p>The script is composed of tokens, which are <a href="#indentifiers">identifiers</a>, <a href="#keywords">keywords</a>, <a href="#literals">literals</a>, <a href="#operators">operators</a>, and other separators. The length of identifiers is not restricted.</p>
+<h3 id="indentifiers">Indentifiers<a class="headerlink" href="#indentifiers" title="Permanent link"></a></h3>
 <p>Identifier are names for variables, constants, instances, prototypes, classes and functions. An identifier is a sequence of letters and ciphers. The first sign must be a letter. Thereafter are allowed: letters, ciphers 0 to 9 and underscores.</p>
+<h3 id="keywords">Keywords<a class="headerlink" href="#keywords" title="Permanent link"></a></h3>
 <p>Keywords are:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>class       const       else        float      func         if
-instance    int         other       prototype  return       self
-string      this        var         void       while
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>var  const  if  else  class  prototype  instance  return  null  nofunc  int  float  string  void  func
 </code></pre></div></td></tr></table></div>
-<p>Literals are strings ("Hello") and constant values (453). Operators will be introduced further below.</p>
-<p>In this reference I describe the script language formally in dependence on the book "The C++ Programming Language" by Bjarne Stroustrup. Syntactical identifiers will be represented in italics.</p>
-<p>The script language is not case-sensitive (different than in C).</p>
-<p>But we recommend the following conventions for the naming of identifiers: ("dng" be the acronym for a module "dungeon.D")</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Function: Dng_MoveLift();
-Variable: dng_buttonsPressed;
-Constant: DNG_NUM_TRIES;
-</code></pre></div></td></tr></table></div>
+<p>Keywords are reserved and can not be used as identifiers.</p>
+<h3 id="literals">Literals<a class="headerlink" href="#literals" title="Permanent link"></a></h3>
+<p>Literals are strings <code>"Hello"</code> and constant values <code>453</code>. Operators will be introduced further below.</p>
 <h2 id="commentaries">Commentaries<a class="headerlink" href="#commentaries" title="Permanent link"></a></h2>
-<p>The string /<em> begins a comment, which is closed by the string </em>/. The string // begins a comment, which goes until the end of the line. Tthe strings // and /<em> within a comment as well as </em>/ after a line comment have no further meaning and are handled like other signs.</p>
+<p>The string /<em> begins a comment, which is closed by the string </em>/. 
+</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
+<span class="normal"><a href="#example-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="cm">/* This is a comment </span>
+</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a><span class="cm">    which can be spread over several lines */</span>
+</span></code></pre></div></td></tr></table></div>
+<p>The string // begins a comment, which goes until the end of the line. 
+</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="c">// This is a comment</span>
+</span></code></pre></div></td></tr></table></div>
+The strings // and /<em> within a comment as well as </em>/ after a line comment have no further meaning and are handled like other signs.
 <p>The commentary concept was adopted from C++.</p>
-<h2 id="statements">Statements<a class="headerlink" href="#statements" title="Permanent link"></a></h2>
-<p>Statements are declarations, commands or as well a statement block:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>statement
-  vardecl
-  constdecl
-assignment  
-  if-statement
-  return-statement
-statement-block
-
-
-Example: 
-statement:        door_open();
-statement-list:   door_open();  opened = TRUE;
-statement-block:  { door_open(); opened = TRUE; }
-</code></pre></div></td></tr></table></div>
-<h2 id="expressions">Expressions<a class="headerlink" href="#expressions" title="Permanent link"></a></h2>
-<h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link"></a></h3>
-<p>An operator "calculates" the resulting value from one or two values. A relational operator as well as a boolean operator delivers the integer value 1, if the expression is true, otherwise 0. Bit-Operators manipulate variables on bit level. The operator precedence was adopted from C++.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code>operator:
-  calc-op
-  cmp-op
-  bool-op
-  bit-op
-
-a) Operators
-
-calc-op: 
-  +   Addition
-  -   Subtraction
-  *   Multiplication
-  /   Division
-  %   Euclidean division (Modulo)
-
-
-c) Relational Operators
-
-cmp-op: 
-  &lt;   smaller than
-  &lt;=  smaller or equal to
-  &gt;   greater than
-  &gt;=  greater or equal to
-  ==  Equality
-  !=  Inequality
-
-d) Boolean Operators
-
-bool-op:
-  !   not
-  &amp;&amp;  and
-  ||  or
-
-
-e) Bitwise Operators
-
-bit-op:
-  &amp;   and
-  |   or
-
-f) Signs
-
-sign:
-  +   positive
-  -   negative
-</code></pre></div></td></tr></table></div>
-<h3 id="expressions_1">Expressions<a class="headerlink" href="#expressions_1" title="Permanent link"></a></h3>
-<p>Expressions are formed by the operators presented above, as is common in C. Here just some examples of expressions are shown.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code>expression:
-  literal
-  calc-expressoin
-  cmp-expression
-  bool-expression
-  bit-expression
-
-a) Expression
-
-expression:
-  -x1 + x2
-  x1 * (x2 + x3)
-  (x2 % 2) * x3
-
-b) Compares
-
-cmp- expression: 
-  x1 &lt; x2
-  x1 == x2
-
-c) Boolean Expressions
-
-bool- expression:
-  x1 &amp;&amp; x2
-  x1 || x2
-  (x0)
-
-A numerical value counts as true, when it does not equal zero.
-
-d) Bitwise Manipulations
-
-bit- expression:
-  x1 | 5;
-  x1 &amp; 4;
-</code></pre></div></td></tr></table></div>
-<h2 id="types-variables-and-constants">Types, Variables and Constants<a class="headerlink" href="#types-variables-and-constants" title="Permanent link"></a></h2>
-<p>Two kinds of types exist: elementary types and classes. Additional types can not be defined, as is common in C/C++. Classes have a direct correspondent in the C-Code of the engine. Variables of a class are the so called instances.</p>
+<h2 id="constants-and-variables">Constants and Variables<a class="headerlink" href="#constants-and-variables" title="Permanent link"></a></h2>
 <h3 id="elementary-types">Elementary Types<a class="headerlink" href="#elementary-types" title="Permanent link"></a></h3>
+<p>Elementary types, which can be used in the script, are:</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>float
 int
 string
 </code></pre></div></td></tr></table></div>
-<p>Correspond to the types in C/C++</p>
-<p>Additionally, int- and string-arrays can be formed:</p>
-<div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1">1</a></span>
-<span class="normal"><a href="#example-0-2">2</a></span>
-<span class="normal"><a href="#example-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-0-1"><a id="example-0-1" name="example-0-1"></a><span class="kd">VAR</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="n">attribute</span><span class="p">[</span><span class="n">MAX_ATTRIBUTES</span><span class="p">];</span>
-</span><span id="example-0-2"><a id="example-0-2" name="example-0-2"></a>
-</span><span id="example-0-3"><a id="example-0-3" name="example-0-3"></a><span class="kd">VAR</span><span class="w"> </span><span class="kt">STRING</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="n">MAX_NAMES</span><span class="p">];</span>
-</span></code></pre></div></td></tr></table></div>
-<p>Only one-dimensional arrays can be created. The single elements of the fields (arrays) are addressed as usual in C++, but for this only constants can be used as index:
-</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-1-1"><a id="example-1-1" name="example-1-1"></a><span class="n">attribute</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span></code></pre></div></td></tr></table></div>
-<p>The first element begins with the index zero.</p>
-<h3 id="c-and-daedalus">C++ and DAEDALUS<a class="headerlink" href="#c-and-daedalus" title="Permanent link"></a></h3>
-<p>Functions, variables and constants, which have to be accessed both in the C++-Code as well as in DAEDALUS, are declared at least in DAEDALUS. This is served by the keyword external. Variables and constants are also additionally defined, that means values are assigned to them.
-Variables and Constants</p>
-<h3 id="variables-and-constants">Variables and Constants<a class="headerlink" href="#variables-and-constants" title="Permanent link"></a></h3>
-<p>A variable declaration must be initiated by the keyword var. This applies to every single declaration, not, like in PASCAL, for a whole block. But lists of variables are possible (as in C):
-</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1"> 1</a></span>
-<span class="normal"><a href="#example-2-2"> 2</a></span>
-<span class="normal"><a href="#example-2-3"> 3</a></span>
-<span class="normal"><a href="#example-2-4"> 4</a></span>
-<span class="normal"><a href="#example-2-5"> 5</a></span>
-<span class="normal"><a href="#example-2-6"> 6</a></span>
-<span class="normal"><a href="#example-2-7"> 7</a></span>
-<span class="normal"><a href="#example-2-8"> 8</a></span>
-<span class="normal"><a href="#example-2-9"> 9</a></span>
-<span class="normal"><a href="#example-2-10">10</a></span>
-<span class="normal"><a href="#example-2-11">11</a></span>
-<span class="normal"><a href="#example-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="c">// vardecl:</span>
-</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a><span class="kd">var</span><span class="w">  </span><span class="kt">type</span><span class="w">  </span><span class="n">identifier</span><span class="w"> </span><span class="p">[,</span><span class="n">identifier</span><span class="p">]</span><span class="n">opt</span><span class="w">  </span><span class="p">[...]</span><span class="n">opt</span><span class="p">;</span>
+<p>No additional types can be defined. </p>
+<h3 id="other-types">Other Types<a class="headerlink" href="#other-types" title="Permanent link"></a></h3>
+<p>Classes are also a type, therefore they can be used as a type for variables.</p>
+<h3 id="declaration">Declaration<a class="headerlink" href="#declaration" title="Permanent link"></a></h3>
+<p>A declaration is a statement, which declares a variable or a constant. </p>
+<p>The declaration of a variable is initiated by the keyword <code>var</code>.
+</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
+<span class="normal"><a href="#example-2-2">2</a></span>
+<span class="normal"><a href="#example-2-3">3</a></span>
+<span class="normal"><a href="#example-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-2-1"><a id="example-2-1" name="example-2-1"></a><span class="c">// vardecl:</span>
+</span><span id="example-2-2"><a id="example-2-2" name="example-2-2"></a><span class="kd">var</span><span class="w"> </span><span class="kt">type</span><span class="w"> </span><span class="n">indentifier</span><span class="w"> </span><span class="p">[,</span><span class="n">identifier</span><span class="p">]</span><span class="n">opt</span><span class="w"> </span><span class="p">[...]</span><span class="n">opt</span><span class="p">;</span>
 </span><span id="example-2-3"><a id="example-2-3" name="example-2-3"></a>
-</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="c">// Examples:</span>
-</span><span id="example-2-5"><a id="example-2-5" name="example-2-5"></a>
-</span><span id="example-2-6"><a id="example-2-6" name="example-2-6"></a><span class="c">// correct:</span>
-</span><span id="example-2-7"><a id="example-2-7" name="example-2-7"></a><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="n">value3</span><span class="p">;</span>
-</span><span id="example-2-8"><a id="example-2-8" name="example-2-8"></a><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">question</span><span class="p">,</span><span class="w"> </span><span class="n">answer</span><span class="p">;</span>
-</span><span id="example-2-9"><a id="example-2-9" name="example-2-9"></a><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
-</span><span id="example-2-10"><a id="example-2-10" name="example-2-10"></a>
-</span><span id="example-2-11"><a id="example-2-11" name="example-2-11"></a><span class="c">// wrong:</span>
-</span><span id="example-2-12"><a id="example-2-12" name="example-2-12"></a><span class="n">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+</span><span id="example-2-4"><a id="example-2-4" name="example-2-4"></a><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">x3</span><span class="p">;</span>
 </span></code></pre></div></td></tr></table></div>
-<p>A constant definition must be initiated by the keyword const:
+<p>The declaration of a constant by the keyword <code>const</code>.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-3-1">1</a></span>
 <span class="normal"><a href="#example-3-2">2</a></span>
 <span class="normal"><a href="#example-3-3">3</a></span>
-<span class="normal"><a href="#example-3-4">4</a></span>
-<span class="normal"><a href="#example-3-5">5</a></span>
-<span class="normal"><a href="#example-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="c">// constsdef:</span>
-</span><span id="example-3-2"><a id="example-3-2" name="example-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="kt">type</span><span class="w">  </span><span class="n">identifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="p">;</span>
+<span class="normal"><a href="#example-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-3-1"><a id="example-3-1" name="example-3-1"></a><span class="c">// constdecl:</span>
+</span><span id="example-3-2"><a id="example-3-2" name="example-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="kt">type</span><span class="w"> </span><span class="n">identifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="p">;</span>
 </span><span id="example-3-3"><a id="example-3-3" name="example-3-3"></a>
-</span><span id="example-3-4"><a id="example-3-4" name="example-3-4"></a>
-</span><span id="example-3-5"><a id="example-3-5" name="example-3-5"></a><span class="c">// Example:</span>
-</span><span id="example-3-6"><a id="example-3-6" name="example-3-6"></a><span class="kd">const</span><span class="w"> </span><span class="kt">type</span><span class="w"> </span><span class="n">identifier</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">expression</span><span class="p">,</span><span class="w"> </span><span class="n">expression</span><span class="p">,</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="p">};</span>
+</span><span id="example-3-4"><a id="example-3-4" name="example-3-4"></a><span class="kd">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAX_ATTRIBUTES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="framework-global-local">Framework: global, local<a class="headerlink" href="#framework-global-local" title="Permanent link"></a></h3>
-<p>There exist two different frameworks for variables and constants:</p>
-<p>One variable or constant declared outside of each block is available globally: After their declaration it is available in the entire following script part.
-A variable/constant declared inside a block is local in reference to the block most outside. 
-</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span>
+<h3 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link"></a></h3>
+<p>Additionally, <code>int</code> and <code>string</code> arrays can be formed:</p>
+<p></p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span>
 <span class="normal"><a href="#example-4-2">2</a></span>
-<span class="normal"><a href="#example-4-3">3</a></span>
-<span class="normal"><a href="#example-4-4">4</a></span>
-<span class="normal"><a href="#example-4-5">5</a></span>
-<span class="normal"><a href="#example-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="c">// Examples:</span>
+<span class="normal"><a href="#example-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-4-1"><a id="example-4-1" name="example-4-1"></a><span class="kd">VAR</span><span class="w"> </span><span class="kt">INT</span><span class="w"> </span><span class="n">attribute</span><span class="p">[</span><span class="n">MAX_ATTRIBUTES</span><span class="p">];</span>
 </span><span id="example-4-2"><a id="example-4-2" name="example-4-2"></a>
-</span><span id="example-4-3"><a id="example-4-3" name="example-4-3"></a><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
-</span><span id="example-4-4"><a id="example-4-4" name="example-4-4"></a>
-</span><span id="example-4-5"><a id="example-4-5" name="example-4-5"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="p">()</span>
-</span><span id="example-4-6"><a id="example-4-6" name="example-4-6"></a><span class="p">{</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="example-4-3"><a id="example-4-3" name="example-4-3"></a><span class="kd">VAR</span><span class="w"> </span><span class="kt">STRING</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="n">MAX_NAMES</span><span class="p">];</span>
 </span></code></pre></div></td></tr></table></div>
-<p>The variable count is available globally in the script. The variables x and y - as in C/C++ - have the same local framework: the function <code>test()</code>.</p>
-<h2 id="assignments">Assignments<a class="headerlink" href="#assignments" title="Permanent link"></a></h2>
-<div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span>
+The first element begins with the index zero.
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only one-dimensional arrays can be created. The single elements of the fields (arrays) are addressed as usual in C++, but for this only constants can be used as index:</p>
+</div>
+<h3 id="assignment">Assignment<a class="headerlink" href="#assignment" title="Permanent link"></a></h3>
+<p>An assignment is a statement, which assigns a value to a variable. The assignment is initiated by the equal sign <code>=</code>.
+</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-5-1">1</a></span>
 <span class="normal"><a href="#example-5-2">2</a></span>
 <span class="normal"><a href="#example-5-3">3</a></span>
 <span class="normal"><a href="#example-5-4">4</a></span>
@@ -3675,74 +3426,48 @@ A variable/constant declared inside a block is local in reference to the block m
 </span><span id="example-5-7"><a id="example-5-7" name="example-5-7"></a><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 </span><span id="example-5-8"><a id="example-5-8" name="example-5-8"></a><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span>
 </span></code></pre></div></td></tr></table></div>
-<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link"></a></h2>
-<h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link"></a></h3>
-<p>Function definitions are initiated by the keyword func.
-</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>The assignment is not allowed alongside with declarations. The assignment must be done in a separate statement.</p>
+<div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1">1</a></span>
 <span class="normal"><a href="#example-6-2">2</a></span>
 <span class="normal"><a href="#example-6-3">3</a></span>
 <span class="normal"><a href="#example-6-4">4</a></span>
 <span class="normal"><a href="#example-6-5">5</a></span>
-<span class="normal"><a href="#example-6-6">6</a></span>
-<span class="normal"><a href="#example-6-7">7</a></span>
-<span class="normal"><a href="#example-6-8">8</a></span>
-<span class="normal"><a href="#example-6-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="c">// func-def:</span>
-</span><span id="example-6-2"><a id="example-6-2" name="example-6-2"></a><span class="kd">func</span><span class="w"> </span><span class="kt">type</span><span class="w"> </span><span class="nf">identifier</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">vardecl1opt</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">vardecl8opt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="err">statement-block</span>
+<span class="normal"><a href="#example-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-6-1"><a id="example-6-1" name="example-6-1"></a><span class="c">// wrong:</span>
+</span><span id="example-6-2"><a id="example-6-2" name="example-6-2"></a><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span>
 </span><span id="example-6-3"><a id="example-6-3" name="example-6-3"></a>
-</span><span id="example-6-4"><a id="example-6-4" name="example-6-4"></a><span class="err">//</span><span class="w"> </span><span class="err">Example:</span>
-</span><span id="example-6-5"><a id="example-6-5" name="example-6-5"></a>
-</span><span id="example-6-6"><a id="example-6-6" name="example-6-6"></a><span class="err">func</span><span class="w"> </span><span class="err">int</span><span class="w"> </span><span class="err">UsingShield</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">s1</span><span class="p">)</span>
-</span><span id="example-6-7"><a id="example-6-7" name="example-6-7"></a><span class="p">{</span>
-</span><span id="example-6-8"><a id="example-6-8" name="example-6-8"></a><span class="p">[...]</span>
-</span><span id="example-6-9"><a id="example-6-9" name="example-6-9"></a><span class="p">};</span>
+</span><span id="example-6-4"><a id="example-6-4" name="example-6-4"></a><span class="c">// correct:</span>
+</span><span id="example-6-5"><a id="example-6-5" name="example-6-5"></a><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">;</span>
+</span><span id="example-6-6"><a id="example-6-6" name="example-6-6"></a><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="parameter-transfer">Parameter transfer<a class="headerlink" href="#parameter-transfer" title="Permanent link"></a></h3>
-<p>The length of the parameter list is unlimited, but should be kept as short as possible for memory capacity reasons. Parameters are transfered call-by-value, that said, they don't return a value. Arrays are not allowed as parameter transfers.
-Function Calls</p>
-<h3 id="function-calls">Function calls<a class="headerlink" href="#function-calls" title="Permanent link"></a></h3>
-<p>Functions are called as usual in C++. Also with their identifier as well as a mandatory parameter bracket.</p>
-<h2 id="classes-design-patterns-and-instances">Classes, Design Patterns and Instances<a class="headerlink" href="#classes-design-patterns-and-instances" title="Permanent link"></a></h2>
-<h3 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link"></a></h3>
-<p>The Class declarations describe exactly the data structure of the engine. That means, they are not arbitrarily extendable in the script, but they are directly linked with the engine.
-</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1"> 1</a></span>
-<span class="normal"><a href="#example-7-2"> 2</a></span>
-<span class="normal"><a href="#example-7-3"> 3</a></span>
-<span class="normal"><a href="#example-7-4"> 4</a></span>
-<span class="normal"><a href="#example-7-5"> 5</a></span>
-<span class="normal"><a href="#example-7-6"> 6</a></span>
-<span class="normal"><a href="#example-7-7"> 7</a></span>
-<span class="normal"><a href="#example-7-8"> 8</a></span>
-<span class="normal"><a href="#example-7-9"> 9</a></span>
-<span class="normal"><a href="#example-7-10">10</a></span>
-<span class="normal"><a href="#example-7-11">11</a></span>
-<span class="normal"><a href="#example-7-12">12</a></span>
-<span class="normal"><a href="#example-7-13">13</a></span>
-<span class="normal"><a href="#example-7-14">14</a></span>
-<span class="normal"><a href="#example-7-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="c">// classdecl:</span>
-</span><span id="example-7-2"><a id="example-7-2" name="example-7-2"></a><span class="n">class</span><span class="w">  </span><span class="n">classname</span><span class="w">  </span><span class="p">(</span><span class="n">base</span><span class="o">-</span><span class="n">classname</span><span class="p">)</span><span class="n">opt</span><span class="w">  </span><span class="n">declaration</span><span class="o">-</span><span class="n">block</span>
-</span><span id="example-7-3"><a id="example-7-3" name="example-7-3"></a>
-</span><span id="example-7-4"><a id="example-7-4" name="example-7-4"></a><span class="c">// Example:</span>
-</span><span id="example-7-5"><a id="example-7-5" name="example-7-5"></a>
-</span><span id="example-7-6"><a id="example-7-6" name="example-7-6"></a><span class="n">class</span><span class="w"> </span><span class="n">Creature</span><span class="w"> </span><span class="p">(</span><span class="n">Vob</span><span class="p">)</span>
-</span><span id="example-7-7"><a id="example-7-7" name="example-7-7"></a><span class="p">{</span>
-</span><span id="example-7-8"><a id="example-7-8" name="example-7-8"></a><span class="w">  </span><span class="c">// attributes</span>
-</span><span id="example-7-9"><a id="example-7-9" name="example-7-9"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w">  </span><span class="n">name</span><span class="p">;</span>
-</span><span id="example-7-10"><a id="example-7-10" name="example-7-10"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">hitpoints</span><span class="p">;</span>
-</span><span id="example-7-11"><a id="example-7-11" name="example-7-11"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">hp_max</span><span class="p">;</span>
-</span><span id="example-7-12"><a id="example-7-12" name="example-7-12"></a><span class="w">  </span><span class="c">// actions</span>
-</span><span id="example-7-13"><a id="example-7-13" name="example-7-13"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">funcref</span><span class="w"> </span><span class="n">birth</span><span class="p">;</span>
-</span><span id="example-7-14"><a id="example-7-14" name="example-7-14"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">funcref</span><span class="w"> </span><span class="n">death</span><span class="p">;</span>
-</span><span id="example-7-15"><a id="example-7-15" name="example-7-15"></a><span class="p">};</span>
+</div>
+<h3 id="global-local">Global, Local<a class="headerlink" href="#global-local" title="Permanent link"></a></h3>
+<p>There exist two different frameworks for variables and constants:</p>
+<p>One variable or constant declared outside any block is available globally: After their declaration it is available in the entire following script part.
+A variable/constant declared inside a block is local in reference to the block most outside. 
+</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-7-1">1</a></span>
+<span class="normal"><a href="#example-7-2">2</a></span>
+<span class="normal"><a href="#example-7-3">3</a></span>
+<span class="normal"><a href="#example-7-4">4</a></span>
+<span class="normal"><a href="#example-7-5">5</a></span>
+<span class="normal"><a href="#example-7-6">6</a></span>
+<span class="normal"><a href="#example-7-7">7</a></span>
+<span class="normal"><a href="#example-7-8">8</a></span>
+<span class="normal"><a href="#example-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-7-1"><a id="example-7-1" name="example-7-1"></a><span class="c">// Examples:</span>
+</span><span id="example-7-2"><a id="example-7-2" name="example-7-2"></a>
+</span><span id="example-7-3"><a id="example-7-3" name="example-7-3"></a><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+</span><span id="example-7-4"><a id="example-7-4" name="example-7-4"></a>
+</span><span id="example-7-5"><a id="example-7-5" name="example-7-5"></a><span class="kd">func</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="p">()</span>
+</span><span id="example-7-6"><a id="example-7-6" name="example-7-6"></a><span class="p">{</span><span class="w"> </span>
+</span><span id="example-7-7"><a id="example-7-7" name="example-7-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span>
+</span><span id="example-7-8"><a id="example-7-8" name="example-7-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span>
+</span><span id="example-7-9"><a id="example-7-9" name="example-7-9"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<p>The attributes receive default values:</p>
-<ul>
-<li>Variables of type <code>int</code> receive the value <code>0</code></li>
-<li>Strings receive the empty string <code>""</code></li>
-<li>Pointertypes reference <code>NULL</code>. </li>
-</ul>
-<h3 id="prototypes">Prototypes<a class="headerlink" href="#prototypes" title="Permanent link"></a></h3>
-<p>With the keyword prototype it is possible to create so-called prototypes, which have different default values:
-</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1"> 1</a></span>
+<p>The variables x and y in the example above, have the same local framework: the function <code>test()</code>.</p>
+<h2 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link"></a></h2>
+<p>An operator "calculates" the resulting value from one or two values. A relational operator as well as a boolean operator delivers the integer value 1, if the expression is true, otherwise 0. Bit-Operators manipulate variables on bit level. The operator precedence was adopted from C++.
+</p><div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-8-1"> 1</a></span>
 <span class="normal"><a href="#example-8-2"> 2</a></span>
 <span class="normal"><a href="#example-8-3"> 3</a></span>
 <span class="normal"><a href="#example-8-4"> 4</a></span>
@@ -3755,91 +3480,96 @@ Function Calls</p>
 <span class="normal"><a href="#example-8-11">11</a></span>
 <span class="normal"><a href="#example-8-12">12</a></span>
 <span class="normal"><a href="#example-8-13">13</a></span>
-<span class="normal"><a href="#example-8-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a><span class="c">// prototype-def:</span>
-</span><span id="example-8-2"><a id="example-8-2" name="example-8-2"></a><span class="kd">prototype</span><span class="w"> </span><span class="n">class</span><span class="o">-</span><span class="n">identifier</span><span class="w">  </span><span class="n">identifier</span><span class="w">  </span><span class="n">statement</span><span class="o">-</span><span class="n">block</span>
-</span><span id="example-8-3"><a id="example-8-3" name="example-8-3"></a>
-</span><span id="example-8-4"><a id="example-8-4" name="example-8-4"></a><span class="c">// Example:</span>
-</span><span id="example-8-5"><a id="example-8-5" name="example-8-5"></a><span class="n">prototype</span><span class="w"> </span><span class="n">CreatureProtoType</span><span class="w"> </span><span class="p">(</span><span class="nc">Creature</span><span class="p">)</span>
-</span><span id="example-8-6"><a id="example-8-6" name="example-8-6"></a><span class="p">{</span>
-</span><span id="example-8-7"><a id="example-8-7" name="example-8-7"></a><span class="w">  </span><span class="c">// attributes</span>
-</span><span id="example-8-8"><a id="example-8-8" name="example-8-8"></a><span class="w">  </span><span class="vi">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"A creature"</span><span class="p">;</span>
-</span><span id="example-8-9"><a id="example-8-9" name="example-8-9"></a><span class="w">  </span><span class="vi">hitpoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span><span id="example-8-10"><a id="example-8-10" name="example-8-10"></a><span class="w">  </span><span class="vi">hp_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span><span id="example-8-11"><a id="example-8-11" name="example-8-11"></a><span class="w">  </span><span class="c">// actions</span>
-</span><span id="example-8-12"><a id="example-8-12" name="example-8-12"></a><span class="w">  </span><span class="vi">birth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BirthCreature</span><span class="p">();</span>
-</span><span id="example-8-13"><a id="example-8-13" name="example-8-13"></a><span class="w">  </span><span class="vi">death</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DeathCreature</span><span class="p">();</span>
-</span><span id="example-8-14"><a id="example-8-14" name="example-8-14"></a><span class="p">};</span>
+<span class="normal"><a href="#example-8-14">14</a></span>
+<span class="normal"><a href="#example-8-15">15</a></span>
+<span class="normal"><a href="#example-8-16">16</a></span>
+<span class="normal"><a href="#example-8-17">17</a></span>
+<span class="normal"><a href="#example-8-18">18</a></span>
+<span class="normal"><a href="#example-8-19">19</a></span>
+<span class="normal"><a href="#example-8-20">20</a></span>
+<span class="normal"><a href="#example-8-21">21</a></span>
+<span class="normal"><a href="#example-8-22">22</a></span>
+<span class="normal"><a href="#example-8-23">23</a></span>
+<span class="normal"><a href="#example-8-24">24</a></span>
+<span class="normal"><a href="#example-8-25">25</a></span>
+<span class="normal"><a href="#example-8-26">26</a></span>
+<span class="normal"><a href="#example-8-27">27</a></span>
+<span class="normal"><a href="#example-8-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-8-1"><a id="example-8-1" name="example-8-1"></a>    Calculation: 
+</span><span id="example-8-2"><a id="example-8-2" name="example-8-2"></a>      +   Addition
+</span><span id="example-8-3"><a id="example-8-3" name="example-8-3"></a>      -   Subtraction
+</span><span id="example-8-4"><a id="example-8-4" name="example-8-4"></a>      *   Multiplication
+</span><span id="example-8-5"><a id="example-8-5" name="example-8-5"></a>      /   Division
+</span><span id="example-8-6"><a id="example-8-6" name="example-8-6"></a>      %   Euclidean division (Modulo)
+</span><span id="example-8-7"><a id="example-8-7" name="example-8-7"></a>
+</span><span id="example-8-8"><a id="example-8-8" name="example-8-8"></a>    Comparison: 
+</span><span id="example-8-9"><a id="example-8-9" name="example-8-9"></a>      &lt;   smaller than
+</span><span id="example-8-10"><a id="example-8-10" name="example-8-10"></a>      &lt;=  smaller or equal to
+</span><span id="example-8-11"><a id="example-8-11" name="example-8-11"></a>      &gt;   greater than
+</span><span id="example-8-12"><a id="example-8-12" name="example-8-12"></a>      &gt;=  greater or equal to
+</span><span id="example-8-13"><a id="example-8-13" name="example-8-13"></a>      ==  Equality
+</span><span id="example-8-14"><a id="example-8-14" name="example-8-14"></a>      !=  Inequality
+</span><span id="example-8-15"><a id="example-8-15" name="example-8-15"></a>
+</span><span id="example-8-16"><a id="example-8-16" name="example-8-16"></a>    Boolean:
+</span><span id="example-8-17"><a id="example-8-17" name="example-8-17"></a>      !   not
+</span><span id="example-8-18"><a id="example-8-18" name="example-8-18"></a>      &amp;&amp;  and
+</span><span id="example-8-19"><a id="example-8-19" name="example-8-19"></a>      ||  or
+</span><span id="example-8-20"><a id="example-8-20" name="example-8-20"></a>
+</span><span id="example-8-21"><a id="example-8-21" name="example-8-21"></a>
+</span><span id="example-8-22"><a id="example-8-22" name="example-8-22"></a>    Bitwise:
+</span><span id="example-8-23"><a id="example-8-23" name="example-8-23"></a>      &amp;   and
+</span><span id="example-8-24"><a id="example-8-24" name="example-8-24"></a>      |   or
+</span><span id="example-8-25"><a id="example-8-25" name="example-8-25"></a>
+</span><span id="example-8-26"><a id="example-8-26" name="example-8-26"></a>    Sign:
+</span><span id="example-8-27"><a id="example-8-27" name="example-8-27"></a>      +   positive
+</span><span id="example-8-28"><a id="example-8-28" name="example-8-28"></a>      -   negative
 </span></code></pre></div></td></tr></table></div>
-<p>One can see a prototype as a "derived" class, in which ONLY the default values were changed. Or as an instance of the class, that only serves as a pattern for additional instances. The definition of the default values happens in the statement-block.</p>
-<p>There is a separation between class declarations, which mirror the exact structure of the engine-internal class, and the class definition (prototype).</p>
-<h3 id="instances">Instances<a class="headerlink" href="#instances" title="Permanent link"></a></h3>
-<p>Instances of classes or prototypes act as their concrete representations. The instance of a class material is a specific material with all its characteristics.
-</p><div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1">1</a></span>
-<span class="normal"><a href="#example-9-2">2</a></span>
-<span class="normal"><a href="#example-9-3">3</a></span>
-<span class="normal"><a href="#example-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a>// instance-def:
-</span><span id="example-9-2"><a id="example-9-2" name="example-9-2"></a>instance class-identifier  identifier  statement-block
-</span><span id="example-9-3"><a id="example-9-3" name="example-9-3"></a>
-</span><span id="example-9-4"><a id="example-9-4" name="example-9-4"></a>instance instance-identifier prototype-identifier statement-block
+<h2 id="expressions">Expressions<a class="headerlink" href="#expressions" title="Permanent link"></a></h2>
+<p>Expressions are formed by the operators presented above, as is common in C. Here just some examples of expressions are shown.</p>
+<div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-9-1"> 1</a></span>
+<span class="normal"><a href="#example-9-2"> 2</a></span>
+<span class="normal"><a href="#example-9-3"> 3</a></span>
+<span class="normal"><a href="#example-9-4"> 4</a></span>
+<span class="normal"><a href="#example-9-5"> 5</a></span>
+<span class="normal"><a href="#example-9-6"> 6</a></span>
+<span class="normal"><a href="#example-9-7"> 7</a></span>
+<span class="normal"><a href="#example-9-8"> 8</a></span>
+<span class="normal"><a href="#example-9-9"> 9</a></span>
+<span class="normal"><a href="#example-9-10">10</a></span>
+<span class="normal"><a href="#example-9-11">11</a></span>
+<span class="normal"><a href="#example-9-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-9-1"><a id="example-9-1" name="example-9-1"></a><span class="c">// Comparison expressions:</span>
+</span><span id="example-9-2"><a id="example-9-2" name="example-9-2"></a><span class="w">      </span><span class="n">x1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">x2</span>
+</span><span id="example-9-3"><a id="example-9-3" name="example-9-3"></a><span class="w">      </span><span class="n">x1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">x2</span>
+</span><span id="example-9-4"><a id="example-9-4" name="example-9-4"></a>
+</span><span id="example-9-5"><a id="example-9-5" name="example-9-5"></a><span class="c">// Boolean expressions:</span>
+</span><span id="example-9-6"><a id="example-9-6" name="example-9-6"></a><span class="w">      </span><span class="n">x1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x2</span>
+</span><span id="example-9-7"><a id="example-9-7" name="example-9-7"></a><span class="w">      </span><span class="n">x1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">x2</span>
+</span><span id="example-9-8"><a id="example-9-8" name="example-9-8"></a><span class="w">      </span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
+</span><span id="example-9-9"><a id="example-9-9" name="example-9-9"></a>
+</span><span id="example-9-10"><a id="example-9-10" name="example-9-10"></a><span class="c">// Bitwise Manipulations</span>
+</span><span id="example-9-11"><a id="example-9-11" name="example-9-11"></a><span class="w">      </span><span class="n">x1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="example-9-12"><a id="example-9-12" name="example-9-12"></a><span class="w">      </span><span class="n">x1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
 </span></code></pre></div></td></tr></table></div>
-<p>The statement-block of an instance definition serves the definition of the variables, which belong to a class. Non defined attributes or actions keep their default value. But all additional assignments are allowed, insofar they make sense in any way.</p>
-<div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1"> 1</a></span>
-<span class="normal"><a href="#example-10-2"> 2</a></span>
-<span class="normal"><a href="#example-10-3"> 3</a></span>
-<span class="normal"><a href="#example-10-4"> 4</a></span>
-<span class="normal"><a href="#example-10-5"> 5</a></span>
-<span class="normal"><a href="#example-10-6"> 6</a></span>
-<span class="normal"><a href="#example-10-7"> 7</a></span>
-<span class="normal"><a href="#example-10-8"> 8</a></span>
-<span class="normal"><a href="#example-10-9"> 9</a></span>
-<span class="normal"><a href="#example-10-10">10</a></span>
-<span class="normal"><a href="#example-10-11">11</a></span>
-<span class="normal"><a href="#example-10-12">12</a></span>
-<span class="normal"><a href="#example-10-13">13</a></span>
-<span class="normal"><a href="#example-10-14">14</a></span>
-<span class="normal"><a href="#example-10-15">15</a></span>
-<span class="normal"><a href="#example-10-16">16</a></span>
-<span class="normal"><a href="#example-10-17">17</a></span>
-<span class="normal"><a href="#example-10-18">18</a></span>
-<span class="normal"><a href="#example-10-19">19</a></span>
-<span class="normal"><a href="#example-10-20">20</a></span>
-<span class="normal"><a href="#example-10-21">21</a></span>
-<span class="normal"><a href="#example-10-22">22</a></span>
-<span class="normal"><a href="#example-10-23">23</a></span>
-<span class="normal"><a href="#example-10-24">24</a></span>
-<span class="normal"><a href="#example-10-25">25</a></span>
-<span class="normal"><a href="#example-10-26">26</a></span>
-<span class="normal"><a href="#example-10-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="c">// Small (fictitous) example for Item/Shield/WoodShield</span>
-</span><span id="example-10-2"><a id="example-10-2" name="example-10-2"></a>
-</span><span id="example-10-3"><a id="example-10-3" name="example-10-3"></a><span class="n">class</span><span class="w"> </span><span class="bp">Item</span><span class="p">(</span><span class="n">Vob</span><span class="p">)</span>
-</span><span id="example-10-4"><a id="example-10-4" name="example-10-4"></a><span class="p">{</span>
-</span><span id="example-10-5"><a id="example-10-5" name="example-10-5"></a><span class="w">  </span><span class="c">// attributes</span>
-</span><span id="example-10-6"><a id="example-10-6" name="example-10-6"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">;</span>
-</span><span id="example-10-7"><a id="example-10-7" name="example-10-7"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">attack</span><span class="p">;</span>
-</span><span id="example-10-8"><a id="example-10-8" name="example-10-8"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">description</span><span class="p">;</span>
-</span><span id="example-10-9"><a id="example-10-9" name="example-10-9"></a><span class="w">  </span><span class="c">// actions</span>
-</span><span id="example-10-10"><a id="example-10-10" name="example-10-10"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">funcref</span><span class="w"> </span><span class="n">use</span><span class="p">;</span>
-</span><span id="example-10-11"><a id="example-10-11" name="example-10-11"></a><span class="p">};</span>
-</span><span id="example-10-12"><a id="example-10-12" name="example-10-12"></a>
-</span><span id="example-10-13"><a id="example-10-13" name="example-10-13"></a>
-</span><span id="example-10-14"><a id="example-10-14" name="example-10-14"></a><span class="kd">prototype</span><span class="w"> </span><span class="n">ShieldProtoType</span><span class="w"> </span><span class="p">(</span><span class="nc">Item</span><span class="p">)</span>
-</span><span id="example-10-15"><a id="example-10-15" name="example-10-15"></a><span class="p">{</span>
-</span><span id="example-10-16"><a id="example-10-16" name="example-10-16"></a><span class="w">  </span><span class="vi">damage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="example-10-17"><a id="example-10-17" name="example-10-17"></a><span class="w">  </span><span class="vi">attack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="example-10-18"><a id="example-10-18" name="example-10-18"></a><span class="w">  </span><span class="vi">descriptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span>
-</span><span id="example-10-19"><a id="example-10-19" name="example-10-19"></a><span class="w">  </span><span class="c">// actions</span>
-</span><span id="example-10-20"><a id="example-10-20" name="example-10-20"></a><span class="w">  </span><span class="vi">use</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UsingSchild</span><span class="p">();</span>
-</span><span id="example-10-21"><a id="example-10-21" name="example-10-21"></a><span class="p">};</span>
-</span><span id="example-10-22"><a id="example-10-22" name="example-10-22"></a>
-</span><span id="example-10-23"><a id="example-10-23" name="example-10-23"></a><span class="kd">instance</span><span class="w"> </span><span class="n">WoodShield1</span><span class="w"> </span><span class="p">(</span><span class="nc">ShieldProtoType</span><span class="p">)</span>
-</span><span id="example-10-24"><a id="example-10-24" name="example-10-24"></a><span class="p">{</span>
-</span><span id="example-10-25"><a id="example-10-25" name="example-10-25"></a><span class="w">  </span><span class="c">// attributes</span>
-</span><span id="example-10-26"><a id="example-10-26" name="example-10-26"></a><span class="w">  </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"A quite miserable wooden shield"</span><span class="p">;</span>
-</span><span id="example-10-27"><a id="example-10-27" name="example-10-27"></a><span class="p">};</span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A numerical value counts as true, when it does not equal zero.</p>
+</div>
+<h2 id="statement-blocks">Statement Blocks<a class="headerlink" href="#statement-blocks" title="Permanent link"></a></h2>
+<p>A statement block is a sequence of statements, which are enclosed by curly brackets. The block is a statement itself. The block is used in functions, if-statements and class declarations.</p>
+<div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-10-1">1</a></span>
+<span class="normal"><a href="#example-10-2">2</a></span>
+<span class="normal"><a href="#example-10-3">3</a></span>
+<span class="normal"><a href="#example-10-4">4</a></span>
+<span class="normal"><a href="#example-10-5">5</a></span>
+<span class="normal"><a href="#example-10-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-10-1"><a id="example-10-1" name="example-10-1"></a><span class="c">// statement-block:</span>
+</span><span id="example-10-2"><a id="example-10-2" name="example-10-2"></a><span class="p">{</span>
+</span><span id="example-10-3"><a id="example-10-3" name="example-10-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">;</span>
+</span><span id="example-10-4"><a id="example-10-4" name="example-10-4"></a><span class="w">    </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+</span><span id="example-10-5"><a id="example-10-5" name="example-10-5"></a><span class="w">    </span><span class="c">// [...]</span>
+</span><span id="example-10-6"><a id="example-10-6" name="example-10-6"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<h2 id="control-flows">Control flows<a class="headerlink" href="#control-flows" title="Permanent link"></a></h2>
-<h3 id="branching-if-then-else">Branching: if-then-else<a class="headerlink" href="#branching-if-then-else" title="Permanent link"></a></h3>
-<p>The if-statement was adopted from C++. Only the limited possibilities of expressions have to be respected. Other than that, a statement-block is always expected.
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link"></a></h2>
+<h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link"></a></h3>
+<p>Function definitions are initiated by the keyword func.
 </p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-11-1">1</a></span>
 <span class="normal"><a href="#example-11-2">2</a></span>
 <span class="normal"><a href="#example-11-3">3</a></span>
@@ -3848,53 +3578,208 @@ Function Calls</p>
 <span class="normal"><a href="#example-11-6">6</a></span>
 <span class="normal"><a href="#example-11-7">7</a></span>
 <span class="normal"><a href="#example-11-8">8</a></span>
-<span class="normal"><a href="#example-11-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="c">// if-statement:</span>
-</span><span id="example-11-2"><a id="example-11-2" name="example-11-2"></a><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">statement</span><span class="o">-</span><span class="n">block</span>
-</span><span id="example-11-3"><a id="example-11-3" name="example-11-3"></a><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">statement</span><span class="o">-</span><span class="n">block</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="n">statement</span><span class="o">-</span><span class="n">block</span>
-</span><span id="example-11-4"><a id="example-11-4" name="example-11-4"></a>
-</span><span id="example-11-5"><a id="example-11-5" name="example-11-5"></a><span class="c">// wrong:   </span>
-</span><span id="example-11-6"><a id="example-11-6" name="example-11-6"></a><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="n">SoundPlay</span><span class="p">(</span><span class="n">ID_sound_roar</span><span class="p">);</span>
-</span><span id="example-11-7"><a id="example-11-7" name="example-11-7"></a>
-</span><span id="example-11-8"><a id="example-11-8" name="example-11-8"></a><span class="c">// correct:  </span>
-</span><span id="example-11-9"><a id="example-11-9" name="example-11-9"></a><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">SoundPlay</span><span class="p">(</span><span class="n">ID_sound_roar</span><span class="p">);</span><span class="w"> </span><span class="p">};</span>
+<span class="normal"><a href="#example-11-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-11-1"><a id="example-11-1" name="example-11-1"></a><span class="c">// func-def:</span>
+</span><span id="example-11-2"><a id="example-11-2" name="example-11-2"></a><span class="kd">func</span><span class="w"> </span><span class="kt">type</span><span class="w"> </span><span class="nf">identifier</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">vardecl1opt</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">vardecl8opt</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="err">statement-block</span>
+</span><span id="example-11-3"><a id="example-11-3" name="example-11-3"></a>
+</span><span id="example-11-4"><a id="example-11-4" name="example-11-4"></a><span class="err">//</span><span class="w"> </span><span class="err">Example:</span>
+</span><span id="example-11-5"><a id="example-11-5" name="example-11-5"></a>
+</span><span id="example-11-6"><a id="example-11-6" name="example-11-6"></a><span class="err">func</span><span class="w"> </span><span class="err">int</span><span class="w"> </span><span class="err">UsingShield</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">s1</span><span class="p">)</span>
+</span><span id="example-11-7"><a id="example-11-7" name="example-11-7"></a><span class="p">{</span>
+</span><span id="example-11-8"><a id="example-11-8" name="example-11-8"></a><span class="c">// [...]</span>
+</span><span id="example-11-9"><a id="example-11-9" name="example-11-9"></a><span class="p">};</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="function-value-return-return">Function value return: return<a class="headerlink" href="#function-value-return-return" title="Permanent link"></a></h3>
-<p>In functions, which return a value, a return assignment is used like in C++:</p>
+<h3 id="parameter-transfer">Parameter transfer<a class="headerlink" href="#parameter-transfer" title="Permanent link"></a></h3>
+<p>The length of the parameter list is unlimited, but should be kept as short as possible for memory capacity reasons. Parameters are transfered call-by-value, that said, they don't return a value. Arrays are not allowed as parameter transfers.
+Function Calls</p>
+<h3 id="function-calls">Function calls<a class="headerlink" href="#function-calls" title="Permanent link"></a></h3>
+<p>Functions are called as usual in C++. Also with their identifier as well as a mandatory parameter bracket.</p>
 <div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-12-1">1</a></span>
-<span class="normal"><a href="#example-12-2">2</a></span>
-<span class="normal"><a href="#example-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="c">// return-statement:</span>
-</span><span id="example-12-2"><a id="example-12-2" name="example-12-2"></a>
-</span><span id="example-12-3"><a id="example-12-3" name="example-12-3"></a><span class="kr">return</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="p">);</span>
+<span class="normal"><a href="#example-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-12-1"><a id="example-12-1" name="example-12-1"></a><span class="c">// func-call:</span>
+</span><span id="example-12-2"><a id="example-12-2" name="example-12-2"></a><span class="n">UsingShield</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">);</span>
 </span></code></pre></div></td></tr></table></div>
-<h2 id="dynamic-variables">Dynamic Variables<a class="headerlink" href="#dynamic-variables" title="Permanent link"></a></h2>
-<p>Some variables are set dynamically with a function call and then they refer to, e.g. in a dialogue on the instance of the NPC (self) and his dialogue partner (other). Furthermore there will be Build-In-Functions, that allow an access to other VOBs.</p>
-<p>To support this concept several global variables are declared and dynamically set in the course of the game, such that these functions can be requested. The variables, at the moment, are the following:</p>
-<div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-13-1">1</a></span>
-<span class="normal"><a href="#example-13-2">2</a></span>
-<span class="normal"><a href="#example-13-3">3</a></span>
-<span class="normal"><a href="#example-13-4">4</a></span>
-<span class="normal"><a href="#example-13-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-13-1"><a id="example-13-1" name="example-13-1"></a><span class="kd">VAR</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">self</span><span class="p">;</span>
-</span><span id="example-13-2"><a id="example-13-2" name="example-13-2"></a><span class="kd">VAR</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">other</span><span class="p">;</span>
-</span><span id="example-13-3"><a id="example-13-3" name="example-13-3"></a><span class="kd">VAR</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">victim</span><span class="p">;</span>
-</span><span id="example-13-4"><a id="example-13-4" name="example-13-4"></a><span class="kd">VAR</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">hero</span><span class="p">;</span>
-</span><span id="example-13-5"><a id="example-13-5" name="example-13-5"></a><span class="kd">VAR</span><span class="w"> </span><span class="kt">C_NPC</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+<h2 id="classes-prototypes-and-instances">Classes, Prototypes and Instances<a class="headerlink" href="#classes-prototypes-and-instances" title="Permanent link"></a></h2>
+<h3 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link"></a></h3>
+<p>The Engine Class declarations describe exactly the data structure of the engine. That means, they are not arbitrarily extendable in the script, but they are directly linked with the engine. However, user-defined classes can be created.
+</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-13-1"> 1</a></span>
+<span class="normal"><a href="#example-13-2"> 2</a></span>
+<span class="normal"><a href="#example-13-3"> 3</a></span>
+<span class="normal"><a href="#example-13-4"> 4</a></span>
+<span class="normal"><a href="#example-13-5"> 5</a></span>
+<span class="normal"><a href="#example-13-6"> 6</a></span>
+<span class="normal"><a href="#example-13-7"> 7</a></span>
+<span class="normal"><a href="#example-13-8"> 8</a></span>
+<span class="normal"><a href="#example-13-9"> 9</a></span>
+<span class="normal"><a href="#example-13-10">10</a></span>
+<span class="normal"><a href="#example-13-11">11</a></span>
+<span class="normal"><a href="#example-13-12">12</a></span>
+<span class="normal"><a href="#example-13-13">13</a></span>
+<span class="normal"><a href="#example-13-14">14</a></span>
+<span class="normal"><a href="#example-13-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-13-1"><a id="example-13-1" name="example-13-1"></a><span class="c">// classdecl:</span>
+</span><span id="example-13-2"><a id="example-13-2" name="example-13-2"></a><span class="n">class</span><span class="w">  </span><span class="n">classname</span><span class="w">  </span><span class="p">(</span><span class="n">base</span><span class="o">-</span><span class="n">classname</span><span class="p">)</span><span class="n">opt</span><span class="w">  </span><span class="n">declaration</span><span class="o">-</span><span class="n">block</span>
+</span><span id="example-13-3"><a id="example-13-3" name="example-13-3"></a>
+</span><span id="example-13-4"><a id="example-13-4" name="example-13-4"></a><span class="c">// Example:</span>
+</span><span id="example-13-5"><a id="example-13-5" name="example-13-5"></a>
+</span><span id="example-13-6"><a id="example-13-6" name="example-13-6"></a><span class="n">class</span><span class="w"> </span><span class="n">Creature</span><span class="p">()</span>
+</span><span id="example-13-7"><a id="example-13-7" name="example-13-7"></a><span class="p">{</span>
+</span><span id="example-13-8"><a id="example-13-8" name="example-13-8"></a><span class="w">  </span><span class="c">// attributes</span>
+</span><span id="example-13-9"><a id="example-13-9" name="example-13-9"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w">  </span><span class="n">name</span><span class="p">;</span>
+</span><span id="example-13-10"><a id="example-13-10" name="example-13-10"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">hitpoints</span><span class="p">;</span>
+</span><span id="example-13-11"><a id="example-13-11" name="example-13-11"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">hp_max</span><span class="p">;</span>
+</span><span id="example-13-12"><a id="example-13-12" name="example-13-12"></a><span class="w">  </span><span class="c">// actions</span>
+</span><span id="example-13-13"><a id="example-13-13" name="example-13-13"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">funcref</span><span class="w"> </span><span class="n">birth</span><span class="p">;</span>
+</span><span id="example-13-14"><a id="example-13-14" name="example-13-14"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">funcref</span><span class="w"> </span><span class="n">death</span><span class="p">;</span>
+</span><span id="example-13-15"><a id="example-13-15" name="example-13-15"></a><span class="p">};</span>
 </span></code></pre></div></td></tr></table></div>
-<h2 id="important-differences-to-c">Important Differences to C++<a class="headerlink" href="#important-differences-to-c" title="Permanent link"></a></h2>
-<p>Here just some pitfalls should be shown in short which result from the differences to C++. Where C++ also allows for single assignments, in DAEDALUS there must be an assignment block. This affects if-statements.</p>
-<div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1">1</a></span>
-<span class="normal"><a href="#example-14-2">2</a></span>
-<span class="normal"><a href="#example-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-14-1"><a id="example-14-1" name="example-14-1"></a><span class="c">// Example:</span>
-</span><span id="example-14-2"><a id="example-14-2" name="example-14-2"></a>
-</span><span id="example-14-3"><a id="example-14-3" name="example-14-3"></a><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">SoundPlay</span><span class="p">();</span><span class="w"> </span><span class="p">};</span>
+<p>The attributes receive default values:</p>
+<ul>
+<li>Variables of type <code>int</code> receive the value <code>0</code></li>
+<li>Strings receive the empty string <code>""</code></li>
+<li>Pointertypes reference <code>NULL</code>. </li>
+</ul>
+<h3 id="prototypes">Prototypes<a class="headerlink" href="#prototypes" title="Permanent link"></a></h3>
+<p>With the keyword prototype it is possible to create so-called prototypes, which have different default values:
+</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1"> 1</a></span>
+<span class="normal"><a href="#example-14-2"> 2</a></span>
+<span class="normal"><a href="#example-14-3"> 3</a></span>
+<span class="normal"><a href="#example-14-4"> 4</a></span>
+<span class="normal"><a href="#example-14-5"> 5</a></span>
+<span class="normal"><a href="#example-14-6"> 6</a></span>
+<span class="normal"><a href="#example-14-7"> 7</a></span>
+<span class="normal"><a href="#example-14-8"> 8</a></span>
+<span class="normal"><a href="#example-14-9"> 9</a></span>
+<span class="normal"><a href="#example-14-10">10</a></span>
+<span class="normal"><a href="#example-14-11">11</a></span>
+<span class="normal"><a href="#example-14-12">12</a></span>
+<span class="normal"><a href="#example-14-13">13</a></span>
+<span class="normal"><a href="#example-14-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-14-1"><a id="example-14-1" name="example-14-1"></a><span class="c">// prototype-def:</span>
+</span><span id="example-14-2"><a id="example-14-2" name="example-14-2"></a><span class="kd">prototype</span><span class="w"> </span><span class="n">class</span><span class="o">-</span><span class="n">identifier</span><span class="w">  </span><span class="n">identifier</span><span class="w">  </span><span class="n">statement</span><span class="o">-</span><span class="n">block</span>
+</span><span id="example-14-3"><a id="example-14-3" name="example-14-3"></a>
+</span><span id="example-14-4"><a id="example-14-4" name="example-14-4"></a><span class="c">// Example:</span>
+</span><span id="example-14-5"><a id="example-14-5" name="example-14-5"></a><span class="n">prototype</span><span class="w"> </span><span class="n">CreatureProtoType</span><span class="w"> </span><span class="p">(</span><span class="nc">Creature</span><span class="p">)</span>
+</span><span id="example-14-6"><a id="example-14-6" name="example-14-6"></a><span class="p">{</span>
+</span><span id="example-14-7"><a id="example-14-7" name="example-14-7"></a><span class="w">  </span><span class="c">// attributes</span>
+</span><span id="example-14-8"><a id="example-14-8" name="example-14-8"></a><span class="w">  </span><span class="vi">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"A creature"</span><span class="p">;</span>
+</span><span id="example-14-9"><a id="example-14-9" name="example-14-9"></a><span class="w">  </span><span class="vi">hitpoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="example-14-10"><a id="example-14-10" name="example-14-10"></a><span class="w">  </span><span class="vi">hp_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="example-14-11"><a id="example-14-11" name="example-14-11"></a><span class="w">  </span><span class="c">// actions</span>
+</span><span id="example-14-12"><a id="example-14-12" name="example-14-12"></a><span class="w">  </span><span class="vi">birth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BirthCreature</span><span class="p">();</span>
+</span><span id="example-14-13"><a id="example-14-13" name="example-14-13"></a><span class="w">  </span><span class="vi">death</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DeathCreature</span><span class="p">();</span>
+</span><span id="example-14-14"><a id="example-14-14" name="example-14-14"></a><span class="p">};</span>
+</span></code></pre></div></td></tr></table></div>
+<p>One can see a prototype as a "derived" class, in which ONLY the default values were changed. Or as an instance of the class, that only serves as a pattern for additional instances. The definition of the default values happens in the statement-block.</p>
+<p>There is a separation between class declarations, which mirror the exact structure of the engine-internal class, and the class definition (prototype).</p>
+<h3 id="instances">Instances<a class="headerlink" href="#instances" title="Permanent link"></a></h3>
+<p>Instances of classes or prototypes act as their concrete representations. The instance of a class material is a specific material with all its characteristics.
+</p><div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-15-1">1</a></span>
+<span class="normal"><a href="#example-15-2">2</a></span>
+<span class="normal"><a href="#example-15-3">3</a></span>
+<span class="normal"><a href="#example-15-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-15-1"><a id="example-15-1" name="example-15-1"></a>// instance-def:
+</span><span id="example-15-2"><a id="example-15-2" name="example-15-2"></a>instance class-identifier  identifier  statement-block
+</span><span id="example-15-3"><a id="example-15-3" name="example-15-3"></a>
+</span><span id="example-15-4"><a id="example-15-4" name="example-15-4"></a>instance instance-identifier prototype-identifier statement-block
+</span></code></pre></div></td></tr></table></div>
+<p>The statement-block of an instance definition serves the definition of the variables, which belong to a class. Non defined attributes or actions keep their default value. But all additional assignments are allowed, insofar they make sense in any way.</p>
+<div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-16-1"> 1</a></span>
+<span class="normal"><a href="#example-16-2"> 2</a></span>
+<span class="normal"><a href="#example-16-3"> 3</a></span>
+<span class="normal"><a href="#example-16-4"> 4</a></span>
+<span class="normal"><a href="#example-16-5"> 5</a></span>
+<span class="normal"><a href="#example-16-6"> 6</a></span>
+<span class="normal"><a href="#example-16-7"> 7</a></span>
+<span class="normal"><a href="#example-16-8"> 8</a></span>
+<span class="normal"><a href="#example-16-9"> 9</a></span>
+<span class="normal"><a href="#example-16-10">10</a></span>
+<span class="normal"><a href="#example-16-11">11</a></span>
+<span class="normal"><a href="#example-16-12">12</a></span>
+<span class="normal"><a href="#example-16-13">13</a></span>
+<span class="normal"><a href="#example-16-14">14</a></span>
+<span class="normal"><a href="#example-16-15">15</a></span>
+<span class="normal"><a href="#example-16-16">16</a></span>
+<span class="normal"><a href="#example-16-17">17</a></span>
+<span class="normal"><a href="#example-16-18">18</a></span>
+<span class="normal"><a href="#example-16-19">19</a></span>
+<span class="normal"><a href="#example-16-20">20</a></span>
+<span class="normal"><a href="#example-16-21">21</a></span>
+<span class="normal"><a href="#example-16-22">22</a></span>
+<span class="normal"><a href="#example-16-23">23</a></span>
+<span class="normal"><a href="#example-16-24">24</a></span>
+<span class="normal"><a href="#example-16-25">25</a></span>
+<span class="normal"><a href="#example-16-26">26</a></span>
+<span class="normal"><a href="#example-16-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-16-1"><a id="example-16-1" name="example-16-1"></a><span class="c">// Small (fictitous) example for Item/Shield/WoodShield</span>
+</span><span id="example-16-2"><a id="example-16-2" name="example-16-2"></a>
+</span><span id="example-16-3"><a id="example-16-3" name="example-16-3"></a><span class="n">class</span><span class="w"> </span><span class="bp">Item</span><span class="p">(</span><span class="n">Vob</span><span class="p">)</span>
+</span><span id="example-16-4"><a id="example-16-4" name="example-16-4"></a><span class="p">{</span>
+</span><span id="example-16-5"><a id="example-16-5" name="example-16-5"></a><span class="w">  </span><span class="c">// attributes</span>
+</span><span id="example-16-6"><a id="example-16-6" name="example-16-6"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">;</span>
+</span><span id="example-16-7"><a id="example-16-7" name="example-16-7"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">attack</span><span class="p">;</span>
+</span><span id="example-16-8"><a id="example-16-8" name="example-16-8"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">description</span><span class="p">;</span>
+</span><span id="example-16-9"><a id="example-16-9" name="example-16-9"></a><span class="w">  </span><span class="c">// actions</span>
+</span><span id="example-16-10"><a id="example-16-10" name="example-16-10"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">funcref</span><span class="w"> </span><span class="n">use</span><span class="p">;</span>
+</span><span id="example-16-11"><a id="example-16-11" name="example-16-11"></a><span class="p">};</span>
+</span><span id="example-16-12"><a id="example-16-12" name="example-16-12"></a>
+</span><span id="example-16-13"><a id="example-16-13" name="example-16-13"></a>
+</span><span id="example-16-14"><a id="example-16-14" name="example-16-14"></a><span class="kd">prototype</span><span class="w"> </span><span class="n">ShieldProtoType</span><span class="w"> </span><span class="p">(</span><span class="nc">Item</span><span class="p">)</span>
+</span><span id="example-16-15"><a id="example-16-15" name="example-16-15"></a><span class="p">{</span>
+</span><span id="example-16-16"><a id="example-16-16" name="example-16-16"></a><span class="w">  </span><span class="vi">damage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="example-16-17"><a id="example-16-17" name="example-16-17"></a><span class="w">  </span><span class="vi">attack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="example-16-18"><a id="example-16-18" name="example-16-18"></a><span class="w">  </span><span class="vi">descriptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span>
+</span><span id="example-16-19"><a id="example-16-19" name="example-16-19"></a><span class="w">  </span><span class="c">// actions</span>
+</span><span id="example-16-20"><a id="example-16-20" name="example-16-20"></a><span class="w">  </span><span class="vi">use</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UsingSchild</span><span class="p">();</span>
+</span><span id="example-16-21"><a id="example-16-21" name="example-16-21"></a><span class="p">};</span>
+</span><span id="example-16-22"><a id="example-16-22" name="example-16-22"></a>
+</span><span id="example-16-23"><a id="example-16-23" name="example-16-23"></a><span class="kd">instance</span><span class="w"> </span><span class="n">WoodShield1</span><span class="w"> </span><span class="p">(</span><span class="nc">ShieldProtoType</span><span class="p">)</span>
+</span><span id="example-16-24"><a id="example-16-24" name="example-16-24"></a><span class="p">{</span>
+</span><span id="example-16-25"><a id="example-16-25" name="example-16-25"></a><span class="w">  </span><span class="c">// attributes</span>
+</span><span id="example-16-26"><a id="example-16-26" name="example-16-26"></a><span class="w">  </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"A quite miserable wooden shield"</span><span class="p">;</span>
+</span><span id="example-16-27"><a id="example-16-27" name="example-16-27"></a><span class="p">};</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="control-flows">Control flows<a class="headerlink" href="#control-flows" title="Permanent link"></a></h2>
+<h3 id="if-statement">if statement<a class="headerlink" href="#if-statement" title="Permanent link"></a></h3>
+<p>The if-statement was adopted from C++. Only the limited possibilities of expressions have to be respected. Other than that, a statement-block is always expected.
+</p><div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-17-1"> 1</a></span>
+<span class="normal"><a href="#example-17-2"> 2</a></span>
+<span class="normal"><a href="#example-17-3"> 3</a></span>
+<span class="normal"><a href="#example-17-4"> 4</a></span>
+<span class="normal"><a href="#example-17-5"> 5</a></span>
+<span class="normal"><a href="#example-17-6"> 6</a></span>
+<span class="normal"><a href="#example-17-7"> 7</a></span>
+<span class="normal"><a href="#example-17-8"> 8</a></span>
+<span class="normal"><a href="#example-17-9"> 9</a></span>
+<span class="normal"><a href="#example-17-10">10</a></span>
+<span class="normal"><a href="#example-17-11">11</a></span>
+<span class="normal"><a href="#example-17-12">12</a></span>
+<span class="normal"><a href="#example-17-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-17-1"><a id="example-17-1" name="example-17-1"></a><span class="c">// if-statement:</span>
+</span><span id="example-17-2"><a id="example-17-2" name="example-17-2"></a><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</span><span id="example-17-3"><a id="example-17-3" name="example-17-3"></a><span class="p">{</span>
+</span><span id="example-17-4"><a id="example-17-4" name="example-17-4"></a><span class="w">    </span><span class="c">// do something</span>
+</span><span id="example-17-5"><a id="example-17-5" name="example-17-5"></a><span class="p">}</span>
+</span><span id="example-17-6"><a id="example-17-6" name="example-17-6"></a><span class="kr">else</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</span><span id="example-17-7"><a id="example-17-7" name="example-17-7"></a><span class="p">{</span>
+</span><span id="example-17-8"><a id="example-17-8" name="example-17-8"></a><span class="w">    </span><span class="c">// do something else</span>
+</span><span id="example-17-9"><a id="example-17-9" name="example-17-9"></a><span class="p">}</span>
+</span><span id="example-17-10"><a id="example-17-10" name="example-17-10"></a><span class="kr">else</span>
+</span><span id="example-17-11"><a id="example-17-11" name="example-17-11"></a><span class="p">{</span>
+</span><span id="example-17-12"><a id="example-17-12" name="example-17-12"></a><span class="w">    </span><span class="c">// do something completely different</span>
+</span><span id="example-17-13"><a id="example-17-13" name="example-17-13"></a><span class="p">};</span>
+</span></code></pre></div></td></tr></table></div>
+Notice the semicolon at the end of the statement block, which is mandatory.
+<h3 id="return-statement">return statement<a class="headerlink" href="#return-statement" title="Permanent link"></a></h3>
+<p>In functions, which return a value, a return assignment is used like in C++:</p>
+<div class="language-dae highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-18-1">1</a></span>
+<span class="normal"><a href="#example-18-2">2</a></span>
+<span class="normal"><a href="#example-18-3">3</a></span>
+<span class="normal"><a href="#example-18-4">4</a></span>
+<span class="normal"><a href="#example-18-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-18-1"><a id="example-18-1" name="example-18-1"></a><span class="c">// return-statement:</span>
+</span><span id="example-18-2"><a id="example-18-2" name="example-18-2"></a><span class="kd">func</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">test</span><span class="p">()</span>
+</span><span id="example-18-3"><a id="example-18-3" name="example-18-3"></a><span class="p">{</span>
+</span><span id="example-18-4"><a id="example-18-4" name="example-18-4"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+</span><span id="example-18-5"><a id="example-18-5" name="example-18-5"></a><span class="p">};</span>
 </span></code></pre></div></td></tr></table></div>
 <div class="footnote">
 <hr>
 <ol>
 <li id="fn:1">
-<p>The original text was written by Piranha Bytes and published in the Gothic MDK documentation. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-<li id="fn:2">
-<p>Translation was done by <a href="https://github.com/floshin">Flosha</a> and published on <a href="https://mdk.gothicarchive.org/docs/skripte/gothic_skriptsprache.htm">Gothic MDK website</a>. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+<p>The inspiration was taken form text written by Piranha Bytes. Its translation can be found on <a href="https://mdk.gothicarchive.org/docs/skripte/gothic_skriptsprache.htm">Gothic MDK website</a>. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div></div>
@@ -3904,7 +3789,7 @@ Function Calls</p>
       </main>
 <footer class="md-footer">
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
-          <a href="../../../music/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Music">
+          <a href="../compilation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Compilation">
             <div class="md-footer__button md-icon">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>            </div>
             <div class="md-footer__title">
@@ -3912,17 +3797,17 @@ Function Calls</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Music
+                Compilation
               </div>
             </div>
           </a>
-          <a href="../parsing/" class="md-footer__link md-footer__link--next" aria-label="Next: Parsing">
+          <a href="../../classes/c_info/" class="md-footer__link md-footer__link--next" aria-label="Next: C_INFO">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Parsing
+                C_INFO
               </div>
             </div>
             <div class="md-footer__button md-icon">
