@@ -3670,7 +3670,7 @@ Function Calls</p>
 </span><span id="example-14-10"><a id="example-14-10" name="example-14-10"></a><span class="p">};</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="instances">Instances<a class="headerlink" href="#instances" title="Permanent link"></a></h3>
-<p>Instances of classes or prototypes act as their concrete representations.
+<p>Instances of classes or prototypes are objects, which can be used in the script.
 </p><div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-15-1">1</a></span>
 <span class="normal"><a href="#example-15-2">2</a></span>
 <span class="normal"><a href="#example-15-3">3</a></span>
@@ -3699,36 +3699,26 @@ Function Calls</p>
 <span class="normal"><a href="#example-16-17">17</a></span>
 <span class="normal"><a href="#example-16-18">18</a></span>
 <span class="normal"><a href="#example-16-19">19</a></span>
-<span class="normal"><a href="#example-16-20">20</a></span>
-<span class="normal"><a href="#example-16-21">21</a></span>
-<span class="normal"><a href="#example-16-22">22</a></span>
-<span class="normal"><a href="#example-16-23">23</a></span>
-<span class="normal"><a href="#example-16-24">24</a></span>
-<span class="normal"><a href="#example-16-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-16-1"><a id="example-16-1" name="example-16-1"></a><span class="n">class</span><span class="w"> </span><span class="bp">Item</span><span class="p">(</span><span class="n">Object</span><span class="p">)</span>
+<span class="normal"><a href="#example-16-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="example-16-1"><a id="example-16-1" name="example-16-1"></a><span class="n">class</span><span class="w"> </span><span class="bp">Item</span><span class="p">(</span><span class="n">Object</span><span class="p">)</span>
 </span><span id="example-16-2"><a id="example-16-2" name="example-16-2"></a><span class="p">{</span>
-</span><span id="example-16-3"><a id="example-16-3" name="example-16-3"></a><span class="w">  </span><span class="c">// attributes</span>
-</span><span id="example-16-4"><a id="example-16-4" name="example-16-4"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">;</span>
-</span><span id="example-16-5"><a id="example-16-5" name="example-16-5"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">attack</span><span class="p">;</span>
-</span><span id="example-16-6"><a id="example-16-6" name="example-16-6"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">description</span><span class="p">;</span>
-</span><span id="example-16-7"><a id="example-16-7" name="example-16-7"></a><span class="w">  </span><span class="c">// actions</span>
-</span><span id="example-16-8"><a id="example-16-8" name="example-16-8"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">use</span><span class="p">;</span>
-</span><span id="example-16-9"><a id="example-16-9" name="example-16-9"></a><span class="p">};</span>
-</span><span id="example-16-10"><a id="example-16-10" name="example-16-10"></a>
-</span><span id="example-16-11"><a id="example-16-11" name="example-16-11"></a>
-</span><span id="example-16-12"><a id="example-16-12" name="example-16-12"></a><span class="kd">prototype</span><span class="w"> </span><span class="n">ShieldProtoType</span><span class="w"> </span><span class="p">(</span><span class="nc">Item</span><span class="p">)</span>
-</span><span id="example-16-13"><a id="example-16-13" name="example-16-13"></a><span class="p">{</span>
-</span><span id="example-16-14"><a id="example-16-14" name="example-16-14"></a><span class="w">  </span><span class="vi">damage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="example-16-15"><a id="example-16-15" name="example-16-15"></a><span class="w">  </span><span class="vi">attack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="example-16-16"><a id="example-16-16" name="example-16-16"></a><span class="w">  </span><span class="vi">descriptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span>
-</span><span id="example-16-17"><a id="example-16-17" name="example-16-17"></a><span class="w">  </span><span class="c">// actions</span>
-</span><span id="example-16-18"><a id="example-16-18" name="example-16-18"></a><span class="w">  </span><span class="vi">use</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UsingSchild</span><span class="p">();</span>
-</span><span id="example-16-19"><a id="example-16-19" name="example-16-19"></a><span class="p">};</span>
-</span><span id="example-16-20"><a id="example-16-20" name="example-16-20"></a>
-</span><span id="example-16-21"><a id="example-16-21" name="example-16-21"></a><span class="kd">instance</span><span class="w"> </span><span class="n">WoodShield1</span><span class="w"> </span><span class="p">(</span><span class="nc">ShieldProtoType</span><span class="p">)</span>
-</span><span id="example-16-22"><a id="example-16-22" name="example-16-22"></a><span class="p">{</span>
-</span><span id="example-16-23"><a id="example-16-23" name="example-16-23"></a><span class="w">  </span><span class="c">// attributes</span>
-</span><span id="example-16-24"><a id="example-16-24" name="example-16-24"></a><span class="w">  </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"A quite miserable wooden shield"</span><span class="p">;</span>
-</span><span id="example-16-25"><a id="example-16-25" name="example-16-25"></a><span class="p">};</span>
+</span><span id="example-16-3"><a id="example-16-3" name="example-16-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">;</span>
+</span><span id="example-16-4"><a id="example-16-4" name="example-16-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">attack</span><span class="p">;</span>
+</span><span id="example-16-5"><a id="example-16-5" name="example-16-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">description</span><span class="p">;</span>
+</span><span id="example-16-6"><a id="example-16-6" name="example-16-6"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="kt">func</span><span class="w"> </span><span class="n">use</span><span class="p">;</span>
+</span><span id="example-16-7"><a id="example-16-7" name="example-16-7"></a><span class="p">};</span>
+</span><span id="example-16-8"><a id="example-16-8" name="example-16-8"></a>
+</span><span id="example-16-9"><a id="example-16-9" name="example-16-9"></a><span class="kd">prototype</span><span class="w"> </span><span class="n">ShieldProtoType</span><span class="w"> </span><span class="p">(</span><span class="nc">Item</span><span class="p">)</span>
+</span><span id="example-16-10"><a id="example-16-10" name="example-16-10"></a><span class="p">{</span>
+</span><span id="example-16-11"><a id="example-16-11" name="example-16-11"></a><span class="w">    </span><span class="vi">damage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="example-16-12"><a id="example-16-12" name="example-16-12"></a><span class="w">    </span><span class="vi">attack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="example-16-13"><a id="example-16-13" name="example-16-13"></a><span class="w">    </span><span class="vi">descriptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span>
+</span><span id="example-16-14"><a id="example-16-14" name="example-16-14"></a><span class="w">    </span><span class="vi">use</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UsingSchild</span><span class="p">();</span>
+</span><span id="example-16-15"><a id="example-16-15" name="example-16-15"></a><span class="p">};</span>
+</span><span id="example-16-16"><a id="example-16-16" name="example-16-16"></a>
+</span><span id="example-16-17"><a id="example-16-17" name="example-16-17"></a><span class="kd">instance</span><span class="w"> </span><span class="n">WoodShield1</span><span class="w"> </span><span class="p">(</span><span class="nc">ShieldProtoType</span><span class="p">)</span>
+</span><span id="example-16-18"><a id="example-16-18" name="example-16-18"></a><span class="p">{</span>
+</span><span id="example-16-19"><a id="example-16-19" name="example-16-19"></a><span class="w">    </span><span class="vi">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"A quite miserable wooden shield"</span><span class="p">;</span>
+</span><span id="example-16-20"><a id="example-16-20" name="example-16-20"></a><span class="p">};</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="control-flows">Control flows<a class="headerlink" href="#control-flows" title="Permanent link"></a></h2>
 <h3 id="if-statement">if statement<a class="headerlink" href="#if-statement" title="Permanent link"></a></h3>
